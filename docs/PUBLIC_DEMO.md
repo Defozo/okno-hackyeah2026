@@ -2,7 +2,7 @@
 
 Docelowy adres: **https://okno-impacther-2026.defozo.chatgpt.site/**. Zespół: **DEFOZO SOFTWARE HOUSE**, Michał Kiełtyka. Strona materiałów: **https://okno-impacther-2026.defozo.chatgpt.site/materialy/**.
 
-Publiczny odbiór zakończył się powodzeniem 3 października 2026 o 18:44:31 UTC. [Raport](evidence/public-demo.json) potwierdza świeżą sesję bez konta, zwykły DNS, walidowane HTTPS, 8 grup przepływów i 7 skanów axe bez naruszeń. Pobieranie karty PDF i ICS, zapis, decyzja, próba, izolacja sesji, kopia oraz usunięcie działały przez publiczny adres. Bieżące materiały i daty kontroli są w [MATERIALS.md](MATERIALS.md).
+Publiczny odbiór zakończył się powodzeniem 3 października 2026 o 21:27:06 UTC. [Raport](evidence/public-demo.json) potwierdza świeżą sesję bez konta, zwykły DNS, walidowane HTTPS, 8 grup przepływów i 7 skanów axe bez naruszeń. Pobieranie karty PDF i ICS, zapis, decyzja, próba, izolacja sesji, kopia oraz usunięcie działały przez publiczny adres. Bieżące materiały i daty kontroli są w [MATERIALS.md](MATERIALS.md).
 
 W raporcie jest jedno osobne ostrzeżenie platformy: restrykcyjne CSP aplikacji blokuje detekcję JavaScript wstrzykniętą przez Cloudflare. Nie osłabiono CSP. Nie wystąpiły błędy aplikacji ani inne błędy konsoli.
 

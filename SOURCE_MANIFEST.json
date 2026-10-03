@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "created_at": "2026-10-03T21:30:11.212627+00:00",
+  "created_at": "2026-10-03T21:33:11.262751+00:00",
   "algorithm": "SHA-256",
   "scope": "Application source, tests, configuration, public source fixtures and selected technical documentation. Git metadata and this manifest itself are excluded.",
   "file_count": 176,
@@ -334,7 +334,7 @@
     {
       "path": "docs/evidence/public-demo.json",
       "bytes": 4948,
-      "sha256": "6721f30ce1565c2cc280faf79018bb3cbc6b04849130d076581cd7c53ed51bb8"
+      "sha256": "fd0cea1a5e74b49c04fb844847579dfc7dfdcbb4aa087bb28b7594299d88b689"
     },
     {
       "path": "docs/evidence/public-recovery.json",
@@ -449,7 +449,7 @@
     {
       "path": "docs/PUBLIC_DEMO.md",
       "bytes": 6390,
-      "sha256": "c251604b2b26b1b904ff537718c2976527ae2205611f5daf58e1f04ac962981e"
+      "sha256": "e4e39938797e5bb56b0de1ee41233d7d3bd7c2575277a2fe78f455d04b06ae1c"
     },
     {
       "path": "docs/RESEARCH.md",
