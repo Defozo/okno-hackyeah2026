@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "status": "partial",
+  "reason": "Sprawdzono działającą aplikację i materiały. Trzeci adres pokazał wyłącznie komunikat niedostępności. Nie potwierdzono rzeczywistego zoomu 200% ani pełnej ścieżki zapisu i próby.",
+  "firstImpression": {
+    "purpose": "Narzędzie do pogodzenia powrotu do pracy z opieką i dojazdami.",
+    "audience": "Osoby wracające do pracy, które muszą dopasować grafik do obowiązków opiekuńczych.",
+    "firstAction": "Otworzyć przykład albo wpisać godziny i warunki.",
+    "expectedOutcome": "Porównanie wykonalnych wariantów i przygotowanie propozycji do rozmowy z pracodawcą.",
+    "uncertainties": [
+      "Ile danych trzeba podać?",
+      "Jak konkretnie będą wyglądały wyniki?"
+    ],
+    "recordedBeforeExploration": true
+  },
+  "coverage": {
+    "entryUrl": "http://127.0.0.1:18435/",
+    "routesRequested": [
+      "http://127.0.0.1:18435/materialy/",
+      "http://127.0.0.1:18435/__preview-unavailable"
+    ],
+    "routesChecked": [
+      "http://127.0.0.1:18435/",
+      "http://127.0.0.1:18435/materialy/",
+      "http://127.0.0.1:18435/__preview-unavailable"
+    ],
+    "checks": [
+      {
+        "area": "first-impression",
+        "result": "checked",
+        "evidence": "Przed eksploracją obejrzano zrzut i drzewo dostępności przy 1366 × 900. Nagłówek wyjaśnia powrót do pracy, opis łączy pracę, opiekę i dojazdy, a formularz wskazuje początek działania.",
+        "limitations": "Ocena jednej pierwszej wizyty."
+      },
+      {
+        "area": "navigation",
+        "result": "checked",
+        "evidence": "Z menu otwarto katalog; z analizy wrócono do formularza i przejściem „Przejdź do uzgodnień” otwarto kolejny etap. Nagłówki i oznaczenie etapu pomagają w orientacji. Materiały otwarto bezpośrednio. Ekran niedostępności zawiera odnośnik do materiałów.",
+        "limitations": "W sprawdzonej nawigacji aplikacji nie znaleziono odnośnika do materiałów. Nie ustalono, czy mają być dostępne z głównego interfejsu. Pod trzecim adresem oceniono tylko komunikat niedostępności."
+      },
+      {
+        "area": "language",
+        "result": "checked",
+        "evidence": "Cel, kolejne kroki i wymóg uzgodnienia zmian są opisane konkretnie. Ekran uzgodnień wyjaśnia, że aplikacja nie wysyła wiadomości, a pobranie pliku nie potwierdza zgody.",
+        "limitations": "Nie oceniano treści pobieranych dokumentów."
+      },
+      {
+        "area": "cognitive-load",
+        "result": "checked",
+        "evidence": "Formularz dzieli dane na zakładki. Przykład „45 minut do zmiany” zwrócił dwa warianty z porównywalnymi miarami i grafikiem przed zmianą oraz po zmianie. Dodatkowe informacje umieszczono w rozwijanych sekcjach.",
+        "limitations": "Nie przetestowano złożonego przykładu z dwiema placówkami ani wszystkich pól."
+      },
+      {
+        "area": "forms-and-feedback",
+        "result": "checked",
+        "evidence": "Sprawdzono pusty plan, brak wyników wyszukiwania, ładowanie, poprawną analizę przykładu oraz błędną datę „abc”. Błąd zachowuje dane, podaje wymagany format i umożliwia przejście do pola. Po usunięciu błędnej daty klawiaturą analiza zakończyła się powodzeniem.",
+        "limitations": "Nie sprawdzono zapisu, usuwania, importu, eksportu, odpowiedzi na uzgodnienia ani zakończenia próby."
+      },
+      {
+        "area": "keyboard-and-focus",
+        "result": "checked",
+        "evidence": "Użyto Tab, Shift+Tab, Enter i Escape. Pierwszy Tab ujawnia widoczny odnośnik „Przejdź do treści”. Escape zamyka menu mobilne i oddaje fokus przyciskowi otwierającemu. Enter na odnośniku błędu przenosi fokus do właściwego pola. Odnośnik do demo na stronie materiałów otrzymuje obrys 3 px.",
+        "limitations": "Sprawdzono wybrane sekwencje, nie wszystkie kontrolki i pełną pętlę fokusu dialogu."
+      },
+      {
+        "area": "semantics-and-names",
+        "result": "checked",
+        "evidence": "Drzewo dostępności zawiera nagłówki, nazwane formularze, zakładki i dialog menu. Błędne pole dat ma aria-invalid oraz powiązanie z opisem błędu. Dokumenty aplikacji i materiałów deklarują język polski. Film ma ścieżkę captions oznaczoną „Polskie napisy”.",
+        "limitations": "Inspekcja drzewa dostępności i semantyki DOM, bez testu czytnikiem ekranu. Nie oceniono zgodności napisów z filmem."
+      },
+      {
+        "area": "contrast",
+        "result": "checked",
+        "evidence": "Obliczenia na podstawie kolorów stylów obliczonych: „Bez zapisu” 4,65:1, kolorowy fragment nagłówka 4,95:1, podpowiedzi formularza 6,58:1, tekst materiałów 10,75:1, biały tekst przycisku demo 10,24:1.",
+        "limitations": "Pomiar próbek tekstu, nie wszystkich stanów, obramowań i elementów graficznych."
+      },
+      {
+        "area": "zoom-and-mobile",
+        "result": "checked",
+        "evidence": "Przy emulowanych 390 × 844 strona wejściowa i materiały miały szerokość dokumentu 390 px, bez poziomego przepełnienia. Obejrzano układ i menu mobilne. Ekran uzgodnień przy 683 × 450 zachował szerokość dokumentu 683 px.",
+        "limitations": "Skróty zoomu nie zmieniły skali. Widok 683 × 450 symuluje tylko przestrzeń układu odpowiadającą połowie wymiarów początkowych, nie rzeczywiste powiększenie tekstu lub zoom 200%."
+      },
+      {
+        "area": "status-announcements",
+        "result": "checked",
+        "evidence": "Liczba wyników katalogu zmieniła się z 2 na 0 w regionie status. Ładowanie i zakończenie analizy mają regiony polite. Podsumowanie błędnej daty ma role alert, tryb assertive i otrzymuje fokus.",
+        "limitations": "Potwierdzono strukturę i aktualizację komunikatów, bez odsłuchu czytnika ekranu."
+      }
+    ],
+    "limitations": [
+      "Adres /__preview-unavailable pokazał „Demo chwilowo nie odpowiada”; nie stanowi to dowodu sprawdzenia ekranu aplikacji znajdującego się za niedostępnym podglądem.",
+      "Nie pobierano dokumentów ani nie otwierano zewnętrznych źródeł.",
+      "Nie sprawdzono całej ścieżki od zapisu planu do wyniku próby.",
+      "Badanie próbkowe nie potwierdza pełnej zgodności z WCAG."
+    ]
+  },
+  "findings": [
+    {
+      "id": "UX-01",
+      "priority": "low",
+      "confidence": "high",
+      "area": "forms-and-feedback",
+      "location": {
+        "url": "http://127.0.0.1:18435/",
+        "target": "Twoje możliwości: komunikat po sprawdzeniu pustego planu"
+      },
+      "evidence": "Po sprawdzeniu planu bez zajęć pojawia się „Analiza gotowa. Porównaj warianty i wybierz kolejny krok.” Jednocześnie ekran informuje „Uzupełnij dane przed rozstrzygnięciem” oraz „Brak aktywności w sprawdzanym okresie” i nie przedstawia wariantów.",
+      "reproduction": [
+        "Otwórz stronę z początkowym planem bez ofert i zajęć.",
+        "Wybierz „Sprawdź mój plan”.",
+        "Porównaj komunikat zakończenia z informacją o brakujących danych."
+      ],
+      "impact": "Użytkownik otrzymuje sprzeczne wskazówki i może szukać wariantów, których nie da się jeszcze porównać. Ten sam komunikat trafia do regionu statusu.",
+      "recommendation": "Dopasować komunikat końcowy do wyniku analizy. Przy brakujących danych wskazać konieczność ich uzupełnienia, zachowując obecne przejścia do formularza.",
+      "acceptanceCriteria": [
+        "Dla planu bez aktywności widoczny komunikat i region statusu informują o potrzebie dodania zajęć.",
+        "Zachęta do porównania wariantów pojawia się wtedy, gdy warianty są dostępne.",
+        "Powrót do formularza zachowuje wpisane dane."
+      ]
+    }
+  ],
+  "overall": {
+    "understandable": true,
+    "summary": "Cel i podstawowa ścieżka są zrozumiałe. Mocne strony to konkretne wyniki, czytelna walidacja oraz sprawdzone mechanizmy fokusu i statusów. Potwierdzono drobną niespójność komunikatu po analizie pustego planu. Zakres pozostaje częściowy."
+  }
+}

@@ -37,11 +37,11 @@ Koszt jest liczony w groszach w okresie analizy. Cena przejazdu i prawo do ulgi 
 
 ## Działania wymagające rzeczywistego wdrożenia i udziału ludzi
 
-Końcowy niezależny audyt asystenta AI ma status `partial`. Potwierdzona i nadal otwarta wada dostępności: filtrowanie katalogu nie ogłasza liczby ani braku wyników w regionie `aria-live`/`status`. Widoczny komunikat pozostaje na stronie, ale czytnik ekranu może nie poinformować o zmianie bez przejścia do wyników. Nie deklarujemy zakończenia wszystkich napraw ani pełnego odbioru dostępności. Szczegółowe ustalenia i ich odrębna weryfikacja są opisane w [VALIDATION.md](VALIDATION.md).
+Niezależny audyt dostępności pozostaje częściowy. W późniejszym cyklu aktualizacji pitchu naprawiono potwierdzony brak ogłaszania liczby wyników katalogu oraz powiązanie błędu daty końca z polem. [Kontrola poprawek](evidence/ux-pitch-fixes-verification.json) dokumentuje rzeczywiste zmiany regionu statusu i atrybutów błędu. Oryginalne raporty zachowano; aktualny zakres i wynik cyklu opisuje [UX_PITCH_AUDIT.md](UX_PITCH_AUDIT.md). Nie deklarujemy pełnego odbioru dostępności ani testu czytnikiem ekranu.
 
 - Wykonanie wywiadów oraz porównania użyteczności według protokołu, z rzeczywistymi uczestniczkami i osobami układającymi grafik.
 - Uzgodnienie operatora danych, wsparcia, procedury incydentów, finansowania i zasad utrzymania katalogu.
 - Sprawdzenie szyfrowania woluminów hosta, kopii poza hostem i odtworzenia w środowisku docelowym. Szyfrowanie rekordów nie dowodzi konfiguracji całej infrastruktury.
-- Potwierdzenie platformy zgłoszenia, terminu, strefy czasu i kwalifikowalności prac. Literalne rozbieżności materiałów zachowano w pakiecie zgłoszeniowym.
+- Osobna finalizacja konkursowa, zgodnie z bieżącym terminem organizatora. Aktualne ustalenia i źródła opisuje matryca `docs/jury/REQUIREMENTS.md`; Save istniejącego wpisu nie jest taką finalizacją.
 
 Żaden z tych punktów nie jest zastępowany wygenerowanymi ankietami, fikcyjnymi opiniami lub danymi demonstracyjnymi. Dostarczone protokoły i narzędzia umożliwiają dalszą walidację; nie oznaczają jej wykonania.

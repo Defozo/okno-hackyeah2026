@@ -1,0 +1,119 @@
+{
+  "tested_at": "2026-10-03T21:55:01.210Z",
+  "base_url": "http://127.0.0.1:18435/",
+  "scope": "Targeted verification of an invalid end date after navigating to catalogue and returning to the plan.",
+  "fresh_browser_context": true,
+  "product_code_changed": false,
+  "snapshots": [
+    {
+      "stage": "initial-example",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-09",
+      "solve_enabled": true,
+      "aria_invalid": null,
+      "aria_describedby": null,
+      "field_errors": [],
+      "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-09",
+      "summary": [],
+      "focus": {
+        "id": "",
+        "role": null,
+        "text": "Sprawdź, co zmienić,by wrócić do pracy."
+      }
+    },
+    {
+      "stage": "invalid-date-before-navigation",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-01",
+      "solve_enabled": false,
+      "aria_invalid": "true",
+      "aria_describedby": "editor-end_date-error",
+      "field_errors": [
+        "Koniec okresu musi przypadać po początku"
+      ],
+      "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-01",
+      "summary": [],
+      "focus": {
+        "id": "editor-minimum_paid_minutes",
+        "role": null,
+        "text": ""
+      }
+    },
+    {
+      "stage": "invalid-date-after-return",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-01",
+      "solve_enabled": true,
+      "aria_invalid": null,
+      "aria_describedby": null,
+      "field_errors": [],
+      "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-01",
+      "summary": [],
+      "focus": {
+        "id": "",
+        "role": null,
+        "text": "Sprawdź, co zmienić,by wrócić do pracy."
+      }
+    },
+    {
+      "stage": "after-normal-analysis-click",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-01",
+      "solve_enabled": true,
+      "aria_invalid": "true",
+      "aria_describedby": "editor-end_date-error",
+      "field_errors": [
+        "Koniec okresu nie może przypadać przed początkiem."
+      ],
+      "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-01",
+      "summary": [
+        "Sprawdź dane przed analiząWpisane dane pozostają w formularzu. Sprawdź wskazane wartości. Przyciski prowadzą do odpowiednich pól.Twój plan: Sprawdzam do. Koniec okresu nie może przypadać przed początkiem."
+      ],
+      "focus": {
+        "id": "editor-validation-summary",
+        "role": "alert",
+        "text": "Sprawdź dane przed analiząWpisane dane pozostają w formularzu. Sprawdź wskazane wartości. Przyciski prowadzą do odpowiednich pól.Twój plan: Sprawdzam do. Koniec okresu nie może przypadać przed początkiem."
+      }
+    }
+  ],
+  "solve_requests": [],
+  "solve_responses": [],
+  "page_errors": [],
+  "status": "passed",
+  "limitations": [
+    "Chromium interaction and DOM/accessibility inspection; no human screen-reader test."
+  ],
+  "frontend_assets": [
+    "http://127.0.0.1:18435/assets/index-Bjlm9mNB.js"
+  ],
+  "click_attempted": true,
+  "after_click": {
+    "stage": "after-normal-analysis-click",
+    "start_date": "2026-10-05",
+    "end_date": "2026-10-01",
+    "solve_enabled": true,
+    "aria_invalid": "true",
+    "aria_describedby": "editor-end_date-error",
+    "field_errors": [
+      "Koniec okresu nie może przypadać przed początkiem."
+    ],
+    "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-01",
+    "summary": [
+      "Sprawdź dane przed analiząWpisane dane pozostają w formularzu. Sprawdź wskazane wartości. Przyciski prowadzą do odpowiednich pól.Twój plan: Sprawdzam do. Koniec okresu nie może przypadać przed początkiem."
+    ],
+    "focus": {
+      "id": "editor-validation-summary",
+      "role": "alert",
+      "text": "Sprawdź dane przed analiząWpisane dane pozostają w formularzu. Sprawdź wskazane wartości. Przyciski prowadzą do odpowiednich pól.Twój plan: Sprawdzam do. Koniec okresu nie może przypadać przed początkiem."
+    }
+  },
+  "validation_accessibility_snapshot": "- alert \"Sprawdź dane przed analizą\":\n  - heading \"Sprawdź dane przed analizą\" [level=2]\n  - paragraph: Wpisane dane pozostają w formularzu. Sprawdź wskazane wartości. Przyciski prowadzą do odpowiednich pól.\n  - list:\n    - listitem:\n      - 'button \"Twój plan: Sprawdzam do. Koniec okresu nie może przypadać przed początkiem.\"'",
+  "checks": {
+    "invalid_date_retained": true,
+    "no_invalid_api_request": true,
+    "no_page_errors": true,
+    "click_blocked_with_validation": true,
+    "focus_moved_to_validation_summary": true
+  },
+  "finished_at": "2026-10-03T21:55:04.484Z"
+}

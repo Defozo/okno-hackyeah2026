@@ -1,0 +1,144 @@
+{
+  "tested_at": "2026-10-03T22:20:39.719Z",
+  "timezone": "Europe/Warsaw",
+  "base_url": "https://okno-impacther-2026.defozo.chatgpt.site/",
+  "expected_bundle": "index-GtiVDxWa.js",
+  "status": "passed",
+  "script_path": ".runtime/ux-pitch-public-verification.cjs",
+  "script_sha256": "97d50189f41832615c5194d019494448b99b7caac8381fb64e418a78a72cee92",
+  "session": {
+    "fresh_nonpersistent_context": true,
+    "storage_state_loaded": false,
+    "cookies_at_start_count": 0
+  },
+  "cases": {
+    "empty_real_plan": {
+      "status": "passed",
+      "http_status": 200,
+      "response_status": "UNKNOWN",
+      "data_status": "needs_input",
+      "activity_count": 0,
+      "data_mode": "personal",
+      "gap_codes": [
+        "empty_period"
+      ],
+      "alternatives": 0,
+      "visible_message": "Dodaj ofertę pracy, kurs lub inne zajęcia w sprawdzanym okresie.",
+      "accessible_status": "Dodaj ofertę pracy, kurs lub inne zajęcia w sprawdzanym okresie.",
+      "entered_title": "Publiczna kontrola pustego planu",
+      "submitted_title": "Publiczna kontrola pustego planu",
+      "returned_title": "Publiczna kontrola pustego planu",
+      "title_retained": true
+    },
+    "catalog_live_status": {
+      "status": "passed",
+      "role": "status",
+      "aria_live": "polite",
+      "aria_atomic": "true",
+      "transitions": [
+        {
+          "count": 2,
+          "message": "Liczba wyników: 2.",
+          "same_status_node": true,
+          "search_focused": true
+        },
+        {
+          "count": 0,
+          "message": "Liczba wyników: 0.",
+          "same_status_node": true,
+          "search_focused": true
+        },
+        {
+          "count": 2,
+          "message": "Liczba wyników: 2.",
+          "same_status_node": true,
+          "search_focused": true
+        }
+      ]
+    },
+    "invalid_end_date": {
+      "status": "passed",
+      "example": "single-parent",
+      "start_date": "2026-10-05",
+      "entered_end_date": "2026-10-04",
+      "retained_end_date": "2026-10-04",
+      "aria_invalid": "true",
+      "aria_describedby": [
+        "editor-end_date-error"
+      ],
+      "inline_error": "Koniec okresu musi przypadać po początku",
+      "validation_trigger": "input change and blur",
+      "analysis_button_disabled": true,
+      "forced_click_performed": false,
+      "solve_requests_before": 1,
+      "solve_requests_after": 1,
+      "new_solve_requests": 0,
+      "observation_after_validation_ms": 1500
+    }
+  },
+  "api_requests": [
+    {
+      "method": "GET",
+      "path": "/api/session"
+    },
+    {
+      "method": "GET",
+      "path": "/api/examples"
+    },
+    {
+      "method": "GET",
+      "path": "/api/catalog"
+    },
+    {
+      "method": "POST",
+      "path": "/api/solve"
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [
+    "Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-VRMYVt/3ty24SNODtzRFiN8lTX7O6GPCFyCiLyxNaNY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked."
+  ],
+  "request_failures": [],
+  "mock_count": 0,
+  "plan_write_requests": 0,
+  "limitations": [
+    "Focused verification of three requested UI fixes in headless Chromium, desktop viewport 1440x1000 and Polish locale.",
+    "Real public API only. No request interception, mocked responses, plan saves, external messages, or UI changes.",
+    "DOM roles, ARIA attributes, stable status-node identity and focus were checked; no human screen-reader or usability session was conducted.",
+    "Absence of a solve request for the invalid end date was observed through validation completion and a further 1500 ms; this is not a long-duration network test.",
+    "No broad regression, accessibility audit, presentation rebuild or publication was performed."
+  ],
+  "prior_attempts": [
+    {
+      "tested_at": "2026-10-03T22:18:19.815Z",
+      "finished_at": "2026-10-03T22:18:23.770Z",
+      "status": "failed",
+      "reason": "Error: Analysis did not submit an empty real plan\n    at assert (<workspace>\\.runtime\\ux-pitch-public-verification.cjs:7:64)\n    at <workspace>\\.runtime\\ux-pitch-public-verification.cjs:65:5",
+      "real_solve_requests": 1,
+      "plan_write_requests": 0,
+      "explanation": "Harness assertion used real instead of the application schema value personal. No application change."
+    },
+    {
+      "tested_at": "2026-10-03T22:19:17.189Z",
+      "finished_at": "2026-10-03T22:19:42.168Z",
+      "status": "failed",
+      "reason": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Sprawdź mój plan', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled class=\"button   \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    39 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at <workspace>\\.runtime\\ux-pitch-public-verification.cjs:113:79",
+      "real_solve_requests": 1,
+      "plan_write_requests": 0,
+      "explanation": "Harness tried clicking an analysis action already disabled by invalid date validation. The corrected check observes ARIA and disabled state without forcing the action. No application change."
+    }
+  ],
+  "browser_version": "145.0.7632.6",
+  "navigation_http_status": 200,
+  "frontend_assets": {
+    "scripts": [
+      "https://okno-impacther-2026.defozo.chatgpt.site/assets/index-GtiVDxWa.js"
+    ],
+    "stylesheets": [
+      "https://okno-impacther-2026.defozo.chatgpt.site/assets/index-3KQfrRp2.css"
+    ]
+  },
+  "console_observation": "The browser reported a blocked inline script under CSP. All three requested behaviors passed. The cause and policy were not changed or audited in this focused check.",
+  "finished_at": "2026-10-03T22:20:47.448Z",
+  "real_solve_requests": 1
+}

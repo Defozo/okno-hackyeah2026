@@ -3,8 +3,10 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || '../.venv/Lib/site
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const evidence = path.join(root, 'docs', 'evidence');
+const evidence = path.resolve(root, process.env.OKNO_UX_EVIDENCE_DIR || 'docs/evidence');
+const reportPath = process.env.OKNO_UX_REPORT_PATH ? path.resolve(root, process.env.OKNO_UX_REPORT_PATH) : path.join(evidence, 'ux-regression.json');
 fs.mkdirSync(evidence, { recursive: true });
+fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 
 (async () => {
   const report = {
@@ -68,8 +70,14 @@ fs.mkdirSync(evidence, { recursive: true });
     const response = await pending;
     assert(response.ok(), 'Analysis returned HTTP ' + response.status());
     const result = await response.json();
-    await page.getByRole('heading', { name: 'Przyjrzyjmy się Twoim możliwościom', exact: true }).waitFor({ timeout: 45000 });
-    return { result, input: response.request().postDataJSON(), http_status: response.status() };
+    await page.getByRole('heading', { name: 'Konflikt i możliwe zmiany', exact: true }).waitFor({ timeout: 45000 });
+    await page.locator('.busy-indicator').waitFor({ state: 'hidden' });
+    const announcement = await page.locator('.sr-only[role="status"]').innerText();
+    const visibleMessage = await page.locator('.message-bar > span').innerText();
+    assert(announcement.trim().length > 0 && announcement === visibleMessage, 'Analysis lacks a consistent visible and accessible status message');
+    if (result.alternatives?.length) assert(/porównaj warianty/i.test(announcement), 'Available alternatives are not announced as ready for comparison');
+    else assert(!/porówn/i.test(announcement), 'Analysis invites comparison despite having no alternatives');
+    return { result, input: response.request().postDataJSON(), http_status: response.status(), announcement, visible_message: visibleMessage };
   };
   const edit = () => page.getByRole('button', { name: 'Zmień dane', exact: true }).click();
   try {
@@ -157,6 +165,8 @@ fs.mkdirSync(evidence, { recursive: true });
     await cdp.detach();
     console.log('Mobile 390: closed AX and Tab exclusion, keyboard opening and Escape focus verified');
 
+    const emptyTitle = 'Pusty plan: kontrola komunikatu';
+    await page.getByLabel('Nazwa Twojego planu', { exact: true }).fill(emptyTitle);
     const empty = await solveResponse();
     assert(empty.result.status === 'UNKNOWN' && empty.result.data_status === 'needs_input', 'Empty real plan did not return UNKNOWN/needs_input');
     assert(empty.result.data_gaps.some(gap => gap.code === 'empty_period'), 'Empty real plan lacks the empty_period explanation');
@@ -165,11 +175,16 @@ fs.mkdirSync(evidence, { recursive: true });
     const emptyText = await page.locator('.results').innerText();
     assert(!/limit analizy|upłynął limit|przekroczono.*limit/i.test(emptyText), 'Empty plan is incorrectly explained as an analysis limit');
     assert(!emptyText.includes('Obliczenia bez rozstrzygnięcia'), 'Empty plan shows redundant undecided-calculation badge');
-    report.real_api.push({ case: 'empty-plan', http_status: empty.http_status, status: empty.result.status, data_status: empty.result.data_status, gaps: empty.result.data_gaps, retry_present: false, limit_claim_present: false });
+    assert(/dodaj.*(?:ofert|zaję)/i.test(empty.announcement), 'Empty plan status does not ask for an activity');
+    assert(empty.input.title === emptyTitle, 'Empty plan analysis lost the user-entered title');
+    report.real_api.push({ case: 'empty-plan', http_status: empty.http_status, status: empty.result.status, data_status: empty.result.data_status, gaps: empty.result.data_gaps, retry_present: false, limit_claim_present: false, announcement: empty.announcement, visible_message: empty.visible_message, submitted_title: empty.input.title });
     await screenshot('empty-needs-input');
     await scan('empty-needs-input');
 
     await edit();
+    const emptyReturnedTitle = await page.getByLabel('Nazwa Twojego planu', { exact: true }).inputValue();
+    assert(emptyReturnedTitle === emptyTitle, 'Returning from an empty-plan result lost the user-entered title');
+    report.real_api.find(item => item.case === 'empty-plan').retained_title_after_return = emptyReturnedTitle;
     await page.setViewportSize({ width: 1440, height: 1000 });
     const examplesResponse = await page.evaluate(async () => {
       const response = await fetch('/api/examples', { credentials: 'same-origin' });
@@ -232,7 +247,7 @@ fs.mkdirSync(evidence, { recursive: true });
       displayed_care: translatedInput.care_resources[0].location, displayed_dependent: translatedInput.care_needs[0].dependent_id,
       origins, destinations, semantic_result_identical: true, original_status: originalResult.status, translated_status: translatedExample.result.status,
       alternatives: translatedExample.result.alternatives.map(item => ({ id: item.id, metrics: item.metrics, events: item.schedule.length, validation: item.validation.valid })) };
-    report.real_api.push({ case: 'polish-example', http_status: translatedExample.http_status, status: translatedExample.result.status, data_status: translatedExample.result.data_status, alternatives: translatedExample.result.alternatives.length, all_validated: true },
+    report.real_api.push({ case: 'polish-example', http_status: translatedExample.http_status, status: translatedExample.result.status, data_status: translatedExample.result.data_status, alternatives: translatedExample.result.alternatives.length, all_validated: true, announcement: translatedExample.announcement, visible_message: translatedExample.visible_message },
       { case: 'original-example-reference', request_method: 'Browser fetch with current test-session CSRF, without changing UI state', http_status: originalResponse.status, status: originalResult.status, equivalent_to_polish_example: true });
     report.direct_api_analyses = 1;
     await screenshot('polish-example-result');
@@ -322,7 +337,7 @@ fs.mkdirSync(evidence, { recursive: true });
     assert(corrected.input.minimum_paid_minutes === 0 && corrected.input.budget_grosze === null, 'Numeric correction changed zero required time or the unknown-budget semantics');
     for (const day of ['2026-10-05', '2026-10-06']) assert(corrected.result.alternatives[0].schedule.some(event => event.kind === 'work' && event.start.startsWith(day + 'T09:00')), 'Corrected real schedule is missing the dated work shift: ' + day);
     await page.locator('.alternative').first().waitFor();
-    report.real_api.push({ case: 'corrected-offer', http_status: corrected.http_status, status: corrected.result.status, data_status: corrected.result.data_status, alternatives: corrected.result.alternatives.length, all_validated: true, retained_title: corrected.input.title, retained_offer: corrected.input.activities[0].label, dates: corrected.input.activities[0].dates, start: corrected.input.activities[0].start });
+    report.real_api.push({ case: 'corrected-offer', http_status: corrected.http_status, status: corrected.result.status, data_status: corrected.result.data_status, alternatives: corrected.result.alternatives.length, all_validated: true, retained_title: corrected.input.title, retained_offer: corrected.input.activities[0].label, dates: corrected.input.activities[0].dates, start: corrected.input.activities[0].start, announcement: corrected.announcement, visible_message: corrected.visible_message });
     report.date_validation.corrected_without_data_loss = true;
     report.date_validation.character_by_character_date_list = '2026-10-05, 2026-10-06';
     await screenshot('corrected-result');
@@ -361,7 +376,9 @@ fs.mkdirSync(evidence, { recursive: true });
       if (fixture.noLimit) assert(!/limit analizy|limit całej analizy|przekroczyła wspólny limit/i.test(text), 'False timeout claim in ' + fixture.name);
       if (fixture.name === 'unknown-neutral' || fixture.name === 'model-invalid') assert(!text.includes('Nie znaleźliśmy wykonalnego wariantu'), 'Indecision or model error became an impossibility claim');
       if (['needs-input', 'stale'].includes(fixture.name)) assert(await page.getByRole('button', { name: 'Uzupełnij plan', exact: true }).count() === 1, 'Missing data does not offer correction');
-      report.mocked_responses.push({ case: fixture.name, source_shape: fixture.source, status: response.result.status, data_status: response.result.data_status, heading: fixture.heading, retry_present: Boolean(retryCount), displayed_text: text });
+      const expectedAnnouncement = fixture.name === 'needs-input' ? /uzupełnij dane/i : fixture.name === 'stale' ? /zaktualizuj dane/i : fixture.name === 'infeasible' ? /nie znaleziono.*wykonalnego wariantu/i : fixture.name === 'model-invalid' ? /nie udało się potwierdzić/i : /bez rozstrzygnięcia/i;
+      assert(expectedAnnouncement.test(response.announcement), 'Status message does not explain the next step or result for ' + fixture.name);
+      report.mocked_responses.push({ case: fixture.name, source_shape: fixture.source, response_source: 'Mocked /api/solve response', status: response.result.status, data_status: response.result.data_status, heading: fixture.heading, retry_present: Boolean(retryCount), displayed_text: text, announcement: response.announcement, visible_message: response.visible_message });
       if (['unknown-neutral', 'unknown-limit-warning', 'infeasible'].includes(fixture.name)) await screenshot(fixture.name);
     }
     console.log('All seven explicitly mocked status rendering cases passed');
@@ -448,7 +465,7 @@ fs.mkdirSync(evidence, { recursive: true });
   } finally {
     report.finished_at = new Date().toISOString();
     report.real_solve_requests = realSolveRequests;
-    fs.writeFileSync(path.join(evidence, 'ux-regression.json'), JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(JSON.stringify({ status: report.status, real_api: report.real_api.map(item => item.case), mocks: report.mocked_responses.map(item => item.case), error: report.error }));
     await browser.close();
   }

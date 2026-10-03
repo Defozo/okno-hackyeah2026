@@ -65,7 +65,7 @@ Druga runda regresji potwierdziła także nazwę pola, minimum i powiązanie bł
 
 Osobny asystent AI przeprowadził [początkowy audyt](evidence/ux-audit-initial.json) w izolowanej przeglądarce, na danych syntetycznych. Zgłosił trzy problemy: dostępność zamkniętego menu mobilnego, techniczny angielski błąd daty oraz utożsamianie braków danych z limitem analizy. [Plan korekt](evidence/ux-correction-plan.md) zachowuje pochodzenie tych ustaleń. W trakcie regresji dodatkowo wykryto i poprawiono wpisywanie separatora dat, kontrast nieaktywnych dni oraz widoczność błędów w dialogach zapisu i odpowiedzi. Te dodatkowe ustalenia pochodzą z testów wdrożenia, nie z raportu niezależnego audytora. [Drugi audyt](evidence/ux-audit-intermediate.json), ze statusem `partial`, potwierdził poprawę menu i pustego planu oraz wskazał ogólny komunikat wartości -1 i angielskie etykiety przykładu. Druga runda korekt usunęła te problemy bez zmiany reguł serwera ani obliczeń.
 
-[Końcowy świeży audyt AI](evidence/ux-audit-final.json), po dwóch rundach korekt, nadal ma status **`partial`** i dwa zgłoszenia. Zachowano pełny oryginalny raport. [Oddzielna reprodukcja](evidence/ux-final-findings.json) nie zmienia jego treści ani oceny audytora:
+[Historyczny końcowy audyt implementacji](evidence/ux-audit-final.json), po dwóch rundach korekt tego cyklu, ma status **`partial`** i dwa zgłoszenia. Poniższa tabela zachowuje ówczesny stan. Aktualizację po późniejszej zmianie tekstów produktu opisuje kolejna sekcja. Oryginalne raporty pozostają bez zmian.
 
 | Zgłoszenie końcowego audytu | Oddzielnie zaobserwowany wynik i status |
 | --- | --- |
@@ -77,6 +77,16 @@ Oddzielna kontrola dat stwierdziła również brak jawnych `aria-invalid` i `ari
 Zgodnie z ustalonym limitem wykonano dwie rundy korekt i po końcowym audycie nie prowadzono trzeciej. Cykl audytu zamknięto ze statusem `partial`. Pozostałe uwagi są jawne, a pełny odbiór dostępności i zakończenie wszystkich napraw **nie zostały osiągnięte**. Końcowy audyt nie obejmował wszystkich formularzy, trwałego zapisu, importu, eksportu ani rzeczywistego powiększenia 200%; te przepływy mają odrębne dowody automatyczne. Audytorem był asystent AI, nie uczestniczka badania użyteczności.
 
 Klawiatura, poprawne etykiety pól, przywracanie fokusu dialogów, komunikaty statusu i reflow są elementami implementacji. Automatyczne axe nie zastępuje niezależnego testu czytnikiem ekranu, rzeczywistym telefonem i użytkowniczkami. Nie deklarujemy pełnej certyfikacji WCAG ani samodzielnego ukończenia przez planowane 10 z 12 osób.
+
+## Późniejszy audyt aktualizacji pitchu
+
+Nowe zlecenie zmieniło teksty sześciu ekranów i stronę materiałów. Jego odrębny cykl audytu oraz plan poprawek opisuje [UX_PITCH_AUDIT.md](UX_PITCH_AUDIT.md). W pierwszej rundzie poprawiono trwały komunikat liczby wyników katalogu i semantykę błędu daty końca. [Kontrola poprawek](evidence/ux-pitch-fixes-verification.json) potwierdza aktualizacje tego samego regionu `status` przy wynikach 2 → 0 → 2, zachowanie fokusu i prawidłowe `aria-invalid` oraz `aria-describedby` w dwóch metodach edycji daty. Oba historyczne braki semantyczne są tym samym naprawione w sprawdzonej wersji `index-Bjlm9mNB.js`.
+
+Ponowna [kontrola wartości dat](evidence/ux-pitch-date-confirmation.json) nie odtworzyła analizy starego okresu. Błędny zakres był blokowany, a poprawiona data trafiała do API. To wynik konkretnych metod reprodukcji, nie wyjaśnienie każdej wcześniejszej interakcji audytora. Cała ścieżka przeglądarkowa po zmianach przeszła dziewięć grup kontroli, osiem skanów axe i kontrolę układu 320/360 px oraz CSS 200%. Nie wykonywano odsłuchu czytnikiem ekranu. Końcowy zakres niezależnego audytu i stan publikacji zawiera dokument cyklu.
+
+[Kontrola ponownego otwarcia formularza](evidence/ux-pitch-date-reopen.json) zamyka wcześniejszą lukę testową: po powrocie lokalny błąd nie jest jeszcze widoczny, lecz kliknięcie analizy uruchamia walidację, przenosi fokus do podsumowania błędów i przywraca semantykę pola. Nie wysyła żadnego żądania `/api/solve` z nieprawidłowym okresem. Raport zachowuje także przejściowy stan aktywnego przycisku przed kliknięciem.
+
+Druga, ostatnia runda aktualizacji pitchu dopasowała komunikat analizy do rzeczywistego wyniku. [Regresja statusów](evidence/ux-pitch-status-verification.json) potwierdza pusty plan, zachowanie nazwy po powrocie i przykład z wariantami. [Końcowy niezależny przegląd](evidence/ux-pitch-audit-final.json) zgłosił zero usterek przy częściowym pokryciu. Po publikacji bundla `index-GtiVDxWa.js` ponownie przeszło osiem publicznych przepływów i siedem skanów axe. Aktualna data znajduje się w [raporcie publicznym](evidence/public-demo.json); wcześniejsze datowane wyniki pozostają historyczne.
 
 ## Wydajność i limity
 

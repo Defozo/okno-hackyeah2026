@@ -20,7 +20,7 @@ Treść odpowiada pięciu kryteriom ImpactHER. [Matryca kryteriów](jury/REQUIRE
 
 ## Kontrola materiałów
 
-Wyniki kontroli są przypisane do konkretnych plików i dat: [prezentacja](presentation-build.json), [film](../output/video/video-validation.json), [rzeczywiste audio](evidence/audio-verification.json), [anonimowe pobrania](evidence/public-materials.json), [odtwarzanie publicznego filmu](evidence/public-materials-browser.json) i [przepływ publicznego demo](evidence/public-demo.json). Rozmiary i SHA-256 zawiera [manifest](materials-manifest.json).
+Wyniki kontroli są przypisane do konkretnych plików i dat: [prezentacja](presentation-build.json), [film](../output/video/video-validation.json), [rzeczywiste audio](evidence/audio-verification.json), [anonimowe pobrania](evidence/public-materials.json), [odtwarzanie publicznego filmu](evidence/public-materials-browser.json) i [przepływ publicznego demo](evidence/public-demo.json). [Audyt aktualizacji interfejsu](UX_PITCH_AUDIT.md) dokumentuje dwie rundy poprawek oraz zakres niezależnego przeglądu. Rozmiary i SHA-256 zawiera [manifest](materials-manifest.json).
 
 Zapis istniejącego formularza dokumentuje `HACKTRIBE_UPDATE_RESULT.json`. Zgłoszenie pozostaje na etapie New Idea, bez osobnej finalizacji.
 

@@ -2,7 +2,7 @@
 
 Docelowy adres: **https://okno-impacther-2026.defozo.chatgpt.site/**. Zespół: **DEFOZO SOFTWARE HOUSE**, Michał Kiełtyka. Strona materiałów: **https://okno-impacther-2026.defozo.chatgpt.site/materialy/**.
 
-Publiczny odbiór zakończył się powodzeniem 3 października 2026 o 21:27:06 UTC. [Raport](evidence/public-demo.json) potwierdza świeżą sesję bez konta, zwykły DNS, walidowane HTTPS, 8 grup przepływów i 7 skanów axe bez naruszeń. Pobieranie karty PDF i ICS, zapis, decyzja, próba, izolacja sesji, kopia oraz usunięcie działały przez publiczny adres. Bieżące materiały i daty kontroli są w [MATERIALS.md](MATERIALS.md).
+Publiczny odbiór zakończył się powodzeniem 2026-10-03T22:14:28.559Z (UTC). [Raport](evidence/public-demo.json) potwierdza świeżą sesję bez konta, zwykły DNS, walidowane HTTPS, 8 grup przepływów i 7 skanów axe bez naruszeń. Pobieranie karty PDF i ICS, zapis, decyzja, próba, izolacja sesji, kopia oraz usunięcie działały przez publiczny adres. Bieżące materiały i daty kontroli są w [MATERIALS.md](MATERIALS.md).
 
 W raporcie jest jedno osobne ostrzeżenie platformy: restrykcyjne CSP aplikacji blokuje detekcję JavaScript wstrzykniętą przez Cloudflare. Nie osłabiono CSP. Nie wystąpiły błędy aplikacji ani inne błędy konsoli.
 
@@ -29,12 +29,12 @@ Kontener `connector` odczytuje bieżący adres tunelu z jego lokalnego interfejs
 
 ## Uruchomienie istniejącej konfiguracji
 
-W pełnym katalogu projektu potrzebne są działające Docker i psst, zweryfikowany obraz aplikacji oraz lokalny profil OTP z pobranym grafem. Skrypt publiczny używa obrazu aplikacji `okno-app:competition-20261003` i przypiętego digestu ngrok. Opcja `-Build` buduje obraz aplikacji z bieżących źródeł. Skrypt nie buduje grafu ani nie zakłada kont usług.
+W pełnym katalogu projektu potrzebne są działające Docker i psst, zweryfikowany obraz aplikacji oraz lokalny profil OTP z pobranym grafem. Skrypt publiczny wskazuje konkretny obraz aplikacji i przypięty digest ngrok. Nie buduje grafu ani nie zakłada kont usług.
 
 ```powershell
 ./scripts/start.ps1 -Transit
 ./scripts/init-public-secrets.ps1
-./scripts/start-public.ps1 -Build
+./scripts/start-public.ps1
 ```
 
 `init-public-secrets.ps1` tworzy tylko brakujące sekrety w psst. Istniejący token ngrok pobiera z lokalnej konfiguracji narzędzia. Nie nadpisuje wcześniej zapisanych sekretów. `start-public.ps1` tworzy wydzieloną sieć dostępu do OTP, wskazuje obraz i uruchamia `compose.public.yaml` z sekretami wstrzykniętymi do procesu. Nie drukuj rozwiniętej konfiguracji kontenerów ani zmiennych środowiska, ponieważ mogą zawierać sekrety.
@@ -52,6 +52,6 @@ Sam kod 200 z serwera nie zastępuje sprawdzenia nowej sesji przeglądarki. Po z
 
 Stały adres nie oznacza hostowania obliczeń w niezależnym centrum danych. Interaktywne demo zależy od włączonego komputera, Dockera, działającego łącza, tunelu ngrok, bazy i OTP. Uśpienie lub restart komputera może przerwać analizę. Udostępnione materiały pozostają osobną ścieżką zapoznania się z produktem.
 
-Rozkłady i graf mają ograniczony okres ważności. Nie gwarantują punktualności ani dostępności opieki. Publiczny adres nie zmienia statusu walidacji: audyt UX jest częściowy, brakuje ogłaszania wyników katalogu, a rozbieżność dotycząca edycji dat pozostaje niewyjaśniona. Nie wykonano zewnętrznych badań użyteczności, wywiadów ani rzeczywistych prób zatrudnienia.
+Rozkłady i graf mają ograniczony okres ważności. Nie gwarantują punktualności ani dostępności opieki. Publiczny adres nie zmienia statusu walidacji: końcowy [audyt aktualizacji pitchu](UX_PITCH_AUDIT.md) jest częściowy i nie zgłosił nowych usterek. Komunikaty katalogu, semantykę błędu daty i status pustego planu poprawiono. Odrębne próby edycji dat oraz powrotu do formularza blokowały analizę błędnego zakresu. Nie wykonano zewnętrznych badań użyteczności, wywiadów ani rzeczywistych prób zatrudnienia.
 
 Konfiguracja i materiały są przygotowane do demonstracji. Nie stanowią potwierdzenia operatora pilotażu, jego finansowania ani odbioru przetwarzania rzeczywistych danych. Udostępnienie nie wysyła ostatecznego zgłoszenia konkursowego.

@@ -1,5 +1,5 @@
 {
-  "tested_at": "2026-10-03T21:26:30.792Z",
+  "tested_at": "2026-10-03T22:13:47.423Z",
   "base_url": "https://okno-impacther-2026.defozo.chatgpt.site",
   "flows": [
     "Synthetic demo: conflict45, two calculated alternatives",
@@ -65,7 +65,7 @@
   "platform_warnings": [
     {
       "source": "Cloudflare injected JavaScript detection, blocked by application CSP",
-      "message": "Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-iEWHUqXSMw8uo2iCt+1X/Q/1smPOi6xMEZ1RqRBjI0M='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked."
+      "message": "Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-AGWJkXH7S9Kq4ygcR1BKIuny7hlgoFJP2vbQmV7LWsA='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked."
     }
   ],
   "fresh_session_test": true,
@@ -78,12 +78,12 @@
   "initial_cookie_count": 0,
   "api_calls": [
     {
-      "path": "/api/session",
+      "path": "/api/examples",
       "method": "GET",
       "status": 200
     },
     {
-      "path": "/api/examples",
+      "path": "/api/session",
       "method": "GET",
       "status": 200
     },
@@ -210,5 +210,5 @@
   },
   "verified": true,
   "key_flow_test": true,
-  "completed_at": "2026-10-03T21:27:06.324Z"
+  "completed_at": "2026-10-03T22:14:28.559Z"
 }

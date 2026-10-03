@@ -162,7 +162,7 @@ fs.mkdirSync(evidence, { recursive: true });
           empty_container_semantics: await empty.locator('..').evaluate(el => ({ role: el.getAttribute('role'), aria_live: el.getAttribute('aria-live'),
             enclosing_live_region: !!el.closest('[role="status"], [role="alert"], [aria-live="polite"], [aria-live="assertive"]') })),
           live_regions: await page.locator('[role="status"], [role="alert"], [aria-live]').evaluateAll(elements => elements.map(el => ({ role: el.getAttribute('role'), aria_live: el.getAttribute('aria-live'), text: el.textContent?.trim() }))) };
-        report.catalogue.result_change_live_announcement_found = report.catalogue.live_regions.some(region => /Nie ma pasujących źródeł|0.*wynik|brak.*wynik/i.test(region.text || ''));
+        report.catalogue.result_change_live_announcement_found = report.catalogue.live_regions.some(region => /Nie ma pasujących źródeł|liczba wyników:\s*0\b|0.*wynik|brak.*wynik/i.test(region.text || ''));
         await page.screenshot({ path: path.join(evidence, 'ux-final-catalogue-no-results.png'), fullPage: true, animations: 'disabled' });
       }
     } catch (error) {

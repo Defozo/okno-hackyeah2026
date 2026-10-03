@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "status": "partial",
+  "reason": "Przeprowadzono ocenę działającej aplikacji i strony materiałów. Trzeci adres pokazał komunikat niedostępności. Testy dostępności i stanów formularzy były próbkowe; nie potwierdzono powiększenia 200%.",
+  "firstImpression": {
+    "purpose": "Pomoc w pogodzeniu pracy, opieki i dojazdów przy powrocie do pracy.",
+    "audience": "Osoby wracające do pracy, które muszą uzgodnić grafik z obowiązkami opiekuńczymi.",
+    "firstAction": "Wpisanie godzin i warunków albo otwarcie przykładu.",
+    "expectedOutcome": "Wykrycie kolizji i przygotowanie propozycji do rozmowy z pracodawcą.",
+    "uncertainties": [
+      "Ile danych trzeba wprowadzić?",
+      "Jak dokładnie powstają proponowane warianty?"
+    ],
+    "recordedBeforeExploration": true
+  },
+  "coverage": {
+    "entryUrl": "http://127.0.0.1:18435/",
+    "routesRequested": [
+      "http://127.0.0.1:18435/materialy/",
+      "http://127.0.0.1:18435/__preview-unavailable"
+    ],
+    "routesChecked": [
+      "http://127.0.0.1:18435/",
+      "http://127.0.0.1:18435/materialy/",
+      "http://127.0.0.1:18435/__preview-unavailable"
+    ],
+    "checks": [
+      {
+        "area": "first-impression",
+        "result": "checked",
+        "evidence": "Obejrzano początkowy zrzut 1366×900 i drzewo dostępności. Nagłówek opisuje powrót do pracy, tekst wskazuje porównanie godzin i przygotowanie propozycji dla pracodawcy.",
+        "limitations": "Pierwsze wrażenie dotyczy wyłącznie początkowego widoku."
+      },
+      {
+        "area": "navigation",
+        "result": "checked",
+        "evidence": "Z menu otwarto katalog. Analiza prowadzi do „Twoich możliwości”, a „Przejdź do formularza” przywraca plan. Materiały otwarto bezpośrednio. Odsyłacz z komunikatu niedostępności poprawnie prowadzi do materiałów.",
+        "limitations": "W sprawdzonej nawigacji wejściowej nie znaleziono odsyłacza do materiałów. Nie ustalono, czy powinien tam być. Trzeci adres udostępnił jedynie komunikat niedostępności."
+      },
+      {
+        "area": "language",
+        "result": "checked",
+        "evidence": "Cel i następne kroki opisano konkretnie. Rozróżniono propozycję zmiany od uzgodnienia oraz analizę od zapisu. Przykład jest oznaczony jako syntetyczny.",
+        "limitations": "Nie oceniono wszystkich tekstów dalszego procesu."
+      },
+      {
+        "area": "cognitive-load",
+        "result": "checked",
+        "evidence": "Nawigacja dzieli proces na cztery kroki, dane na zakładki. Wynik przykładu pokazuje dwa warianty i porównywalne parametry: czas pracy, koszt, zapas i uzgodnienia.",
+        "limitations": "Nie sprawdzono obciążenia przy wielu własnych ofertach i wyjątkach."
+      },
+      {
+        "area": "forms-and-feedback",
+        "result": "checked",
+        "evidence": "Sprawdzono pusty plan, pusty wynik wyszukiwania katalogu, wczytanie przykładu i udaną analizę. Pusty plan wyjaśnia brak zajęć i daje powrót do formularza. Analiza przykładu wskazuje konflikt 45 minut i dwa warianty.",
+        "limitations": "Nie sprawdzono błędnych formatów danych, zapisu, usuwania, importu, potwierdzeń ani dalszych uzgodnień."
+      },
+      {
+        "area": "keyboard-and-focus",
+        "result": "checked",
+        "evidence": "Użyto Tab, Shift+Tab i Enter na początku strony. Odsyłacz „Przejdź do treści” ma widoczny obrys. Menu mobilne ustawia fokus na zamknięciu; Escape zamyka je i przywraca fokus przyciskowi otwierającemu. Po analizie fokus trafia na nagłówek wyniku.",
+        "limitations": "Nie wykonano pełnego przejścia klawiaturą przez wszystkie pola, zakładki i odtwarzacz."
+      },
+      {
+        "area": "semantics-and-names",
+        "result": "checked",
+        "evidence": "Drzewo dostępności zawiera główną nawigację, main, nagłówki, nazwane pola, zakładki i modalne menu. Opis budżetu jest powiązany z polem. Odsyłacze materiałów wskazują format pliku.",
+        "limitations": "Inspekcja drzewa dostępności nie jest testem czytnika ekranu. Nie sprawdzono powiązań błędów poszczególnych pól."
+      },
+      {
+        "area": "contrast",
+        "result": "checked",
+        "evidence": "Na stronie materiałów obliczono kontrast z kolorów stylów obliczonych: tekst rgb(32,62,51) na rgb(246,246,238) ma 10,75:1; biały tekst przycisku na rgb(33,72,57) ma 10,24:1.",
+        "limitations": "Pomiar obejmuje dwie pary kolorów, nie cały interfejs ani wszystkie stany kontrolek."
+      },
+      {
+        "area": "zoom-and-mobile",
+        "result": "checked",
+        "evidence": "Przy emulacji 390×844 strona wejściowa przechodzi do jednej kolumny i menu mobilnego. Wynik pustego planu ma szerokość dokumentu równą 390 px. Przy 683×450 wynik analizy nie ma poziomego przepełnienia. Materiały obejrzano także przy faktycznej szerokości 512 px.",
+        "limitations": "Skróty powiększenia nie zmieniły skali. Widok 683×450 symuluje jedynie mniejszy obszar dostępny przy powiększeniu, nie rzeczywisty zoom ani tekst 200%. Nie sprawdzono wszystkich ekranów przy 390 px."
+      },
+      {
+        "area": "status-announcements",
+        "result": "checked",
+        "evidence": "Liczba wyników katalogu aktualizuje region statusu. Wczytanie przykładu, przetwarzanie, brak zajęć i ukończenie analizy są obecne w regionach status z aria-live polite.",
+        "limitations": "Potwierdzono semantykę i zmianę treści, nie faktyczny odczyt przez czytnik ekranu."
+      }
+    ],
+    "limitations": [
+      "Adres /__preview-unavailable wyświetlił „Demo chwilowo nie odpowiada”; nie uznano tego za potwierdzenie działania właściwego ekranu ani usterkę użyteczności.",
+      "Nie otwierano dokumentów do pobrania i nie oceniano całego filmu ani synchronizacji napisów.",
+      "Nie przeprowadzono pełnej ścieżki zapisu, uzgodnień i próby.",
+      "Ocena próbkowa nie potwierdza pełnej zgodności z WCAG."
+    ]
+  },
+  "findings": [],
+  "overall": {
+    "understandable": true,
+    "summary": "W sprawdzonym zakresie cel, pierwszy krok i wynik są zrozumiałe. Interfejs zapewnia użyteczne komunikaty i podstawową obsługę dostępności. Nie potwierdzono konkretnej usterki wymagającej zgłoszenia; zakres testów pozostaje niepełny."
+  }
+}
