@@ -1,0 +1,466 @@
+{
+  "run_at": "2026-10-03T12:12:08.379714+00:00",
+  "model": "openai/gpt-oss-120b",
+  "corpus_sha256": "392ac4de7c3996cdf1f5c3161d3d6a190e8814c5425fd8559a9b6f594605d591",
+  "public_cases": 50,
+  "passed": 50,
+  "limitations": "Corpus strongly skewed toward missing data and childcare. Not a representative quality estimate or independent human audit.",
+  "results": [
+    {
+      "id": "public-001",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.859
+    },
+    {
+      "id": "public-002",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.671
+    },
+    {
+      "id": "public-003",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.812
+    },
+    {
+      "id": "public-004",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.266
+    },
+    {
+      "id": "public-005",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.391
+    },
+    {
+      "id": "public-006",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.297
+    },
+    {
+      "id": "public-007",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.641
+    },
+    {
+      "id": "public-008",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.422
+    },
+    {
+      "id": "public-009",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.484
+    },
+    {
+      "id": "public-010",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.375
+    },
+    {
+      "id": "public-011",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.531
+    },
+    {
+      "id": "public-012",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.375
+    },
+    {
+      "id": "public-013",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.672
+    },
+    {
+      "id": "public-014",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.406
+    },
+    {
+      "id": "public-015",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.406
+    },
+    {
+      "id": "public-016",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.672
+    },
+    {
+      "id": "public-017",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.766
+    },
+    {
+      "id": "public-018",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.64
+    },
+    {
+      "id": "public-019",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.844
+    },
+    {
+      "id": "public-020",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.719
+    },
+    {
+      "id": "public-021",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.812
+    },
+    {
+      "id": "public-022",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.687
+    },
+    {
+      "id": "public-023",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.844
+    },
+    {
+      "id": "public-024",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.703
+    },
+    {
+      "id": "public-025",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.266
+    },
+    {
+      "id": "public-026",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.297
+    },
+    {
+      "id": "public-027",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.281
+    },
+    {
+      "id": "public-028",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.172
+    },
+    {
+      "id": "public-029",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.297
+    },
+    {
+      "id": "public-030",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.219
+    },
+    {
+      "id": "public-031",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.422
+    },
+    {
+      "id": "public-032",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.547
+    },
+    {
+      "id": "public-033",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.594
+    },
+    {
+      "id": "public-034",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.688
+    },
+    {
+      "id": "public-035",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.328
+    },
+    {
+      "id": "public-036",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.5
+    },
+    {
+      "id": "public-037",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.297
+    },
+    {
+      "id": "public-038",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.281
+    },
+    {
+      "id": "public-039",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.266
+    },
+    {
+      "id": "public-040",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.375
+    },
+    {
+      "id": "public-041",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "06:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null
+      },
+      "seconds": 1.719
+    },
+    {
+      "id": "public-042",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.437
+    },
+    {
+      "id": "public-043",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.171
+    },
+    {
+      "id": "public-044",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.594
+    },
+    {
+      "id": "public-045",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.484
+    },
+    {
+      "id": "public-046",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.36
+    },
+    {
+      "id": "public-047",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.719
+    },
+    {
+      "id": "public-048",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null
+      },
+      "seconds": 2.094
+    },
+    {
+      "id": "public-049",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.656
+    },
+    {
+      "id": "public-050",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "seconds": 1.234
+    }
+  ]
+}

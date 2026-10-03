@@ -1,0 +1,266 @@
+{
+  "measured_at": "2026-10-03T15:06:01.782625+00:00",
+  "data_mode": "synthetic",
+  "hardware": {
+    "platform": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "processor": "Intel(R) Core(TM) i9-14900KF",
+    "logical_cpus": 32
+  },
+  "runtime": {
+    "python": "3.12.9",
+    "ortools": "9.15.6755",
+    "workers_per_solve": 1,
+    "optimization_parameters": {
+      "cp_model_probing_level": 0,
+      "symmetry_level": 0
+    },
+    "diagnosis_parameters": "CP-SAT defaults; one worker, zero optimality gaps, 512 MiB solver memory limit"
+  },
+  "scenario": "demo",
+  "reference": {
+    "days": 5,
+    "dependents": 1,
+    "caregivers": 0,
+    "care_resources": 1,
+    "work_occurrences": 5,
+    "allowed_resource_counts": [
+      1
+    ],
+    "start_choices": 5,
+    "routing": "manual_synthetic"
+  },
+  "code_sha256": {
+    "api/domain.py": "6f042906c93ab7d5cda53c4faf507b3db391fed63b073eb8ae9f7200b84b817e",
+    "api/solver/engine.py": "1f38317703968a1eefafc4deb1d325f138c99e6483b03e601089d02f8ba607fb",
+    "api/solver/time.py": "733ac86fb9976fcb51e9d5245dc7d5ca71d9c5a258a2d28f428eb08f1320a996",
+    "api/validation/schedule.py": "92d269bd9f66912370fe2a66bb60838c5fcfce3770e9a4899da7b5540b657c26"
+  },
+  "budget_seconds": 20,
+  "import_seconds": 2.211187,
+  "samples": [
+    {
+      "index": 0,
+      "kind": "first_call",
+      "seconds": 0.108846,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 1,
+      "kind": "warm",
+      "seconds": 0.057735,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 2,
+      "kind": "warm",
+      "seconds": 0.059931,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 3,
+      "kind": "warm",
+      "seconds": 0.05443,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 4,
+      "kind": "warm",
+      "seconds": 0.05427,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 5,
+      "kind": "warm",
+      "seconds": 0.047385,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 6,
+      "kind": "warm",
+      "seconds": 0.051795,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 7,
+      "kind": "warm",
+      "seconds": 0.055345,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 8,
+      "kind": "warm",
+      "seconds": 0.052341,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 9,
+      "kind": "warm",
+      "seconds": 0.049183,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 10,
+      "kind": "warm",
+      "seconds": 0.053098,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 11,
+      "kind": "warm",
+      "seconds": 0.059319,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 12,
+      "kind": "warm",
+      "seconds": 0.057277,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 13,
+      "kind": "warm",
+      "seconds": 0.052686,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 14,
+      "kind": "warm",
+      "seconds": 0.050634,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 15,
+      "kind": "warm",
+      "seconds": 0.048654,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 16,
+      "kind": "warm",
+      "seconds": 0.053949,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 17,
+      "kind": "warm",
+      "seconds": 0.057132,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 18,
+      "kind": "warm",
+      "seconds": 0.065403,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 19,
+      "kind": "warm",
+      "seconds": 0.052741,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    },
+    {
+      "index": 20,
+      "kind": "warm",
+      "seconds": 0.05575,
+      "status": "OPTIMAL",
+      "baseline_status": "INFEASIBLE",
+      "alternatives": 2,
+      "all_validated": true,
+      "warnings": []
+    }
+  ],
+  "warm_summary": {
+    "count": 20,
+    "median_seconds": 0.054109,
+    "p95_seconds": 0.059931,
+    "maximum_seconds": 0.065403,
+    "target_seconds": 3,
+    "target_met": true
+  },
+  "limits": [
+    "Pomiar całej analizy: normalizacja, diagnoza, optymalizacja wariantów i walidator; bez sieci OTP i HTTP.",
+    "Pierwsze wywołanie i koszt importów podano osobno; nie jest to pomiar czystego startu kontenera.",
+    "Host współdzielony z innymi pracami; p95 opisuje wyłącznie podaną próbę.",
+    "Nie jest to badanie z użytkowniczkami ani pomiar osiągniętego wpływu."
+  ]
+}

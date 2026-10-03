@@ -1,0 +1,332 @@
+{
+  "records": [
+    {
+      "id": "synthetic-care-basic",
+      "title": "Opieka A · przykład fikcyjny",
+      "kind": "care",
+      "synthetic": true,
+      "status": "published",
+      "source_url": null,
+      "fetched_at": "2026-10-03T12:10:55.158050Z",
+      "checked_at": "2026-10-03T12:10:55.158050Z",
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "63c7fbad37c999b7ad839d7786488ce540fdfa04591eaf6fb37286e44a62af79",
+      "license_or_terms": "Autorski przykład testowy, CC0",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "07:00",
+            "end": "17:00"
+          },
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_grosze": {
+          "value": 0,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_period": {
+          "value": "day",
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        }
+      },
+      "missing_fields": [
+        "admission"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    },
+    {
+      "id": "synthetic-care-late",
+      "title": "Opieka popołudniowa · przykład fikcyjny",
+      "kind": "care",
+      "synthetic": true,
+      "status": "published",
+      "source_url": null,
+      "fetched_at": "2026-10-03T12:10:55.158050Z",
+      "checked_at": "2026-10-03T12:10:55.158050Z",
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "bd0b85029eb1d36a665ada50e452383b7a337d51f9609da36768c59f37a5c0cc",
+      "license_or_terms": "Autorski przykład testowy, CC0",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "16:00",
+            "end": "19:00"
+          },
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_grosze": {
+          "value": 2500,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_period": {
+          "value": "hour",
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        }
+      },
+      "missing_fields": [
+        "admission"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    },
+    {
+      "id": "synthetic-adult-care",
+      "title": "Dzienna opieka nad dorosłym · przykład fikcyjny",
+      "kind": "adult_care",
+      "synthetic": true,
+      "status": "published",
+      "source_url": null,
+      "fetched_at": "2026-10-03T12:10:55.158050Z",
+      "checked_at": "2026-10-03T12:10:55.158050Z",
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "d747618a76a176e130dad5fd70df91b73dcda46455806087489eb929ec7b69aa",
+      "license_or_terms": "Autorski przykład testowy, CC0",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "07:00",
+            "end": "17:30"
+          },
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_grosze": {
+          "value": 5000,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_period": {
+          "value": "day",
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        }
+      },
+      "missing_fields": [
+        "admission"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    },
+    {
+      "id": "synthetic-work-office",
+      "title": "Własna oferta biurowa · przykład fikcyjny",
+      "kind": "work",
+      "synthetic": true,
+      "status": "published",
+      "source_url": null,
+      "fetched_at": "2026-10-03T12:10:55.158050Z",
+      "checked_at": "2026-10-03T12:10:55.158050Z",
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "f8a08bb424c73662a6885547a3051a1ffff0492fb5d389e9a5072f680b082409",
+      "license_or_terms": "Autorski przykład testowy, CC0",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_grosze": {
+          "value": null,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "unknown"
+        },
+        "cost_period": {
+          "value": null,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "unknown"
+        }
+      },
+      "missing_fields": [
+        "cost_grosze",
+        "cost_period",
+        "admission"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    },
+    {
+      "id": "synthetic-course",
+      "title": "Kurs przygotowawczy · przykład fikcyjny",
+      "kind": "course",
+      "synthetic": true,
+      "status": "published",
+      "source_url": null,
+      "fetched_at": "2026-10-03T12:10:55.158050Z",
+      "checked_at": "2026-10-03T12:10:55.158050Z",
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "042f96f2e8e6f66c29b24dcbcbf1ed1b4bd1107ac7c8406087c3b79ae88c37e0",
+      "license_or_terms": "Autorski przykład testowy, CC0",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "08:00",
+            "end": "12:00"
+          },
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_grosze": {
+          "value": 30000,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_period": {
+          "value": "once",
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        }
+      },
+      "missing_fields": [
+        "admission"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    },
+    {
+      "id": "synthetic-care-unknown",
+      "title": "Usługa z nieznaną ceną · przykład fikcyjny",
+      "kind": "care",
+      "synthetic": true,
+      "status": "published",
+      "source_url": null,
+      "fetched_at": "2026-10-03T12:10:55.158050Z",
+      "checked_at": "2026-10-03T12:10:55.158050Z",
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "0fe442ca1656c7be8a85a7191ab996d5a2f5cad5a129259dfe585df5245b6a75",
+      "license_or_terms": "Autorski przykład testowy, CC0",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "07:00",
+            "end": "18:00"
+          },
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "synthetic"
+        },
+        "cost_grosze": {
+          "value": null,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "unknown"
+        },
+        "cost_period": {
+          "value": null,
+          "source_url": null,
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:10:55.158050Z",
+          "checked_at": "2026-10-03T12:10:55.158050Z",
+          "valid_from": null,
+          "valid_to": null,
+          "status": "unknown"
+        }
+      },
+      "missing_fields": [
+        "cost_grosze",
+        "cost_period",
+        "admission"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    }
+  ]
+}

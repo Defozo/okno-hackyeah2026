@@ -1,0 +1,257 @@
+{
+  "run_at": "2026-10-03T13:47:41.041330+00:00",
+  "elapsed_seconds": 0.977,
+  "otp_url": "http://host.docker.internal:18440",
+  "routes": [
+    {
+      "id": "morning-0800",
+      "origin": "Rondo Mogilskie",
+      "destination": "Teatr Słowackiego",
+      "when": "2026-10-05T08:00:00+02:00",
+      "mode": "transit",
+      "status": "ok",
+      "minutes": 9,
+      "total_minutes": 24,
+      "cost_grosze": null,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      },
+      "leg": {
+        "id": "morning-0800",
+        "origin": "Rondo Mogilskie",
+        "destination": "Teatr Słowackiego",
+        "mode": "transit",
+        "bands": [
+          {
+            "weekdays": [],
+            "dates": [
+              "2026-10-05"
+            ],
+            "start": "08:00",
+            "end": "08:01",
+            "minutes": 9,
+            "cost_grosze": null
+          }
+        ],
+        "handoff_minutes": 5,
+        "buffer_minutes": 10,
+        "access_minutes": 0,
+        "source": {
+          "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+          "url": "https://gtfs.ztp.krakow.pl/",
+          "checked_at": "2026-10-03",
+          "valid_from": "2026-10-02",
+          "valid_to": "2026-11-15",
+          "status": "current"
+        }
+      },
+      "departure": "2026-10-05T08:00:00+02:00",
+      "arrival": "2026-10-05T08:08:14+02:00",
+      "modes": [
+        "WALK",
+        "TRAM",
+        "WALK"
+      ],
+      "limitations": [
+        "Rozkład planowy, bez gwarancji punktualności",
+        "Sprawdzono konkretną minutę i kierunek; zmiana wymaga nowego zapytania"
+      ]
+    },
+    {
+      "id": "morning-0815",
+      "origin": "Rondo Mogilskie",
+      "destination": "Teatr Słowackiego",
+      "when": "2026-10-05T08:15:00+02:00",
+      "mode": "transit",
+      "status": "ok",
+      "minutes": 9,
+      "total_minutes": 24,
+      "cost_grosze": null,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      },
+      "leg": {
+        "id": "morning-0815",
+        "origin": "Rondo Mogilskie",
+        "destination": "Teatr Słowackiego",
+        "mode": "transit",
+        "bands": [
+          {
+            "weekdays": [],
+            "dates": [
+              "2026-10-05"
+            ],
+            "start": "08:15",
+            "end": "08:16",
+            "minutes": 9,
+            "cost_grosze": null
+          }
+        ],
+        "handoff_minutes": 5,
+        "buffer_minutes": 10,
+        "access_minutes": 0,
+        "source": {
+          "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+          "url": "https://gtfs.ztp.krakow.pl/",
+          "checked_at": "2026-10-03",
+          "valid_from": "2026-10-02",
+          "valid_to": "2026-11-15",
+          "status": "current"
+        }
+      },
+      "departure": "2026-10-05T08:15:00+02:00",
+      "arrival": "2026-10-05T08:23:14+02:00",
+      "modes": [
+        "WALK",
+        "TRAM",
+        "WALK"
+      ],
+      "limitations": [
+        "Rozkład planowy, bez gwarancji punktualności",
+        "Sprawdzono konkretną minutę i kierunek; zmiana wymaga nowego zapytania"
+      ]
+    },
+    {
+      "id": "arrive-0900",
+      "origin": "Rondo Mogilskie",
+      "destination": "Teatr Słowackiego",
+      "when": "2026-10-05T09:00:00+02:00",
+      "mode": "transit",
+      "status": "ok",
+      "minutes": 9,
+      "total_minutes": 24,
+      "cost_grosze": null,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      },
+      "leg": {
+        "id": "arrive-0900",
+        "origin": "Rondo Mogilskie",
+        "destination": "Teatr Słowackiego",
+        "mode": "transit",
+        "bands": [
+          {
+            "weekdays": [],
+            "dates": [
+              "2026-10-05"
+            ],
+            "start": "08:36",
+            "end": "08:37",
+            "minutes": 9,
+            "cost_grosze": null
+          }
+        ],
+        "handoff_minutes": 5,
+        "buffer_minutes": 10,
+        "access_minutes": 0,
+        "source": {
+          "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+          "url": "https://gtfs.ztp.krakow.pl/",
+          "checked_at": "2026-10-03",
+          "valid_from": "2026-10-02",
+          "valid_to": "2026-11-15",
+          "status": "current"
+        }
+      },
+      "departure": "2026-10-05T08:36:00+02:00",
+      "arrival": "2026-10-05T08:44:14+02:00",
+      "modes": [
+        "WALK",
+        "TRAM",
+        "WALK"
+      ],
+      "limitations": [
+        "Rozkład planowy, bez gwarancji punktualności",
+        "Sprawdzono konkretną minutę i kierunek; zmiana wymaga nowego zapytania"
+      ]
+    },
+    {
+      "id": "return",
+      "origin": "Teatr Słowackiego",
+      "destination": "Rondo Mogilskie",
+      "when": "2026-10-05T17:00:00+02:00",
+      "mode": "transit",
+      "status": "ok",
+      "minutes": 10,
+      "total_minutes": 25,
+      "cost_grosze": null,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      },
+      "leg": {
+        "id": "return",
+        "origin": "Teatr Słowackiego",
+        "destination": "Rondo Mogilskie",
+        "mode": "transit",
+        "bands": [
+          {
+            "weekdays": [],
+            "dates": [
+              "2026-10-05"
+            ],
+            "start": "17:00",
+            "end": "17:01",
+            "minutes": 10,
+            "cost_grosze": null
+          }
+        ],
+        "handoff_minutes": 5,
+        "buffer_minutes": 10,
+        "access_minutes": 0,
+        "source": {
+          "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+          "url": "https://gtfs.ztp.krakow.pl/",
+          "checked_at": "2026-10-03",
+          "valid_from": "2026-10-02",
+          "valid_to": "2026-11-15",
+          "status": "current"
+        }
+      },
+      "departure": "2026-10-05T17:00:00+02:00",
+      "arrival": "2026-10-05T17:09:47+02:00",
+      "modes": [
+        "WALK",
+        "TRAM",
+        "WALK"
+      ],
+      "limitations": [
+        "Rozkład planowy, bez gwarancji punktualności",
+        "Sprawdzono konkretną minutę i kierunek; zmiana wymaga nowego zapytania"
+      ]
+    },
+    {
+      "id": "expired",
+      "origin": "Rondo Mogilskie",
+      "destination": "Teatr Słowackiego",
+      "when": "2027-01-04T08:00:00+01:00",
+      "mode": "transit",
+      "status": "stale",
+      "reason": "Rozkład nie obejmuje wybranego dnia. Podaj własny, potwierdzony czas.",
+      "minutes": null,
+      "valid_from": "2026-10-02",
+      "valid_to": "2026-11-15"
+    }
+  ],
+  "all_resolved": false,
+  "timezone": "Europe/Warsaw"
+}

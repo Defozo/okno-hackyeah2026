@@ -1,0 +1,479 @@
+{
+  "tested_at": "2026-10-03T17:01:07.411Z",
+  "base_url": "http://localhost:18430",
+  "purpose": "Independent reproduction of final audit date-range and empty-catalog claims. No UI changes or disabled-control bypass.",
+  "methods": [
+    {
+      "method": "normal-fill",
+      "inputs": [
+        {
+          "action": "locator.fill",
+          "value": "2026-10-01"
+        }
+      ],
+      "observed_solve_requests": [
+        {
+          "start_date": "2026-10-05",
+          "end_date": "2026-10-08",
+          "version": 3
+        }
+      ],
+      "observed_solve_responses": [
+        {
+          "http_status": 200,
+          "status": "INFEASIBLE",
+          "data_status": "complete",
+          "checked_period": {
+            "start": "2026-10-05",
+            "end": "2026-10-08",
+            "timezone": "Europe/Warsaw"
+          },
+          "alternatives": 0
+        }
+      ],
+      "snapshots": [
+        {
+          "stage": "initial-example",
+          "start": "2026-10-05",
+          "end": "2026-10-09",
+          "solve_enabled": true,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-09",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do\": 2026-10-09",
+          "summary": [],
+          "focused_id": ""
+        },
+        {
+          "stage": "after-edit-before-blur",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": false,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [
+            "Koniec okresu musi przypadać po początku"
+          ],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01\n- text: Koniec okresu musi przypadać po początku",
+          "summary": [],
+          "focused_id": "editor-end_date"
+        },
+        {
+          "stage": "after-blur",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": false,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [
+            "Koniec okresu musi przypadać po początku"
+          ],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01\n- text: Koniec okresu musi przypadać po początku",
+          "summary": [],
+          "focused_id": "editor-minimum_paid_minutes"
+        },
+        {
+          "stage": "after-validation-settled",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": false,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [
+            "Koniec okresu musi przypadać po początku"
+          ],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01\n- text: Koniec okresu musi przypadać po początku",
+          "summary": [],
+          "focused_id": "editor-minimum_paid_minutes"
+        },
+        {
+          "stage": "after-leaving-and-returning-to-form",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": true,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do\": 2026-10-01",
+          "summary": [],
+          "focused_id": ""
+        },
+        {
+          "stage": "positive-control-valid-end",
+          "start": "2026-10-05",
+          "end": "2026-10-08",
+          "solve_enabled": true,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-08",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do\": 2026-10-08",
+          "summary": [],
+          "focused_id": "editor-minimum_paid_minutes"
+        }
+      ],
+      "status": "observed",
+      "solve_action": "Button disabled; no click or direct API request attempted",
+      "input_events": [
+        {
+          "type": "input",
+          "trusted": false,
+          "value": "2026-10-01"
+        },
+        {
+          "type": "change",
+          "trusted": false,
+          "value": "2026-10-01"
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "value": "2026-10-01"
+        }
+      ],
+      "original_claim_reproduced": false,
+      "entered_date_reverted_after_navigation": false,
+      "range_error_has_aria_invalid_and_describedby": false,
+      "range_error_appears_in_wrapping_label": true,
+      "visible_range_error": true,
+      "invalid_date_requests": [],
+      "invalid_date_responses": [],
+      "positive_control": {
+        "action": "Normal fill of valid changed end followed by normal enabled-button click",
+        "entered_end": "2026-10-08",
+        "request": {
+          "start_date": "2026-10-05",
+          "end_date": "2026-10-08"
+        },
+        "http_status": 200,
+        "status": "INFEASIBLE",
+        "checked_period": {
+          "start": "2026-10-05",
+          "end": "2026-10-08",
+          "timezone": "Europe/Warsaw"
+        },
+        "invalid_date_request_count": 0
+      }
+    },
+    {
+      "method": "keyboard-day-segment",
+      "inputs": [
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-09-09"
+        },
+        {
+          "key": "ArrowUp",
+          "resulting_value": "2026-10-09"
+        },
+        {
+          "key": "ArrowRight"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-08"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-07"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-06"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-05"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-04"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-03"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-02"
+        },
+        {
+          "key": "ArrowDown",
+          "resulting_value": "2026-10-01"
+        }
+      ],
+      "observed_solve_requests": [
+        {
+          "start_date": "2026-10-05",
+          "end_date": "2026-10-08",
+          "version": 12
+        }
+      ],
+      "observed_solve_responses": [
+        {
+          "http_status": 200,
+          "status": "INFEASIBLE",
+          "data_status": "complete",
+          "checked_period": {
+            "start": "2026-10-05",
+            "end": "2026-10-08",
+            "timezone": "Europe/Warsaw"
+          },
+          "alternatives": 0
+        }
+      ],
+      "snapshots": [
+        {
+          "stage": "initial-example",
+          "start": "2026-10-05",
+          "end": "2026-10-09",
+          "solve_enabled": true,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-09",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do\": 2026-10-09",
+          "summary": [],
+          "focused_id": ""
+        },
+        {
+          "stage": "after-edit-before-blur",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": false,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [
+            "Koniec okresu musi przypadać po początku"
+          ],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01\n- text: Koniec okresu musi przypadać po początku",
+          "summary": [],
+          "focused_id": "editor-end_date"
+        },
+        {
+          "stage": "after-blur",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": false,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [
+            "Koniec okresu musi przypadać po początku"
+          ],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01\n- text: Koniec okresu musi przypadać po początku",
+          "summary": [],
+          "focused_id": "editor-minimum_paid_minutes"
+        },
+        {
+          "stage": "after-validation-settled",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": false,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [
+            "Koniec okresu musi przypadać po początku"
+          ],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do Koniec okresu musi przypadać po początku\": 2026-10-01\n- text: Koniec okresu musi przypadać po początku",
+          "summary": [],
+          "focused_id": "editor-minimum_paid_minutes"
+        },
+        {
+          "stage": "after-leaving-and-returning-to-form",
+          "start": "2026-10-05",
+          "end": "2026-10-01",
+          "solve_enabled": true,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-01",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do\": 2026-10-01",
+          "summary": [],
+          "focused_id": ""
+        },
+        {
+          "stage": "positive-control-valid-end",
+          "start": "2026-10-05",
+          "end": "2026-10-08",
+          "solve_enabled": true,
+          "aria_invalid": null,
+          "aria_describedby": null,
+          "field_errors": [],
+          "field_accessibility_snapshot": "- textbox \"Sprawdzam do\": 2026-10-08",
+          "label_accessibility_snapshot": "- text: Sprawdzam do\n- textbox \"Sprawdzam do\": 2026-10-08",
+          "summary": [],
+          "focused_id": "editor-minimum_paid_minutes"
+        }
+      ],
+      "status": "observed",
+      "solve_action": "Button disabled; no click or direct API request attempted",
+      "input_events": [
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-09-09"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-09-09"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-09"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-09"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-08"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-08"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-07"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-07"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-06"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-06"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-05"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-05"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-04"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-04"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-03"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-03"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-02"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-02"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "value": "2026-10-01"
+        },
+        {
+          "type": "change",
+          "trusted": true,
+          "value": "2026-10-01"
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "value": "2026-10-01"
+        }
+      ],
+      "original_claim_reproduced": false,
+      "entered_date_reverted_after_navigation": false,
+      "range_error_has_aria_invalid_and_describedby": false,
+      "range_error_appears_in_wrapping_label": true,
+      "visible_range_error": true,
+      "invalid_date_requests": [],
+      "invalid_date_responses": [],
+      "positive_control": {
+        "action": "Normal fill of valid changed end followed by normal enabled-button click",
+        "entered_end": "2026-10-08",
+        "request": {
+          "start_date": "2026-10-05",
+          "end_date": "2026-10-08"
+        },
+        "http_status": 200,
+        "status": "INFEASIBLE",
+        "checked_period": {
+          "start": "2026-10-05",
+          "end": "2026-10-08",
+          "timezone": "Europe/Warsaw"
+        },
+        "invalid_date_request_count": 0
+      }
+    }
+  ],
+  "catalogue": {
+    "query": "zzzz-brak-rekordu-ux-final-2026",
+    "cards_before": 2,
+    "cards_after": 0,
+    "visible_heading": "Nie ma pasujących źródeł",
+    "empty_container_semantics": {
+      "role": null,
+      "aria_live": null,
+      "enclosing_live_region": false
+    },
+    "live_regions": [
+      {
+        "role": "status",
+        "aria_live": "polite",
+        "text": "Analiza gotowa. Sprawdź wynik i zakres obliczeń."
+      }
+    ],
+    "result_change_live_announcement_found": false
+  },
+  "page_errors": [],
+  "status": "verification-complete",
+  "limitations": [
+    "Chromium automation with fresh sessions; not a human screen-reader test.",
+    "A failure to reproduce a claim applies only to the documented methods and tested build."
+  ],
+  "frontend_assets": [
+    "http://localhost:18430/assets/index-CUhktpe1.js"
+  ],
+  "finished_at": "2026-10-03T17:01:17.853Z"
+}

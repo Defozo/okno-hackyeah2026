@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "title": "Uzgodniony odbiór przez opiekunkę",
+  "version": 1,
+  "data_mode": "synthetic",
+  "start_date": "2026-10-05",
+  "end_date": "2026-10-09",
+  "home_location": "home",
+  "minimum_paid_minutes": 2400,
+  "minimum_rest_minutes": 660,
+  "budget_grosze": 100000,
+  "preferred_extra_buffer_minutes": 15,
+  "notes": "Scenariusz syntetyczny. Opiekunka może przybyć do placówki o 16:30, przejąć dziecko i odprowadzić do domu. Przybycie, przyjęcie i cena wymagają osobnego potwierdzenia.",
+  "activities": [
+    {
+      "id": "work",
+      "label": "Moja oferta pracy",
+      "kind": "work",
+      "location": "work",
+      "start": "09:00",
+      "duration_minutes": 480,
+      "paid_minutes": 480,
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "negotiable": false,
+      "start_min": "08:00",
+      "start_max": "09:00",
+      "step_minutes": 15,
+      "agreement_id": "work-hours",
+      "required": true,
+      "source": {
+        "label": "syntetyczna oferta",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    }
+  ],
+  "care_needs": [
+    {
+      "id": "care-child",
+      "dependent_id": "child-1",
+      "label": "Dziecko 1",
+      "care_type": "child",
+      "start": "00:00",
+      "end": "24:00",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allow_self_care": true,
+      "resource_ids": [
+        "daycare"
+      ],
+      "visit_order": 0,
+      "arrangements": [
+        {
+          "id": "afternoon-handoff",
+          "resource_ids": [
+            "daycare",
+            "helper"
+          ],
+          "handoffs": [
+            {
+              "at": "16:30",
+              "by_resource_id": "helper",
+              "leg_id": "care-home",
+              "confirmed": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "care_resources": [
+    {
+      "id": "daycare",
+      "label": "Placówka demonstracyjna",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "child-1"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3000,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "helper",
+      "label": "Opiekunka demonstracyjna",
+      "location": "home",
+      "kind": "caregiver",
+      "capacity": 1,
+      "dependent_ids": [
+        "child-1"
+      ],
+      "confirmed": false,
+      "availability": [
+        {
+          "start": "16:30",
+          "end": "18:30"
+        }
+      ],
+      "hourly_cost_grosze": 3000,
+      "daily_cost_grosze": 0,
+      "one_time_cost_grosze": 0
+    }
+  ],
+  "travel_legs": [
+    {
+      "id": "home-care",
+      "origin": "home",
+      "destination": "care",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 0,
+          "cost_grosze": 0
+        }
+      ]
+    },
+    {
+      "id": "care-work",
+      "origin": "care",
+      "destination": "work",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 25,
+          "cost_grosze": 400
+        }
+      ],
+      "handoff_minutes": 5,
+      "buffer_minutes": 15
+    },
+    {
+      "id": "work-care",
+      "origin": "work",
+      "destination": "care",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 25,
+          "cost_grosze": 400
+        }
+      ],
+      "handoff_minutes": 5,
+      "buffer_minutes": 15
+    },
+    {
+      "id": "care-home",
+      "origin": "care",
+      "destination": "home",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 10,
+          "cost_grosze": 0
+        }
+      ]
+    },
+    {
+      "id": "work-home",
+      "origin": "work",
+      "destination": "home",
+      "bands": [
+        {
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 25,
+          "cost_grosze": 400
+        }
+      ],
+      "buffer_minutes": 15
+    }
+  ]
+}

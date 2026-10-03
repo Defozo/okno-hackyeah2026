@@ -1,0 +1,982 @@
+{
+  "run_at": "2026-10-03T13:43:49.068616+00:00",
+  "scenario": "Synthetic two dependents, two care places, real OSM/ZTP routes, one Monday, three allowed starts",
+  "synthetic_care_and_prices": true,
+  "otp_url": "http://host.docker.internal:18440",
+  "graph_sha256": "e583743c2e20d3c9ec394bd593acb81295b567f02943e2069b52a19069cfd3b8",
+  "hydration": {
+    "complete": true,
+    "elapsed_ms": 6366,
+    "queries": 18,
+    "issues": [],
+    "active": true
+  },
+  "route_snapshot": [
+    {
+      "id": "home-care",
+      "origin": "home",
+      "destination": "care",
+      "mode": "transit",
+      "bands": [
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "07:46",
+          "end": "07:47",
+          "minutes": 5,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "07:16",
+          "end": "07:17",
+          "minutes": 5,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "08:16",
+          "end": "08:17",
+          "minutes": 5,
+          "cost_grosze": 0
+        }
+      ],
+      "handoff_minutes": 0,
+      "buffer_minutes": 0,
+      "access_minutes": 0,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      }
+    },
+    {
+      "id": "care-work",
+      "origin": "care-2",
+      "destination": "work",
+      "mode": "transit",
+      "bands": [
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "08:00",
+          "end": "08:01",
+          "minutes": 10,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "07:30",
+          "end": "07:31",
+          "minutes": 10,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "08:30",
+          "end": "08:31",
+          "minutes": 10,
+          "cost_grosze": 0
+        }
+      ],
+      "handoff_minutes": 5,
+      "buffer_minutes": 15,
+      "access_minutes": 0,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      }
+    },
+    {
+      "id": "work-care",
+      "origin": "work",
+      "destination": "care-2",
+      "mode": "transit",
+      "bands": [
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "16:00",
+          "end": "16:01",
+          "minutes": 10,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "16:30",
+          "end": "16:31",
+          "minutes": 10,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "17:00",
+          "end": "17:01",
+          "minutes": 10,
+          "cost_grosze": 0
+        }
+      ],
+      "handoff_minutes": 5,
+      "buffer_minutes": 15,
+      "access_minutes": 0,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      }
+    },
+    {
+      "id": "care-home",
+      "origin": "care",
+      "destination": "home",
+      "mode": "transit",
+      "bands": [
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "17:10",
+          "end": "17:11",
+          "minutes": 5,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "16:40",
+          "end": "16:41",
+          "minutes": 5,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "17:40",
+          "end": "17:41",
+          "minutes": 5,
+          "cost_grosze": 0
+        }
+      ],
+      "handoff_minutes": 0,
+      "buffer_minutes": 0,
+      "access_minutes": 0,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      }
+    },
+    {
+      "id": "between-out",
+      "origin": "care",
+      "destination": "care-2",
+      "mode": "transit",
+      "bands": [
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "07:21",
+          "end": "07:22",
+          "minutes": 9,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "07:51",
+          "end": "07:52",
+          "minutes": 9,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "08:21",
+          "end": "08:22",
+          "minutes": 9,
+          "cost_grosze": 0
+        }
+      ],
+      "handoff_minutes": 0,
+      "buffer_minutes": 0,
+      "access_minutes": 0,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      }
+    },
+    {
+      "id": "between-back",
+      "origin": "care-2",
+      "destination": "care",
+      "mode": "transit",
+      "bands": [
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "17:00",
+          "end": "17:01",
+          "minutes": 10,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "16:30",
+          "end": "16:31",
+          "minutes": 10,
+          "cost_grosze": 0
+        },
+        {
+          "weekdays": [],
+          "dates": [
+            "2026-10-05"
+          ],
+          "excluded_dates": [],
+          "valid_from": null,
+          "valid_to": null,
+          "start": "17:30",
+          "end": "17:31",
+          "minutes": 10,
+          "cost_grosze": 0
+        }
+      ],
+      "handoff_minutes": 0,
+      "buffer_minutes": 0,
+      "access_minutes": 0,
+      "source": {
+        "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+        "url": "https://gtfs.ztp.krakow.pl/",
+        "checked_at": "2026-10-03",
+        "valid_from": "2026-10-02",
+        "valid_to": "2026-11-15",
+        "status": "current"
+      }
+    }
+  ],
+  "solver": {
+    "status": "OPTIMAL",
+    "data_status": "complete",
+    "data_gaps": [],
+    "conflicts": [
+      {
+        "code": "care_window",
+        "message": "Placówka demonstracyjna: odbiór 40 min po zamknięciu",
+        "date": "2026-10-05",
+        "minutes": 40,
+        "need_id": "care-child",
+        "resource_id": "daycare",
+        "arrival": "2026-10-05T17:40+02:00",
+        "closes": "2026-10-05T17:00+02:00"
+      },
+      {
+        "code": "care_window",
+        "message": "Druga placówka demonstracyjna: odbiór 45 min po zamknięciu",
+        "date": "2026-10-05",
+        "minutes": 45,
+        "need_id": "need-2",
+        "resource_id": "daycare-2",
+        "arrival": "2026-10-05T17:30+02:00",
+        "closes": "2026-10-05T16:45+02:00"
+      }
+    ],
+    "baseline": {
+      "status": "INFEASIBLE",
+      "conflicts": [
+        {
+          "code": "care_window",
+          "message": "Placówka demonstracyjna: odbiór 40 min po zamknięciu",
+          "date": "2026-10-05",
+          "minutes": 40,
+          "need_id": "care-child",
+          "resource_id": "daycare",
+          "arrival": "2026-10-05T17:40+02:00",
+          "closes": "2026-10-05T17:00+02:00"
+        },
+        {
+          "code": "care_window",
+          "message": "Druga placówka demonstracyjna: odbiór 45 min po zamknięciu",
+          "date": "2026-10-05",
+          "minutes": 45,
+          "need_id": "need-2",
+          "resource_id": "daycare-2",
+          "arrival": "2026-10-05T17:30+02:00",
+          "closes": "2026-10-05T16:45+02:00"
+        }
+      ],
+      "schedule": [
+        {
+          "kind": "work",
+          "start": "2026-10-05T09:00+02:00",
+          "end": "2026-10-05T17:00+02:00",
+          "start_minute": 29853060,
+          "end_minute": 29853540,
+          "activity_id": "work",
+          "label": "Moja oferta pracy",
+          "location": "work",
+          "paid_minutes": 480,
+          "date": "2026-10-05",
+          "baseline_start": "09:00"
+        },
+        {
+          "kind": "travel",
+          "start": "2026-10-05T08:16+02:00",
+          "end": "2026-10-05T08:21+02:00",
+          "start_minute": 29853016,
+          "end_minute": 29853021,
+          "label": "home → care",
+          "leg_id": "home-care",
+          "origin": "home",
+          "destination": "care",
+          "mode": "transit",
+          "travel_minutes": 5,
+          "handoff_minutes": 0,
+          "buffer_minutes": 0,
+          "cost_grosze": 0,
+          "source": {
+            "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+            "url": "https://gtfs.ztp.krakow.pl/",
+            "checked_at": "2026-10-03",
+            "valid_from": "2026-10-02",
+            "valid_to": "2026-11-15",
+            "status": "current"
+          },
+          "activity_id": "work",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "travel",
+          "start": "2026-10-05T08:21+02:00",
+          "end": "2026-10-05T08:30+02:00",
+          "start_minute": 29853021,
+          "end_minute": 29853030,
+          "label": "care → care-2",
+          "leg_id": "between-out",
+          "origin": "care",
+          "destination": "care-2",
+          "mode": "transit",
+          "travel_minutes": 9,
+          "handoff_minutes": 0,
+          "buffer_minutes": 0,
+          "cost_grosze": 0,
+          "source": {
+            "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+            "url": "https://gtfs.ztp.krakow.pl/",
+            "checked_at": "2026-10-03",
+            "valid_from": "2026-10-02",
+            "valid_to": "2026-11-15",
+            "status": "current"
+          },
+          "activity_id": "work",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "travel",
+          "start": "2026-10-05T08:30+02:00",
+          "end": "2026-10-05T09:00+02:00",
+          "start_minute": 29853030,
+          "end_minute": 29853060,
+          "label": "care-2 → work",
+          "leg_id": "care-work",
+          "origin": "care-2",
+          "destination": "work",
+          "mode": "transit",
+          "travel_minutes": 10,
+          "handoff_minutes": 5,
+          "buffer_minutes": 15,
+          "cost_grosze": 0,
+          "source": {
+            "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+            "url": "https://gtfs.ztp.krakow.pl/",
+            "checked_at": "2026-10-03",
+            "valid_from": "2026-10-02",
+            "valid_to": "2026-11-15",
+            "status": "current"
+          },
+          "activity_id": "work",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "travel",
+          "start": "2026-10-05T17:00+02:00",
+          "end": "2026-10-05T17:30+02:00",
+          "start_minute": 29853540,
+          "end_minute": 29853570,
+          "label": "work → care-2",
+          "leg_id": "work-care",
+          "origin": "work",
+          "destination": "care-2",
+          "mode": "transit",
+          "travel_minutes": 10,
+          "handoff_minutes": 5,
+          "buffer_minutes": 15,
+          "cost_grosze": 0,
+          "source": {
+            "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+            "url": "https://gtfs.ztp.krakow.pl/",
+            "checked_at": "2026-10-03",
+            "valid_from": "2026-10-02",
+            "valid_to": "2026-11-15",
+            "status": "current"
+          },
+          "activity_id": "work",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "travel",
+          "start": "2026-10-05T17:30+02:00",
+          "end": "2026-10-05T17:40+02:00",
+          "start_minute": 29853570,
+          "end_minute": 29853580,
+          "label": "care-2 → care",
+          "leg_id": "between-back",
+          "origin": "care-2",
+          "destination": "care",
+          "mode": "transit",
+          "travel_minutes": 10,
+          "handoff_minutes": 0,
+          "buffer_minutes": 0,
+          "cost_grosze": 0,
+          "source": {
+            "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+            "url": "https://gtfs.ztp.krakow.pl/",
+            "checked_at": "2026-10-03",
+            "valid_from": "2026-10-02",
+            "valid_to": "2026-11-15",
+            "status": "current"
+          },
+          "activity_id": "work",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "travel",
+          "start": "2026-10-05T17:40+02:00",
+          "end": "2026-10-05T17:45+02:00",
+          "start_minute": 29853580,
+          "end_minute": 29853585,
+          "label": "care → home",
+          "leg_id": "care-home",
+          "origin": "care",
+          "destination": "home",
+          "mode": "transit",
+          "travel_minutes": 5,
+          "handoff_minutes": 0,
+          "buffer_minutes": 0,
+          "cost_grosze": 0,
+          "source": {
+            "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+            "url": "https://gtfs.ztp.krakow.pl/",
+            "checked_at": "2026-10-03",
+            "valid_from": "2026-10-02",
+            "valid_to": "2026-11-15",
+            "status": "current"
+          },
+          "activity_id": "work",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "care",
+          "start": "2026-10-05T08:21+02:00",
+          "end": "2026-10-05T17:40+02:00",
+          "start_minute": 29853021,
+          "end_minute": 29853580,
+          "label": "Placówka demonstracyjna",
+          "activity_id": "work",
+          "need_id": "care-child",
+          "dependent_id": "child-1",
+          "resource_id": "daycare",
+          "location": "care",
+          "date": "2026-10-05",
+          "arrangement_id": null
+        },
+        {
+          "kind": "care",
+          "start": "2026-10-05T08:30+02:00",
+          "end": "2026-10-05T17:30+02:00",
+          "start_minute": 29853030,
+          "end_minute": 29853570,
+          "label": "Druga placówka demonstracyjna",
+          "activity_id": "work",
+          "need_id": "need-2",
+          "dependent_id": "child-2",
+          "resource_id": "daycare-2",
+          "location": "care-2",
+          "date": "2026-10-05",
+          "arrangement_id": null
+        }
+      ],
+      "diagnosis": {
+        "sufficient_core": [
+          {
+            "id": "activity:work",
+            "message": "Wymagana aktywność: Moja oferta pracy"
+          },
+          {
+            "id": "occurrence:work:2026-10-05",
+            "message": "Pełna zmiana Moja oferta pracy, 2026-10-05"
+          },
+          {
+            "id": "baseline:work",
+            "message": "Obecne godziny: 09:00"
+          },
+          {
+            "id": "care_window:daycare",
+            "message": "Placówka demonstracyjna: odbiór 10 min po zamknięciu"
+          }
+        ],
+        "minimal_core": false,
+        "fixed_model_conflict": false
+      }
+    },
+    "alternatives": [
+      {
+        "id": "alternative-1",
+        "title": "Najmniejsza zmiana",
+        "status": "awaiting_confirmation",
+        "solver_status": "OPTIMAL",
+        "schedule": [
+          {
+            "kind": "travel",
+            "start": "2026-10-05T07:16+02:00",
+            "end": "2026-10-05T07:21+02:00",
+            "start_minute": 29852956,
+            "end_minute": 29852961,
+            "label": "home → care",
+            "leg_id": "home-care",
+            "origin": "home",
+            "destination": "care",
+            "mode": "transit",
+            "travel_minutes": 5,
+            "handoff_minutes": 0,
+            "buffer_minutes": 0,
+            "cost_grosze": 0,
+            "source": {
+              "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+              "url": "https://gtfs.ztp.krakow.pl/",
+              "checked_at": "2026-10-03",
+              "valid_from": "2026-10-02",
+              "valid_to": "2026-11-15",
+              "status": "current"
+            },
+            "activity_id": "work",
+            "date": "2026-10-05"
+          },
+          {
+            "kind": "care",
+            "start": "2026-10-05T07:21+02:00",
+            "end": "2026-10-05T16:40+02:00",
+            "start_minute": 29852961,
+            "end_minute": 29853520,
+            "label": "Placówka demonstracyjna",
+            "activity_id": "work",
+            "need_id": "care-child",
+            "dependent_id": "child-1",
+            "resource_id": "daycare",
+            "location": "care",
+            "date": "2026-10-05",
+            "arrangement_id": null
+          },
+          {
+            "kind": "travel",
+            "start": "2026-10-05T07:21+02:00",
+            "end": "2026-10-05T07:30+02:00",
+            "start_minute": 29852961,
+            "end_minute": 29852970,
+            "label": "care → care-2",
+            "leg_id": "between-out",
+            "origin": "care",
+            "destination": "care-2",
+            "mode": "transit",
+            "travel_minutes": 9,
+            "handoff_minutes": 0,
+            "buffer_minutes": 0,
+            "cost_grosze": 0,
+            "source": {
+              "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+              "url": "https://gtfs.ztp.krakow.pl/",
+              "checked_at": "2026-10-03",
+              "valid_from": "2026-10-02",
+              "valid_to": "2026-11-15",
+              "status": "current"
+            },
+            "activity_id": "work",
+            "date": "2026-10-05"
+          },
+          {
+            "kind": "care",
+            "start": "2026-10-05T07:30+02:00",
+            "end": "2026-10-05T16:30+02:00",
+            "start_minute": 29852970,
+            "end_minute": 29853510,
+            "label": "Druga placówka demonstracyjna",
+            "activity_id": "work",
+            "need_id": "need-2",
+            "dependent_id": "child-2",
+            "resource_id": "daycare-2",
+            "location": "care-2",
+            "date": "2026-10-05",
+            "arrangement_id": null
+          },
+          {
+            "kind": "travel",
+            "start": "2026-10-05T07:30+02:00",
+            "end": "2026-10-05T08:00+02:00",
+            "start_minute": 29852970,
+            "end_minute": 29853000,
+            "label": "care-2 → work",
+            "leg_id": "care-work",
+            "origin": "care-2",
+            "destination": "work",
+            "mode": "transit",
+            "travel_minutes": 10,
+            "handoff_minutes": 5,
+            "buffer_minutes": 15,
+            "cost_grosze": 0,
+            "source": {
+              "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+              "url": "https://gtfs.ztp.krakow.pl/",
+              "checked_at": "2026-10-03",
+              "valid_from": "2026-10-02",
+              "valid_to": "2026-11-15",
+              "status": "current"
+            },
+            "activity_id": "work",
+            "date": "2026-10-05"
+          },
+          {
+            "kind": "work",
+            "start": "2026-10-05T08:00+02:00",
+            "end": "2026-10-05T16:00+02:00",
+            "start_minute": 29853000,
+            "end_minute": 29853480,
+            "activity_id": "work",
+            "label": "Moja oferta pracy",
+            "location": "work",
+            "paid_minutes": 480,
+            "date": "2026-10-05",
+            "baseline_start": "09:00"
+          },
+          {
+            "kind": "travel",
+            "start": "2026-10-05T16:00+02:00",
+            "end": "2026-10-05T16:30+02:00",
+            "start_minute": 29853480,
+            "end_minute": 29853510,
+            "label": "work → care-2",
+            "leg_id": "work-care",
+            "origin": "work",
+            "destination": "care-2",
+            "mode": "transit",
+            "travel_minutes": 10,
+            "handoff_minutes": 5,
+            "buffer_minutes": 15,
+            "cost_grosze": 0,
+            "source": {
+              "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+              "url": "https://gtfs.ztp.krakow.pl/",
+              "checked_at": "2026-10-03",
+              "valid_from": "2026-10-02",
+              "valid_to": "2026-11-15",
+              "status": "current"
+            },
+            "activity_id": "work",
+            "date": "2026-10-05"
+          },
+          {
+            "kind": "travel",
+            "start": "2026-10-05T16:30+02:00",
+            "end": "2026-10-05T16:40+02:00",
+            "start_minute": 29853510,
+            "end_minute": 29853520,
+            "label": "care-2 → care",
+            "leg_id": "between-back",
+            "origin": "care-2",
+            "destination": "care",
+            "mode": "transit",
+            "travel_minutes": 10,
+            "handoff_minutes": 0,
+            "buffer_minutes": 0,
+            "cost_grosze": 0,
+            "source": {
+              "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+              "url": "https://gtfs.ztp.krakow.pl/",
+              "checked_at": "2026-10-03",
+              "valid_from": "2026-10-02",
+              "valid_to": "2026-11-15",
+              "status": "current"
+            },
+            "activity_id": "work",
+            "date": "2026-10-05"
+          },
+          {
+            "kind": "travel",
+            "start": "2026-10-05T16:40+02:00",
+            "end": "2026-10-05T16:45+02:00",
+            "start_minute": 29853520,
+            "end_minute": 29853525,
+            "label": "care → home",
+            "leg_id": "care-home",
+            "origin": "care",
+            "destination": "home",
+            "mode": "transit",
+            "travel_minutes": 5,
+            "handoff_minutes": 0,
+            "buffer_minutes": 0,
+            "cost_grosze": 0,
+            "source": {
+              "label": "OpenTripPlanner 2.7.0; OSM i rozkład ZTP Kraków",
+              "url": "https://gtfs.ztp.krakow.pl/",
+              "checked_at": "2026-10-03",
+              "valid_from": "2026-10-02",
+              "valid_to": "2026-11-15",
+              "status": "current"
+            },
+            "activity_id": "work",
+            "date": "2026-10-05"
+          }
+        ],
+        "changes": [
+          {
+            "id": "work-hours",
+            "kind": "work_hours",
+            "activity_id": "work",
+            "from": "09:00",
+            "to": "08:00",
+            "minutes": 60,
+            "label": "Moja oferta pracy: 09:00 → 08:00"
+          }
+        ],
+        "metrics": {
+          "changed_agreements": 1,
+          "shift_minutes": 60,
+          "cost_grosze": 6000,
+          "paid_minutes": 480,
+          "presence_minutes": 480,
+          "travel_minutes": 89,
+          "minimum_slack_minutes": 15,
+          "coordination_actions": 1
+        },
+        "dependencies": [
+          {
+            "id": "hours:work-hours",
+            "kind": "employer",
+            "owner": "Pracodawca",
+            "party": "Pracodawca",
+            "activity_id": "work",
+            "description": "Potwierdzić godziny 08:00–16:00",
+            "proposal": {
+              "start": "08:00",
+              "duration_minutes": 480
+            },
+            "fields": [
+              "activities.work.start",
+              "activities.work.duration_minutes"
+            ],
+            "valid_from": "2026-10-05",
+            "valid_to": "2026-10-05",
+            "status": "pending"
+          }
+        ],
+        "actions": [
+          {
+            "id": "hours:work-hours",
+            "owner": "Pracodawca",
+            "description": "Potwierdzić godziny 08:00–16:00",
+            "deadline": "2026-10-05",
+            "depends_on": [],
+            "source": "warunek obliczonego wariantu"
+          }
+        ],
+        "proof": {
+          "stages": [
+            {
+              "objective": "changed_agreements",
+              "value": 1,
+              "status": "OPTIMAL",
+              "best_bound": 1,
+              "optimal": true
+            },
+            {
+              "objective": "shift_minutes",
+              "value": 60,
+              "status": "OPTIMAL",
+              "best_bound": 60,
+              "optimal": true
+            },
+            {
+              "objective": "cost_grosze",
+              "value": 6000,
+              "status": "OPTIMAL",
+              "best_bound": 6000,
+              "optimal": true
+            }
+          ],
+          "minimal_change_proven": true,
+          "scope": "Pełny podany okres, jawny zakres godzin i wprowadzone kierunkowe przedziały tras"
+        },
+        "robustness": [
+          {
+            "kind": "travel_delay",
+            "extra_minutes": 15,
+            "feasible": true,
+            "message": "Dodatkowe opóźnienie 15 min: zapas wystarcza"
+          },
+          {
+            "kind": "care_cancellation",
+            "resource_id": "daycare",
+            "feasible": false,
+            "message": "Brak Placówka demonstracyjna: zaplanowane pokrycie znika; wymagana ponowna analiza"
+          },
+          {
+            "kind": "care_cancellation",
+            "resource_id": "daycare-2",
+            "feasible": false,
+            "message": "Brak Druga placówka demonstracyjna: zaplanowane pokrycie znika; wymagana ponowna analiza"
+          }
+        ],
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "cost_grosze": 6000,
+          "paid_minutes": 480,
+          "checked_period": {
+            "start": "2026-10-05",
+            "end": "2026-10-05"
+          }
+        }
+      }
+    ],
+    "checked_period": {
+      "start": "2026-10-05",
+      "end": "2026-10-05",
+      "timezone": "Europe/Warsaw"
+    },
+    "solver_version": "okno-cpsat-1",
+    "input_version": 1,
+    "scope": {
+      "time_grid": "Wprowadzone start_min/start_max/step_minutes",
+      "routes": "Wyłącznie podane kierunki, daty i przedziały odjazdu",
+      "care": "Jawne kolejności odwiedzin i zasoby dopuszczone do opieki",
+      "full_horizon": true
+    },
+    "warnings": [],
+    "offers": [
+      {
+        "id": "work",
+        "label": "Moja oferta pracy",
+        "included": true,
+        "status": "candidate"
+      }
+    ],
+    "input_hash": "17266dc6037f63d53cc970736c07708d88488d44d6a212cb6d8c75e2ee776f68",
+    "elapsed_ms": 115
+  },
+  "total_elapsed_seconds": 6.486
+}

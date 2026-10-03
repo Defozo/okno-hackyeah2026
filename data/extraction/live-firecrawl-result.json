@@ -1,0 +1,50 @@
+{
+  "records": [
+    {
+      "id": "krakow-zlobek6-firecrawl",
+      "title": "Żłobek 6: test renderowania",
+      "kind": "care",
+      "synthetic": false,
+      "status": "draft",
+      "source_url": "https://zlobek6.pl/o-nas/",
+      "fetched_at": "2026-10-03T12:04:52.246081Z",
+      "checked_at": null,
+      "valid_from": null,
+      "valid_to": null,
+      "content_hash": "e83b54faa3956b1776807e2abb3a974813046915bf15365424150c759ac093e8",
+      "license_or_terms": "Test pojedynczej publicznej strony, bez publikacji",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "06:00",
+            "end": "17:00"
+          },
+          "source_url": "https://zlobek6.pl/o-nas/",
+          "excerpt": "Do żłobka mogą uczęszczać dzieci od ukończenia 20 tygodnia życia do ukończenia 3 lat. Placówka jest otwarta w godzinach od 6:00 do 17:00 codziennie z wyjątkiem dni ustawowo wolnych od pracy i jednego miesiąca przerwy wakacyjnej. Dzieci przebywają w 4 grupach wiekowych w dostosowanych przestronnych salach. Żłobek posiada własną kuchnię oraz duży ogród gdzie w miarę sprzyjającej aury organizowane są zabawy na świeżym powietrzu.",
+          "fetched_at": "2026-10-03T12:04:52.246081Z",
+          "checked_at": null,
+          "valid_from": null,
+          "valid_to": null,
+          "status": "extracted"
+        },
+        "cost_grosze": {
+          "value": null,
+          "source_url": "https://zlobek6.pl/o-nas/",
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:04:52.246081Z",
+          "checked_at": null,
+          "valid_from": null,
+          "valid_to": null,
+          "status": "unknown"
+        }
+      },
+      "missing_fields": [
+        "cost_grosze",
+        "admission",
+        "date_exceptions"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": []
+    }
+  ]
+}

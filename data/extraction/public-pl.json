@@ -1,0 +1,1187 @@
+{
+  "schema_version": 1,
+  "scope": "Purposive public Polish excerpts covering positive prices/hours, absent facts, explicit negation and ambiguity; not representative",
+  "fixtures": [
+    {
+      "id": "public-001",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=497",
+      "fetched_at": "2026-10-03T12:04:36.389446+00:00",
+      "source_content_hash": "9412cb3d96800128cf2b14047bade014a70bc2e6bbafa7ed8411dad3c344595c",
+      "text": "ul. Podzamcze 1,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-002",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=497",
+      "fetched_at": "2026-10-03T12:04:36.389446+00:00",
+      "source_content_hash": "9412cb3d96800128cf2b14047bade014a70bc2e6bbafa7ed8411dad3c344595c",
+      "text": "tel. +48 726 205 810",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-003",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=498",
+      "fetched_at": "2026-10-03T12:04:36.897110+00:00",
+      "source_content_hash": "ccdb0fd93692f23d4d5fb12d425a7d4e533e62a30c95822d767b2578e6ab3c56",
+      "text": "ul. Piastowska 47, 30-067 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-004",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=498",
+      "fetched_at": "2026-10-03T12:04:36.897110+00:00",
+      "source_content_hash": "ccdb0fd93692f23d4d5fb12d425a7d4e533e62a30c95822d767b2578e6ab3c56",
+      "text": "tel. 12 637 50 09",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-005",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=333",
+      "fetched_at": "2026-10-03T12:04:37.408342+00:00",
+      "source_content_hash": "c2588c9d330979498a225d6ffdd9ad6a7fe8d36164117fb3f746856170728b59",
+      "text": "os. Willowe 2, 31-901 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-006",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=333",
+      "fetched_at": "2026-10-03T12:04:37.408342+00:00",
+      "source_content_hash": "c2588c9d330979498a225d6ffdd9ad6a7fe8d36164117fb3f746856170728b59",
+      "text": "tel. 12 254-89-03",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-007",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=334",
+      "fetched_at": "2026-10-03T12:04:37.881525+00:00",
+      "source_content_hash": "f29b4b5f46bc45648330fd629d576b5f724570a6ab63d656d66eb34df9a5ee14",
+      "text": "os. Piastów 42,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-008",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=334",
+      "fetched_at": "2026-10-03T12:04:37.881525+00:00",
+      "source_content_hash": "f29b4b5f46bc45648330fd629d576b5f724570a6ab63d656d66eb34df9a5ee14",
+      "text": "tel. 12 648 55 71",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-009",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=335",
+      "fetched_at": "2026-10-03T12:04:38.482555+00:00",
+      "source_content_hash": "7027726a0e63a8a7a9b53dba33fac0f3bb428b62ca5a308a04727d604e2bfa1c",
+      "text": "os. Zielone 28,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-010",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=335",
+      "fetched_at": "2026-10-03T12:04:38.482555+00:00",
+      "source_content_hash": "7027726a0e63a8a7a9b53dba33fac0f3bb428b62ca5a308a04727d604e2bfa1c",
+      "text": "tel. 12-644-37-98",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-011",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=336",
+      "fetched_at": "2026-10-03T12:04:38.978409+00:00",
+      "source_content_hash": "a8bd115cc3a534545f4ff871d08e6617692b02f00af1d3704093d8e2d89bba61",
+      "text": "os. 2 Pułku Lotniczego 23,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-012",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=336",
+      "fetched_at": "2026-10-03T12:04:38.978409+00:00",
+      "source_content_hash": "a8bd115cc3a534545f4ff871d08e6617692b02f00af1d3704093d8e2d89bba61",
+      "text": "tel. 12 648 40 24",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-013",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=337",
+      "fetched_at": "2026-10-03T12:04:39.547626+00:00",
+      "source_content_hash": "407277d4ec5048fde01085e5b476b741e3db3f289180e51d5482509ddb6ef4a3",
+      "text": "os. Centrum A 12, 31-925 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-014",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=337",
+      "fetched_at": "2026-10-03T12:04:39.547626+00:00",
+      "source_content_hash": "407277d4ec5048fde01085e5b476b741e3db3f289180e51d5482509ddb6ef4a3",
+      "text": "tel. 12-644-23-95",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-015",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=342",
+      "fetched_at": "2026-10-03T12:04:40.085064+00:00",
+      "source_content_hash": "bd7920e07dfcfd29fb97f0f52cc916a21b9197495ce3ac7dcd4633596f945aeb",
+      "text": "ul. Sienkiewicza 24, 30-033 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-016",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=342",
+      "fetched_at": "2026-10-03T12:04:40.085064+00:00",
+      "source_content_hash": "bd7920e07dfcfd29fb97f0f52cc916a21b9197495ce3ac7dcd4633596f945aeb",
+      "text": "tel. 12-623-74-82",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-017",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=459",
+      "fetched_at": "2026-10-03T12:04:40.685813+00:00",
+      "source_content_hash": "a3daa9557bb1a88d92a55396695c295860fa3502c9b2b74f37143c77950a4796",
+      "text": "Biuletyn Informacji Publicznej Żłobka Samorządowego nr 18 w Krakowie\nul. Mazowiecka 30a,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-018",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=459",
+      "fetched_at": "2026-10-03T12:04:40.685813+00:00",
+      "source_content_hash": "a3daa9557bb1a88d92a55396695c295860fa3502c9b2b74f37143c77950a4796",
+      "text": "tel. 12 633 06 42",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-019",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=343",
+      "fetched_at": "2026-10-03T12:04:41.356926+00:00",
+      "source_content_hash": "d83f5bc10ba8a5e851445d9cb27e2ba975bab7fd7d26ada224fa82d4e731bd79",
+      "text": "ul. Świtezianki 7, 31-563 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-020",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=343",
+      "fetched_at": "2026-10-03T12:04:41.356926+00:00",
+      "source_content_hash": "d83f5bc10ba8a5e851445d9cb27e2ba975bab7fd7d26ada224fa82d4e731bd79",
+      "text": "tel. 12-414-34-78",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-021",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=328",
+      "fetched_at": "2026-10-03T12:04:41.876280+00:00",
+      "source_content_hash": "28bdf358d64f5c4d4400dfb91b285690a151079c728814a406f53d14f4591abb",
+      "text": "ul. Okólna 6,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-022",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=328",
+      "fetched_at": "2026-10-03T12:04:41.876280+00:00",
+      "source_content_hash": "28bdf358d64f5c4d4400dfb91b285690a151079c728814a406f53d14f4591abb",
+      "text": "tel. 12 658 41 09",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-023",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=338",
+      "fetched_at": "2026-10-03T12:04:42.436650+00:00",
+      "source_content_hash": "5277a4b42913d6735891d65e5b4d932fc7046a0680f25bcbc530b44c5596f120",
+      "text": "os. Tysiąclecia 14, 31-605 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-024",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=338",
+      "fetched_at": "2026-10-03T12:04:42.436650+00:00",
+      "source_content_hash": "5277a4b42913d6735891d65e5b4d932fc7046a0680f25bcbc530b44c5596f120",
+      "text": "tel. 12 648 12 32, e-mail: zlobek22@mjo.krakow.pl",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-025",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=329",
+      "fetched_at": "2026-10-03T12:04:43.002298+00:00",
+      "source_content_hash": "d654760a5e51de2a2e8d5023279967272133d36bb9b03eb2aad5138f0deae745",
+      "text": "ul. Słomiana 7,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-026",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=329",
+      "fetched_at": "2026-10-03T12:04:43.002298+00:00",
+      "source_content_hash": "d654760a5e51de2a2e8d5023279967272133d36bb9b03eb2aad5138f0deae745",
+      "text": "tel. 12 266 12 46",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-027",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=460",
+      "fetched_at": "2026-10-03T12:04:43.759812+00:00",
+      "source_content_hash": "5f16c3d651d385681422c3976740db6150a594fe0f0e9a7737d09f96195b656e",
+      "text": "Biuletyn Informacji Publicznej Żłobka Samorządowego Nr 24\nul. Opolska 11,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-028",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=460",
+      "fetched_at": "2026-10-03T12:04:43.759812+00:00",
+      "source_content_hash": "5f16c3d651d385681422c3976740db6150a594fe0f0e9a7737d09f96195b656e",
+      "text": "tel. 12 415 83 39",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-029",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=345",
+      "fetched_at": "2026-10-03T12:04:44.710096+00:00",
+      "source_content_hash": "2d7d9fe0fb724ab608ea0e1fdd8bb0724b18a32bcaa38973d969031e405eada1",
+      "text": "ul. Ehrenberga 3, 31-309 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-030",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=345",
+      "fetched_at": "2026-10-03T12:04:44.710096+00:00",
+      "source_content_hash": "2d7d9fe0fb724ab608ea0e1fdd8bb0724b18a32bcaa38973d969031e405eada1",
+      "text": "tel. 12-637-58-96",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-031",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=339",
+      "fetched_at": "2026-10-03T12:04:45.590234+00:00",
+      "source_content_hash": "6cf494fd4be48bb5180191a71eba8d522b92d742c45de97e0b0e0e5dde51c51b",
+      "text": "os. Kazimierzowskie 28, 31-843 Kraków",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-032",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=339",
+      "fetched_at": "2026-10-03T12:04:45.590234+00:00",
+      "source_content_hash": "6cf494fd4be48bb5180191a71eba8d522b92d742c45de97e0b0e0e5dde51c51b",
+      "text": "tel. 12-648-26-46",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-033",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=330",
+      "fetched_at": "2026-10-03T12:04:46.703988+00:00",
+      "source_content_hash": "19fd14f414570e31be0348a55e0f00118c44cac12152e337cdef4059acf13778",
+      "text": "Biuletyn Informacji Publicznej Żłobka Samorządowego Nr 28 w Krakowie",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-034",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=330",
+      "fetched_at": "2026-10-03T12:04:46.703988+00:00",
+      "source_content_hash": "19fd14f414570e31be0348a55e0f00118c44cac12152e337cdef4059acf13778",
+      "text": "tel. 12-658-44-10",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-035",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=346",
+      "fetched_at": "2026-10-03T12:04:47.557490+00:00",
+      "source_content_hash": "aa6112ad74136f1165291ef511fc044c76618f6827f58ab0fdad4baae0352758",
+      "text": "ul. J. Majora 18,",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-036",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=346",
+      "fetched_at": "2026-10-03T12:04:47.557490+00:00",
+      "source_content_hash": "aa6112ad74136f1165291ef511fc044c76618f6827f58ab0fdad4baae0352758",
+      "text": "tel. 12 285 71 71",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-037",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=331",
+      "fetched_at": "2026-10-03T12:04:48.311304+00:00",
+      "source_content_hash": "824e379a05f835b73b526a9f751763736745cbbb653029ceff347b069fb99843",
+      "text": "ul. Sanocka 2",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-038",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=331",
+      "fetched_at": "2026-10-03T12:04:48.311304+00:00",
+      "source_content_hash": "824e379a05f835b73b526a9f751763736745cbbb653029ceff347b069fb99843",
+      "text": "tel.: 12 655 39 10",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-039",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=461",
+      "fetched_at": "2026-10-03T12:04:49.826622+00:00",
+      "source_content_hash": "b6294729a7cbeb214ebd9ebdd9381b7d90251e4d5d76165055d9bf46af610b35",
+      "text": "UL. HETMANA ŻÓŁKIEWSKIEGO 15, 31-539 KRAKÓW",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-040",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=461",
+      "fetched_at": "2026-10-03T12:04:49.826622+00:00",
+      "source_content_hash": "b6294729a7cbeb214ebd9ebdd9381b7d90251e4d5d76165055d9bf46af610b35",
+      "text": "tel. 12 421 33 48",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-041",
+      "provenance": "public",
+      "source_url": "https://zlobek6.pl/o-nas/",
+      "fetched_at": "2026-10-03T12:07:19.173180+00:00",
+      "source_content_hash": "9ab3b4192a5ed1b8c3c17e3346035110cd5fc136e6acac6db41b607945ad4a31",
+      "text": "otwarta w godzinach od 6:00 do 17:00",
+      "expected": {
+        "hours": {
+          "start": "06:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null
+      },
+      "tags": [
+        "hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-042",
+      "provenance": "public",
+      "source_url": "https://zlobek6.pl/o-nas/",
+      "fetched_at": "2026-10-03T12:07:19.173180+00:00",
+      "source_content_hash": "9ab3b4192a5ed1b8c3c17e3346035110cd5fc136e6acac6db41b607945ad4a31",
+      "text": "z wyjątkiem dni ustawowo wolnych od pracy i jednego miesiąca przerwy wakacyjnej",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "exception",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-043",
+      "provenance": "public",
+      "source_url": "https://zlobek6.pl/o-nas/",
+      "fetched_at": "2026-10-03T12:07:19.173180+00:00",
+      "source_content_hash": "9ab3b4192a5ed1b8c3c17e3346035110cd5fc136e6acac6db41b607945ad4a31",
+      "text": "Placówka posiada 116 miejsc w 4 grupach wiekowych.",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "capacity_is_not_admission",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-044",
+      "provenance": "public",
+      "source_url": "https://bip.krakow.pl/?dok_id=121719",
+      "fetched_at": "2026-10-03T12:07:19.365492+00:00",
+      "source_content_hash": "8c67d9a94921ec369acf59ee4970c57e6dec2b84fad14e27c8a475e90aea7126",
+      "text": "dzieci przyjmowane są w miarę wolnych miejsc",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "conditional_admission",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-045",
+      "provenance": "public",
+      "source_url": "https://bip.krakow.pl/?bip_id=334&mmi=6633",
+      "fetched_at": "2026-10-03T12:07:19.551474+00:00",
+      "source_content_hash": "682629d285dafe5f7a8980bc56a3aeaf50c3707a77e5e981ecf466f15e1ee049",
+      "text": "Sekretariat żłobka czynny jest w godzinach:",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "office_hours_are_not_care",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-046",
+      "provenance": "public",
+      "source_url": "https://bip.krakow.pl/?dok_id=14269",
+      "fetched_at": "2026-10-03T12:07:19.740918+00:00",
+      "source_content_hash": "daebddf8ea4af0a7ebd11c9aec764662bddc63da06acf56e7999cd2a049ecc6e",
+      "text": "W tym zakresie nie obowiązuje „rejonizacja”",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "negation",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-047",
+      "provenance": "public",
+      "source_url": "https://bip.krakow.pl/?dok_id=14269",
+      "fetched_at": "2026-10-03T12:07:19.740918+00:00",
+      "source_content_hash": "daebddf8ea4af0a7ebd11c9aec764662bddc63da06acf56e7999cd2a049ecc6e",
+      "text": "Zapisy do żłobka przyjmuje jego dyrektor w miarę wolnych miejsc przez cały rok.",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "conditional_admission",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-048",
+      "provenance": "public",
+      "source_url": "https://www.zlobek21krakow.pl/o-nas/",
+      "fetched_at": "2026-10-03T12:07:21.688563+00:00",
+      "source_content_hash": "41b627a8be75f84dd9c92eb3a9fa63a119cc7174096efed2a5d62bc25e1db79a",
+      "text": "opieki w godzinach od 6.30 do 17.00",
+      "expected": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null
+      },
+      "tags": [
+        "hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-049",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=337",
+      "fetched_at": "2026-10-03T12:04:39.547626+00:00",
+      "source_content_hash": "407277d4ec5048fde01085e5b476b741e3db3f289180e51d5482509ddb6ef4a3",
+      "text": "Informacje publiczne nie opublikowane w BIP podlegają udostępnieniu w trybie na wniosek.",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "negation",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-050",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?bip_id=333",
+      "fetched_at": "2026-10-03T12:04:37.408342+00:00",
+      "source_content_hash": "c2588c9d330979498a225d6ffdd9ad6a7fe8d36164117fb3f746856170728b59",
+      "text": "Modernizacja żłobka dobiega końca, wkrótce otwarcie placówki.",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "not_yet_open",
+        "missing_hours",
+        "missing_cost"
+      ]
+    },
+    {
+      "id": "public-051",
+      "provenance": "public",
+      "source_url": "https://pokazswiat.pl/",
+      "fetched_at": "2026-10-03T15:08:51.162866+00:00",
+      "source_content_hash": "ed3a476e2d0e825496a429fab316664fdc041756056cd95bd4180ac126d823ee",
+      "text": "810 zł\nCzesne/miesiąc",
+      "excerpt_sha256": "abdf0544fc65f7aafed24587d0e000e0c480ed84491dd57a01bfd2e004a17cb7",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 81000,
+          "period": "month"
+        }
+      },
+      "tags": [
+        "price",
+        "month"
+      ],
+      "expected_cost_component": "care",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-052",
+      "provenance": "public",
+      "source_url": "https://pokazswiat.pl/",
+      "fetched_at": "2026-10-03T15:08:51.162866+00:00",
+      "source_content_hash": "ed3a476e2d0e825496a429fab316664fdc041756056cd95bd4180ac126d823ee",
+      "text": "Godziny pobytu: 6:30 – 17:00",
+      "excerpt_sha256": "36c32f5e809e9aba8809640f54c7bbea7b61c07785a6c1546051a7365cd3047a",
+      "expected": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null
+      },
+      "tags": [
+        "hours"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-053",
+      "provenance": "public",
+      "source_url": "https://pokazswiat.pl/",
+      "fetched_at": "2026-10-03T15:08:51.162866+00:00",
+      "source_content_hash": "ed3a476e2d0e825496a429fab316664fdc041756056cd95bd4180ac126d823ee",
+      "text": "Godziny pobytu: 6:30 – 13:00",
+      "excerpt_sha256": "d354768fd9e8600b59bd1fec95375613b81fa072079679fd429242860dc0a77b",
+      "expected": {
+        "hours": {
+          "start": "06:30",
+          "end": "13:00"
+        },
+        "cost_grosze": null
+      },
+      "tags": [
+        "hours"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-054",
+      "provenance": "public",
+      "source_url": "https://chatkakajtka.pl/%C5%BC%C5%82obek/cennik",
+      "fetched_at": "2026-10-03T15:08:51.850860+00:00",
+      "source_content_hash": "81c3af594531e106796374333ce12340ff65e51fc90e395ba3a02a9d54de0906",
+      "text": "Dzienna stawka żywieniowa: 21,00\nzł /dzień",
+      "excerpt_sha256": "377d9794c0661b0be6a25c833ae83dfe0d234a9ba576adce56e365ef1e5755b1",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 2100,
+          "period": "day"
+        }
+      },
+      "tags": [
+        "price",
+        "day"
+      ],
+      "expected_cost_component": "food",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-055",
+      "provenance": "public",
+      "source_url": "https://tup-tup.com.pl/rodzic/cennik",
+      "fetched_at": "2026-10-03T15:08:53.521591+00:00",
+      "source_content_hash": "f3d9a08c82f5226d7cb7d956153444bb3130bd56d4369d8bd710561cd36198dc",
+      "text": "Opieka poza godzinami pracy placówki 50 zł/h.",
+      "excerpt_sha256": "89af45658fa7fdcb3ab571b3b81797f8549316ff7e080474d590b705ee3c31d7",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 5000,
+          "period": "hour"
+        }
+      },
+      "tags": [
+        "price",
+        "hour"
+      ],
+      "expected_cost_component": "additional_care",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-056",
+      "provenance": "public",
+      "source_url": "https://kidsspace.pl/barska-zlobek/",
+      "fetched_at": "2026-10-03T15:08:53.862822+00:00",
+      "source_content_hash": "23d9079293f61e57a65d0d8a956d217c92b1993f26f2e6fc501648d59cfb618c",
+      "text": "Jednorazowa opłata rekrutacyjna 500 zł płatna wyłącznie przy zapisie dziecka.",
+      "excerpt_sha256": "75c0b2e5b5c30810bb64da3745a2b91a26e6b4fc1cd215765b7456a134ebeefa",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 50000,
+          "period": "once"
+        }
+      },
+      "tags": [
+        "price",
+        "once"
+      ],
+      "expected_cost_component": "enrollment",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-057",
+      "provenance": "public",
+      "source_url": "https://kidsspace.pl/barska-zlobek/",
+      "fetched_at": "2026-10-03T15:08:53.862822+00:00",
+      "source_content_hash": "23d9079293f61e57a65d0d8a956d217c92b1993f26f2e6fc501648d59cfb618c",
+      "text": "Wyżywienie – ok. 400 zł / mies.",
+      "excerpt_sha256": "68f3b428117c7f8149d8e702c11e70fcfe7db245c7d886b5a71a9744846534d5",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "approximate_price",
+        "missing_cost"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-058",
+      "provenance": "public",
+      "source_url": "https://kidsspace.pl/barska-zlobek/",
+      "fetched_at": "2026-10-03T15:08:53.862822+00:00",
+      "source_content_hash": "23d9079293f61e57a65d0d8a956d217c92b1993f26f2e6fc501648d59cfb618c",
+      "text": "Godziny 7:00–17:00",
+      "excerpt_sha256": "673deb9b0bf7b4cf32584d55da3d3422343dc7d3ea8387b73e01a4909b190262",
+      "expected": {
+        "hours": {
+          "start": "07:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null
+      },
+      "tags": [
+        "hours"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-059",
+      "provenance": "public",
+      "source_url": "https://ojp.uws.edu.pl/oferta/kurs-roczny",
+      "fetched_at": "2026-10-03T15:08:54.040341+00:00",
+      "source_content_hash": "abeb0b7032baf2d610cc094cc1028ebfbf14e54bac257c2cb32e760d2864daba",
+      "text": "Cena kursu: 5000 PLN",
+      "excerpt_sha256": "c0b954925c3569f796a966b4d9bd5727b493d2cbddf4b119ad4234a2e4ca773c",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 500000,
+          "period": "once"
+        }
+      },
+      "tags": [
+        "price",
+        "once",
+        "course"
+      ],
+      "expected_cost_component": "course",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-060",
+      "provenance": "public",
+      "source_url": "https://snow4fun.com.pl/kursy-6-dniowe/",
+      "fetched_at": "2026-10-03T15:08:54.273931+00:00",
+      "source_content_hash": "1e60fa69c4435031de7703c7397b1222d735ea08771eeee28691dbcab00609a2",
+      "text": "CENA ZA KURS\n1300 zł",
+      "excerpt_sha256": "e6fd6e902f0dfa5afa173d92dc05e5a807dc05b0215dfd79694cac781c9fd189",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 130000,
+          "period": "once"
+        }
+      },
+      "tags": [
+        "price",
+        "once",
+        "course"
+      ],
+      "expected_cost_component": "course",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-061",
+      "provenance": "public",
+      "source_url": "https://snow4fun.com.pl/kursy-6-dniowe/",
+      "fetched_at": "2026-10-03T15:08:54.273931+00:00",
+      "source_content_hash": "1e60fa69c4435031de7703c7397b1222d735ea08771eeee28691dbcab00609a2",
+      "text": "Godziny otwarcia: 8:30 – 22:00",
+      "excerpt_sha256": "e4a8a91e6d7e2967474f25ac6880330f709f3ba7bb5209bd31ceb86851f48a54",
+      "expected": {
+        "hours": {
+          "start": "08:30",
+          "end": "22:00"
+        },
+        "cost_grosze": null
+      },
+      "tags": [
+        "hours"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-062",
+      "provenance": "public",
+      "source_url": "https://snow4fun.com.pl/kursy-6-dniowe/",
+      "fetched_at": "2026-10-03T15:08:54.273931+00:00",
+      "source_content_hash": "1e60fa69c4435031de7703c7397b1222d735ea08771eeee28691dbcab00609a2",
+      "text": "Godziny otwarcia: 8:30 – 16:00; 18:00 – 21:00",
+      "excerpt_sha256": "50701b395a1f271562c391acae4cbed11883e978db822dff82c0fa135c4b6ad8",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "multiple_intervals",
+        "missing_hours"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-063",
+      "provenance": "public",
+      "source_url": "https://lubienkujawski.pl/komunikat-jutro-piatek-kasa-urzedu-miejskiego-bedzie-przejsciowo-nieczynna-w-godzinach-rannych/",
+      "fetched_at": "2026-10-03T15:08:55.757570+00:00",
+      "source_content_hash": "3a1daf1be1a0c804e0290a40732d0b84368de6fd63b53b7df840c420cd1d5e79",
+      "text": "w godzinach od 7:30 do 10:00 kasa Urzędu Miejskiego w Lubieniu Kujawskim będzie nieczynna.",
+      "excerpt_sha256": "6cb0ee07ed60d48b5ccc458d09271c1a46e669b81d5eefc260bd0c789bcf0ecd",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "negation",
+        "negated_hours",
+        "missing_hours"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-064",
+      "provenance": "public",
+      "source_url": "https://www.future-gorzow.pl/cennik/cennik-kursow/",
+      "fetched_at": "2026-10-03T15:08:56.337359+00:00",
+      "source_content_hash": "7e383ea9aedf2d01e578e1c1bd44effff709aa60b7f6b304730f142036d57d41",
+      "text": "CENA NIE obejmuje Pakietu Edukacyjnego 295 pln",
+      "excerpt_sha256": "da85278f1ed87461abe59a948d35d755216f9cc0b867888ffc534c75ab9fee57",
+      "expected": {
+        "hours": null,
+        "cost_grosze": null
+      },
+      "tags": [
+        "negation",
+        "excluded_price",
+        "missing_cost"
+      ],
+      "expected_cost_component": null,
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-065",
+      "provenance": "public",
+      "source_url": "https://szkolajazdy.krakow.pl/cennik/",
+      "fetched_at": "2026-10-03T15:08:56.524084+00:00",
+      "source_content_hash": "657ba5dc52a129e31cd986f293ffcbb1f4ade51bf5a19535273bbd90d825186a",
+      "text": "1 godz. jazdy na placu\n170,00 zł",
+      "excerpt_sha256": "41dd3cf5012c261fb2fa1fc5cef89dbbf3b24ae603eef16f162f3c1e89d240cd",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 17000,
+          "period": "hour"
+        }
+      },
+      "tags": [
+        "price",
+        "hour",
+        "course"
+      ],
+      "expected_cost_component": "course",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-066",
+      "provenance": "public",
+      "source_url": "https://cok.agh.edu.pl/oplaty/zasady-pobierania-oplat/najczesciej-zadawane-pytania-faq",
+      "fetched_at": "2026-10-03T15:08:56.894852+00:00",
+      "source_content_hash": "fc228f52bd36c2c2528516c8849540d034da4c892c4be8ac253bf1d445cb8e18",
+      "text": "Wysokość stawki za jedną godzinę zajęć wynosi 10 zł.",
+      "excerpt_sha256": "8a12edb76c57777dac46de3b7c7117c6bb7e1e0200435c2e8ea82774c8b9a879",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 1000,
+          "period": "hour"
+        }
+      },
+      "tags": [
+        "price",
+        "hour",
+        "university"
+      ],
+      "expected_cost_component": "course",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    },
+    {
+      "id": "public-067",
+      "provenance": "public",
+      "source_url": "https://www.bip.krakow.pl/?news_id=247942",
+      "fetched_at": "2026-10-03T15:08:57.204787+00:00",
+      "source_content_hash": "704795f9f4e8129d675ac08ccee7431fef0fee4d9491a383c7116fded3475a1b",
+      "text": "miesięczna ryczałtowa opłata, pobierana przez oferenta od rodziców za pobyt dziecka w żłobku wynosi: 1 500 zł",
+      "excerpt_sha256": "19560c2548a4aced4a705eb523991cf139c5b8a06a31cdfd944454560e7cb8a4",
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 150000,
+          "period": "month"
+        }
+      },
+      "tags": [
+        "price",
+        "month",
+        "public_contract"
+      ],
+      "expected_cost_component": "care",
+      "label_note": "AI-assisted annotation of literal excerpt, not independent human audit; no claim of current admission or applicability to a user"
+    }
+  ],
+  "annotation_policy": "Labels set before extraction. Excerpts are exact substrings of sanitized fetched HTML; no wording rewritten.",
+  "extended_at": "2026-10-03T15:25:54.613064+00:00"
+}

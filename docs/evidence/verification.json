@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "team": {
+    "name": "DEFOZO SOFTWARE HOUSE",
+    "members": [
+      "Michał Kiełtyka"
+    ]
+  },
+  "selected_plan": "official-2026-10-03/PLAN.md",
+  "implementation_status": "implemented_with_local_verification_and_open_ux_defects",
+  "all_acceptance_goals_met": false,
+  "submission_test_summary": "232 testy; 9 przepływów; 8 ekranów axe bez naruszeń. Klawiatura i regresje UX sprawdzone.",
+  "automated_tests": {
+    "command": "./scripts/test-docker.ps1",
+    "passed": 232,
+    "failed": 0,
+    "elapsed_seconds": 29.62,
+    "warnings": 1,
+    "warning": "Starlette TestClient announces a future httpx2 migration; tests passed using pinned dependencies.",
+    "runtime": "Linux container, Python 3.12.9, OR-Tools 9.15.6755",
+    "database": "Isolated SQLite for this suite; deployed PostgreSQL tested separately.",
+    "report": "pytest-output.txt",
+    "scope_note": "Full 232-test suite rerun after the second UX correction build. Frontend build and browser regressions verified separately."
+  },
+  "frontend_build": {
+    "command": "npm run build in Docker image",
+    "exit_code": 0,
+    "javascript": "index-CUhktpe1.js",
+    "css": "index-3KQfrRp2.css"
+  },
+  "browser": {
+    "report": "browser-report.json",
+    "verified_url": "http://localhost:18430",
+    "flow_groups_passed": 9,
+    "axe_version": "4.10.3",
+    "axe_screens": 8,
+    "axe_violations": 0,
+    "page_errors": 0,
+    "console_errors": 0,
+    "responsive_widths": [
+      320,
+      360
+    ],
+    "css_zoom_percent": 200,
+    "recording": "demo-recording.webm",
+    "keyboard_report": "keyboard-report.json",
+    "keyboard_offer_analysis_save_delete_passed": true,
+    "dialog_tab_shift_tab_escape_focus_restore_passed": true,
+    "recording_data": "Test entries and synthetic scenarios. No real employment outcomes.",
+    "recording_seconds": 58.0,
+    "recording_bytes": 5849750,
+    "recording_frame_visually_reviewed": true,
+    "public_price_component_verified": true,
+    "tested_at": "2026-10-03T16:37:04.635Z",
+    "recording_reviewed_frame": "demo-frame-reviewed.png",
+    "keyboard_tested_at": "2026-10-03T16:43:00.384Z",
+    "unexpected_console_errors": 0,
+    "expected_injected_console_errors": [
+      "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+    ],
+    "decision_error_recovery": {
+      "injected_status": 429,
+      "error_visible_in_dialog": true,
+      "focus_on_alert": true,
+      "input_retained": true,
+      "retry_uses_real_api": true,
+      "retry_status": 200
+    }
+  },
+  "deployed_api": {
+    "http_report": "live-api.json",
+    "tls_report": "live-api-tls.json",
+    "tls_protocol": "TLSv1.3",
+    "local_ca_chain_and_hostname_verified": true,
+    "global_ca_installation": false,
+    "postgresql_save_read_idempotency_ownership_delete": true,
+    "exact_signed_recipient_export": true,
+    "real_otp_candidate_queries": 18,
+    "real_otp_solve_status": "OPTIMAL",
+    "real_otp_analysis_seconds": 12.957,
+    "synthetic_care_prices_and_confirmations": true,
+    "restart_report": "restart-report.json",
+    "same_session_plan_read_after_actual_api_restart": true,
+    "scope_note": "Earlier local HTTPS API test remains evidence for the unchanged backend. The latest UI and UX tests use the separately recorded local HTTP profile."
+  },
+  "runtime": {
+    "image": "sha256:a71bdc315b13c752515cece6b976ce66094601471c7391ab748b55b97b6b7762",
+    "manifest": "runtime-manifest.json",
+    "compared_api_and_frontend_files": 28,
+    "mismatches": 0,
+    "migrations": "Alembic 0003 on PostgreSQL",
+    "maintenance": "Daily maintenance completed; an actual encrypted backup was decrypted and its schema verified.",
+    "storage_report": "storage-report.json",
+    "application_database_role_has_no_administrative_privileges": true,
+    "running_profile_report": "running-profile.json",
+    "running_url": "http://localhost:18430",
+    "manifest_checked_at": "2026-10-03T16:35:55.9373101Z"
+  },
+  "performance": {
+    "reference_report": "../../data/synthetic/benchmark-results.json",
+    "reference": "28 days, 3 dependents, 3 caregivers, 10 care resources, declared compatible assignments",
+    "samples": 20,
+    "median_seconds": 2.677823,
+    "p95_seconds": 2.872416,
+    "target_seconds": 3,
+    "target_met": true,
+    "all_results_optimal_and_independently_validated": true,
+    "demo_report": "../../data/synthetic/benchmark-demo-results.json",
+    "demo_p95_seconds": 0.059931,
+    "includes_http_or_otp": false,
+    "shared_api_analysis_budget_seconds": 20
+  },
+  "known_limits": [
+    "Zero interviews, zero external usability sessions and zero real employment trials. Protocol and measurement tools are prepared.",
+    "No actual screen-reader or physical-phone study; automated accessibility and browser checks cover the stated screens.",
+    "Local HTTPS is verified. There is no public deployment, publication or submitted contest entry.",
+    "Operator, financing and external partnerships are not confirmed. Host disk encryption and off-host backup remain deployment responsibilities.",
+    "The public extraction corpus remains skewed toward missing fields; its reported success rate is not representative extraction accuracy.",
+    "Routing uses the pinned graph valid from 2026-10-02 to 2026-11-15. Timetable routing does not guarantee actual punctuality.",
+    "Solver feasibility and optimum apply only to the declared dates, start grid, resources, ordering and handoffs. Resource limits return explicit unresolved results.",
+    "Confirmed open accessibility defect: catalogue filtering does not announce the current result count or no-results state through a live status region.",
+    "The final AI UX audit is partial. Its high-priority old-date-analysis claim was not reproduced by two documented input methods; raw report and separate reproduction evidence are preserved, without claiming all paths are disproved.",
+    "Date-range feedback remains without explicit aria-invalid/aria-describedby, although the message is part of the field accessible name. No actual screen-reader test was performed."
+  ],
+  "public_extraction": {
+    "report": "../../data/extraction/groq-benchmark.json",
+    "cases": 67,
+    "passed": 64,
+    "safely_rejected": 3,
+    "false_accepted_against_labels": 0,
+    "positive_hours": 6,
+    "positive_prices_with_period_and_component": 9,
+    "public_negated_hours": 1,
+    "excluded_price": 1,
+    "independent_human_audit": false,
+    "representative_accuracy_estimate": false
+  },
+  "finalized_at": "2026-10-03T17:07:45.727731+00:00",
+  "ux_regression": {
+    "report": "ux-regression.json",
+    "tested_at": "2026-10-03T16:41:21.744Z",
+    "status": "passed",
+    "real_api_analyses": 4,
+    "explicitly_mocked_status_responses": 7,
+    "axe_screens": 5,
+    "axe_violations": 0,
+    "mobile_navigation_accessibility_and_focus": true,
+    "invalid_date_field_feedback_and_recovery": true,
+    "two_dates_typed_character_by_character": true,
+    "empty_plan_is_not_reported_as_timeout": true,
+    "save_injected_429_and_real_retry_200": true,
+    "synthetic_plan_deleted_after_retry": true,
+    "numeric_minimums_field_feedback_and_recovery": {
+      "invalid_required_hours": -1,
+      "message": "Podaj co najmniej 0 godzin wymaganego płatnego czasu pracy.",
+      "aria_invalid": true,
+      "summary_focus": true,
+      "corrected_required_hours": 0,
+      "invalid_budget": -1,
+      "budget_message": "Podaj budżet nie mniejszy niż 0 zł albo zostaw puste pole, jeśli nie określasz limitu.",
+      "cleared_budget_valid": true,
+      "invalid_api_requests": 0
+    },
+    "example_labels_semantically_equivalent_through_real_api": true,
+    "offline_example_contract_report": "example-label-contract.json",
+    "offline_examples": 3,
+    "offline_contract_api_calls": 0,
+    "screenshots": [
+      "ux-mobile-menu-open.png",
+      "ux-mobile-menu-closed.png",
+      "ux-empty-needs-input.png",
+      "ux-polish-example-care.png",
+      "ux-polish-example-travel.png",
+      "ux-polish-example-result.png",
+      "ux-negative-required-hours.png",
+      "ux-invalid-date.png",
+      "ux-corrected-result.png",
+      "ux-unknown-neutral.png",
+      "ux-unknown-limit-warning.png",
+      "ux-infeasible.png",
+      "ux-save-error-modal.png"
+    ],
+    "page_errors": 0,
+    "unexpected_console_errors": 0,
+    "limits": [
+      "Automated Chromium keyboard, accessibility tree and rendering regression; not a human usability study or a screen-reader session.",
+      "Blank and corrected own-offer analyses, the Polish example and its original-reference comparison use the real API. Subsequent status cases intercept only /api/solve and are reported separately.",
+      "The first save is an explicitly simulated HTTP 429; retry and deletion use the real API. Only this script's synthetic plan is saved and deleted. No external messages."
+    ]
+  },
+  "independent_ux_audit": {
+    "cycle": "16c80f28-5ee9-4b6b-bdcd-80fe5888ef09",
+    "reviewer": "Separate AI assistant using an isolated browser; not a human participant",
+    "initial_report": "ux-audit-initial.json",
+    "initial_status": "partial",
+    "initial_findings": 3,
+    "intermediate_report": "ux-audit-intermediate.json",
+    "intermediate_status": "partial",
+    "intermediate_findings": 2,
+    "correction_plan": "ux-correction-plan.md",
+    "correction_rounds": 2,
+    "final_status": "partial",
+    "corrections_from_initial_audit": [
+      "Closed mobile sidebar keyboard and accessibility exposure",
+      "Polish field-associated date errors",
+      "Distinguishing missing input from actual calculation limits"
+    ],
+    "additional_regression_findings": [
+      "Typing a comma-separated date list",
+      "Inactive weekday contrast",
+      "Save and decision errors visible inside their dialogs with preserved input and retry"
+    ],
+    "corrections_from_intermediate_audit": [
+      "Numeric field errors identify their labels, minimums and controls",
+      "Polish example labels remain consistent across places and dependents without altering the calculation"
+    ],
+    "final_report": "ux-audit-final.json",
+    "final_findings": 2,
+    "final_reason": "Zbadano aplikację i główną ścieżkę przykładu. Nie sprawdzono wszystkich formularzy, trwałego zapisu, importu, eksportu ani rzeczywistego powiększenia 200%.",
+    "final_reproduction_report": "ux-final-findings.json",
+    "final_reproduction_tested_at": "2026-10-03T17:01:07.411Z",
+    "raw_audits_preserved_without_changes": true,
+    "third_correction_round_performed": false,
+    "audit_cycle_completed": true,
+    "audit_cycle_completion_status": "partial",
+    "final_findings_disposition": [
+      {
+        "audit_id": "F1",
+        "status": "not_reproduced_in_documented_methods",
+        "priority_in_raw_audit": "high",
+        "evidence": "Normal fill and trusted keyboard day-segment changes retained the invalid entered date, showed a range error, disabled analysis and sent no solve request before leaving the form. Positive controls sent and analysed the new 2026-10-05 to 2026-10-08 range. After leaving and returning, the entered invalid date remained but its local error cleared and the button was enabled; that invalid resubmission was not clicked. The discrepancy is unexplained and not every path was disproved."
+      },
+      {
+        "audit_id": "F2",
+        "status": "confirmed_open",
+        "priority_in_raw_audit": "medium",
+        "evidence": "Catalogue filtering changes visible results without announcing their count or absence in a live status region."
+      }
+    ],
+    "additional_open_observation": "The date-range error is included in the wrapping label and accessible name, but lacks explicit aria-invalid and aria-describedby. Actual screen-reader output remains untested.",
+    "limitations": [
+      "Zbadano aplikację i główną ścieżkę przykładu. Nie sprawdzono wszystkich formularzy, trwałego zapisu, importu, eksportu ani rzeczywistego powiększenia 200%.",
+      "Użyto wyłącznie izolowanego ux_browser i danych demonstracyjnych widocznych w aplikacji.",
+      "Nie badano źródeł zewnętrznych ani danych aplikacji poza renderowanym interfejsem.",
+      "Wyniki dotyczą badanego podglądu i nie stanowią potwierdzenia zgodności z WCAG.",
+      "Chromium automation with fresh sessions; not a human screen-reader test.",
+      "A failure to reproduce a claim applies only to the documented methods and tested build."
+    ]
+  }
+}

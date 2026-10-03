@@ -1,0 +1,48 @@
+{
+  "verified_date": "2026-10-03",
+  "method": "Read all supplied category materials and selected PLAN; fetched primary-source PDFs again over HTTPS and compared SHA-256. Web extractor could not parse some PDF endpoints; direct HTTPS downloads succeeded.",
+  "sources": [
+    {
+      "kind": "category_rules",
+      "url": "https://mudnibfuppwadjkynscc.supabase.co/storage/v1/object/public/task-files/6f0f5e2e-246f-4078-a3f7-1aad9152e9f0/files/8f63a03d-dc46-4326-ba5a-8848d00e27c5.pdf",
+      "http_status": 200,
+      "sha256": "5b86bc25d29d38e22334aa4ce6d68fec886dce1947a339732aea8de091d067a6",
+      "matches_supplied_material": true,
+      "pages": 3
+    },
+    {
+      "kind": "category_details",
+      "url": "https://drive.google.com/file/d/1Q_iO0ctvP6ZlytB5EJY2Ne0DazqJQO2P/view",
+      "download_url": "https://drive.google.com/uc?export=download&id=1Q_iO0ctvP6ZlytB5EJY2Ne0DazqJQO2P",
+      "http_status": 200,
+      "sha256": "2b9442c8e92f3b747ef3215768a7def8d3778450e2dcb286c1032e9b8301057f",
+      "matches_supplied_material": true,
+      "pages": 4
+    },
+    {
+      "kind": "general_rules",
+      "url": "https://hackyeah.pl/rules?lang=pl",
+      "http_status": 200,
+      "sha256": "271a30f2ced75f49b6e335dfdcc9de0aefe33c83349c82b654e17bd9d6ddc417",
+      "bytes": 261756,
+      "pages": 15,
+      "relevant_sections": ["4.3", "5.5", "5.8"]
+    }
+  ],
+  "verified_requirements": {
+    "mandatory": ["project_title", "team_name", "team_members", "project_description", "pdf_presentation"],
+    "max_pdf_slides_including_cover_and_authorship": 10,
+    "human_team_members_min": 1,
+    "human_team_members_max": 6,
+    "languages": ["pl", "en"],
+    "criteria_percent": {"idea_innovation": 30, "category_relation": 20, "practical_usability": 20, "design": 20, "completeness_implementation": 10},
+    "significant_ai_and_external_resources_disclosure": true,
+    "preexisting_work_disclosure": true
+  },
+  "user_requested_additions": {"entry_stage": "New Idea", "editable_pptx": true, "mp4_max_seconds": 180, "public_interactive_https_demo": true, "final_submission_authorized": false, "create_second_entry": false},
+  "not_found_in_reviewed_rules": ["separate New Idea scoring criteria", "film duration limit", "mandatory PPTX", "attachment byte limit"],
+  "material_discrepancies": [
+    {"field": "submission_platform", "category_rules": "HackTribe", "category_details": "Challenge Rocket", "resolution": "unconfirmed"},
+    {"field": "submission_window", "general_rules_polish_4_3": "11:00 on 2026-10-03 to 11:00 on 2026-10-04", "general_rules_english_4_3": "11:00 PM on 2026-10-03 to 11:00 PM on 2026-10-04", "category_rules": "11:00 PM on both dates", "resolution": "unconfirmed; no inferred correction or eligibility claim"}
+  ]
+}

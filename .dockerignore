@@ -1,0 +1,14 @@
+.venv
+.runtime
+.git
+web/node_modules
+web/dist
+official-2026-10-03
+proposals
+materials
+infra/otp/graph
+infra/otp/data
+docs
+test-results
+*.env
+.env*

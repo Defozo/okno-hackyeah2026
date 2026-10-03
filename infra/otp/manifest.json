@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "otp_version": "2.7.0",
+  "image": "opentripplanner/opentripplanner:2.7.0@sha256:640870b240ad206d05634e7a066588804c6e23abebf37cbc02b0c9ba66073486",
+  "acquired_at": "2026-10-03T11:55:50.843886+00:00",
+  "valid_from": "2026-10-02",
+  "valid_to": "2026-11-15",
+  "coverage": "Kraków and Małopolskie; actual GTFS service and mapped walking links only",
+  "inputs": [
+    {
+      "file": "malopolskie.osm.pbf",
+      "url": "https://download.geofabrik.de/europe/poland/malopolskie-latest.osm.pbf",
+      "sha256": "14c4f8561b99407442f31abf30a7c1c625ee01ab6e88c32d4c86b59923da7912",
+      "bytes": 202232967
+    },
+    {
+      "file": "krakow-a.gtfs.zip",
+      "url": "https://gtfs.ztp.krakow.pl/GTFS_KRK_A.zip",
+      "sha256": "ad37a5cfca38bb919cf5aa8b152217332a78e6a7c69d78cc7dfea2a0ad44cad7",
+      "bytes": 20376382,
+      "valid_from": "2026-09-30",
+      "valid_to": "2027-01-31"
+    },
+    {
+      "file": "krakow-m.gtfs.zip",
+      "url": "https://gtfs.ztp.krakow.pl/GTFS_KRK_M.zip",
+      "sha256": "258672e87d7077c53a68972804cfea8df23f41734895df9a6bfbf521db2b9062",
+      "bytes": 2829659,
+      "valid_from": "2026-09-30",
+      "valid_to": "2027-01-31"
+    },
+    {
+      "file": "krakow-t.gtfs.zip",
+      "url": "https://gtfs.ztp.krakow.pl/GTFS_KRK_T.zip",
+      "sha256": "450d5f7ae7e086e0d471b09bd26441eaf81ac1d1f8a417e4ebe419e421597403",
+      "bytes": 5295887,
+      "valid_from": "2026-10-02",
+      "valid_to": "2026-12-30"
+    }
+  ],
+  "licenses": {
+    "osm": "OpenStreetMap contributors, ODbL 1.0; Geofabrik extract",
+    "gtfs": "ZTP public feed; operator must verify redistribution terms before publication"
+  },
+  "graph_service_start": "2026-10-01",
+  "graph_service_end": "2026-11-15",
+  "graph_sha256": "e583743c2e20d3c9ec394bd593acb81295b567f02943e2069b52a19069cfd3b8",
+  "graph_built_at": "2026-10-03T12:12:18.049225+00:00"
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "status": "partial",
+  "reason": "Sprawdzono aplikację i główny przebieg przykładu. Nie przetestowano wszystkich formularzy, zapisu, odzyskiwania danych ani rzeczywistego powiększenia 200%.",
+  "firstImpression": {
+    "purpose": "Łączenie godzin pracy, opieki i dojazdów oraz znajdowanie możliwych zmian grafiku.",
+    "audience": "Osoby łączące pracę z obowiązkami opiekuńczymi.",
+    "firstAction": "Otwarcie przykładu albo wpisanie własnego planu.",
+    "expectedOutcome": "Wskazanie kolizji i możliwych zmian godzin.",
+    "uncertainties": [
+      "Jak szczegółowe dane będą potrzebne?",
+      "Co obejmują późniejsze „Uzgodnienia”?"
+    ],
+    "recordedBeforeExploration": true
+  },
+  "coverage": {
+    "entryUrl": "http://localhost:18430/",
+    "routesRequested": [
+      "http://localhost:18430/"
+    ],
+    "routesChecked": [
+      "http://localhost:18430/"
+    ],
+    "checks": [
+      {
+        "area": "first-impression",
+        "result": "checked",
+        "evidence": "Obejrzano pierwszy zrzut 1440 × 900 i drzewo dostępności przed eksploracją. Cel oraz wejście przez przykład są widoczne.",
+        "limitations": "Ocena pierwszego widoku przez jednego audytora."
+      },
+      {
+        "area": "navigation",
+        "result": "checked",
+        "evidence": "Z formularza przejście do wyniku, następnie do Uzgodnień i Próby. Widoki odkryto przez przyciski aplikacji. Nagłówek otrzymywał fokus po zmianie widoku.",
+        "limitations": "Nie otwarto Katalogu źródeł ani Zapisanych planów."
+      },
+      {
+        "area": "language",
+        "result": "checked",
+        "evidence": "Cel opisano konkretnie. Interfejs rozróżnia obliczoną możliwość, zgodę drugiej strony i rzeczywisty wynik. Przykład zawiera również etykiety „work”, „care” i „child-1”.",
+        "limitations": "Nie oceniono wszystkich rozwijanych objaśnień."
+      },
+      {
+        "area": "cognitive-load",
+        "result": "checked",
+        "evidence": "Dane podzielono na zakładki; wynik przykładu przedstawia dwa warianty i porównanie godzin. Formularz opieki wymaga wielu informacji oraz osobnych etykiet.",
+        "limitations": "Nie przeprowadzono badania z użytkownikami ani pełnego wprowadzania własnego grafiku."
+      },
+      {
+        "area": "forms-and-feedback",
+        "result": "checked",
+        "evidence": "Sprawdzono pusty plan, wczytanie przykładu, analizę, podgląd karty i odrzucenie wartości -1 w wymaganym czasie pracy. Dane po błędzie pozostały w formularzu.",
+        "limitations": "Nie sprawdzono zapisu na serwerze, importu, eksportu, usuwania, wszystkich reguł walidacji ani błędów połączenia."
+      },
+      {
+        "area": "keyboard-and-focus",
+        "result": "checked",
+        "evidence": "Tab ujawnił wyraźny fokus odnośnika pomijającego nawigację; Enter go aktywował. ArrowRight zmienił zakładkę na Opiekę. Shift+Tab wrócił do poprzedniego pola. Escape zamknął menu mobilne i zwrócił fokus przyciskowi otwierającemu.",
+        "limitations": "Sprawdzono próbkę kolejności fokusu, nie cały interfejs."
+      },
+      {
+        "area": "semantics-and-names",
+        "result": "checked",
+        "evidence": "Dokument ma lang=pl. Drzewo zawiera nazwane pola, nagłówki, main, nawigację, tablist, tabpanel i nazwany dialog menu. Błąd wartości ujemnej nie ma powiązanego opisu przy polu.",
+        "limitations": "Inspekcja drzewa i DOM, bez testu czytnikiem ekranu."
+      },
+      {
+        "area": "contrast",
+        "result": "checked",
+        "evidence": "Obliczenia ze stylów tekstu i nieprzezroczystego tła: opis celu 6,17:1, opis formularza 6,58:1, etykiety nazwy i daty 7,09:1.",
+        "limitations": "Pomiar wybranych tekstów; nie wszystkich kontrolek, obramowań i stanów."
+      },
+      {
+        "area": "zoom-and-mobile",
+        "result": "checked",
+        "evidence": "Przy emulacji 390 × 844 pierwszy widok mieścił się w szerokości 390 px. Sprawdzono menu mobilne. Przy 720 × 450 również nie wystąpiło poziome przepełnienie dokumentu.",
+        "limitations": "720 × 450 to przybliżenie przestrzeni dostępnej przy 200% względem 1440 × 900, nie rzeczywisty zoom. Skrót powiększenia nie dał potwierdzonej zmiany. Nie sprawdzono wszystkich widoków mobilnych."
+      },
+      {
+        "area": "status-announcements",
+        "result": "checked",
+        "evidence": "Ładowanie, wczytanie przykładu i zakończenie analizy pojawiały się w status z aria-live=polite. Podsumowanie błędu miało role=alert i otrzymało fokus.",
+        "limitations": "Nie zweryfikowano faktycznego odczytu przez technologię asystującą."
+      }
+    ],
+    "limitations": [
+      "Wyłącznie izolowana przeglądarka ux_browser i renderowana aplikacja.",
+      "Zmiana emulacji przeładowała aplikację i przywróciła pusty formularz; nie traktowano tego jako samodzielnego dowodu usterki.",
+      "Wynik nie stanowi pełnego audytu zgodności z WCAG."
+    ]
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "medium",
+      "confidence": "high",
+      "area": "forms-and-feedback",
+      "location": {
+        "url": "http://localhost:18430/",
+        "target": "Twój plan: walidacja pola „Wymagany płatny czas pracy w całym okresie (godz.)”"
+      },
+      "evidence": "Po wpisaniu -1 komunikat brzmi: „Twój plan: Dane do sprawdzenia. Sprawdź wartość tego pola. Nie spełnia wymaganych warunków.” Nie wskazuje nazwy pola ani minimum 0. Podsumowanie zapowiada przyciski prowadzące do pól, lecz nie zawiera żadnego przycisku ani odnośnika. Pole nie ma aria-describedby wskazującego błąd.",
+      "reproduction": [
+        "Otwórz pusty plan.",
+        "Wpisz -1 jako wymagany płatny czas pracy.",
+        "Wybierz „Sprawdź mój plan”.",
+        "Sprawdź podsumowanie błędu i możliwość przejścia do niepoprawnego pola."
+      ],
+      "impact": "Użytkownik musi sam odnaleźć błędne pole i odgadnąć dopuszczalną wartość. W długim formularzu utrudnia to poprawę danych, szczególnie przy obsłudze klawiaturą.",
+      "recommendation": "Podaj nazwę pola i istniejącą regułę minimum 0. Dodaj działający odnośnik do pola oraz powiąż szczegółowy komunikat z kontrolką.",
+      "acceptanceCriteria": [
+        "Wpisanie -1 daje komunikat wskazujący wymagany czas pracy i wartość co najmniej 0.",
+        "Odnośnik z podsumowania przenosi fokus do właściwego pola.",
+        "Pole ma programowo powiązany opis błędu.",
+        "Po poprawieniu wartości na 0 ten błąd znika."
+      ]
+    },
+    {
+      "id": "F2",
+      "priority": "low",
+      "confidence": "medium",
+      "area": "language",
+      "location": {
+        "url": "http://localhost:18430/",
+        "target": "Przykład „45 minut do zmiany”: pola miejsca i podopiecznego"
+      },
+      "evidence": "Przykład pokazuje „work” jako miejsce pracy, „care” jako miejsce placówki i „child-1” jako etykietę podopiecznego. Przy miejscu pracy wymaga użycia tej samej etykiety w dojazdach.",
+      "reproduction": [
+        "Wybierz przykład „45 minut do zmiany”.",
+        "Sprawdź pole miejsca w zakładce Praca i zajęcia.",
+        "Otwórz zakładkę Opieka i sprawdź etykietę podopiecznego oraz miejsce placówki."
+      ],
+      "impact": "Przykład mający wyjaśniać działanie produktu wprowadza angielskie identyfikatory i konieczność pamiętania identycznych etykiet.",
+      "recommendation": "Pokazuj czytelne polskie nazwy i umożliwiaj rozpoznanie wcześniej wskazanych miejsc. Zachowaj istniejące powiązania; jeśli techniczne identyfikatory są konieczne, wyjaśnij ich rolę.",
+      "acceptanceCriteria": [
+        "Przykład prezentuje zrozumiałe nazwy miejsc i podopiecznego.",
+        "Te same miejsca można jednoznacznie rozpoznać w powiązanych częściach formularza.",
+        "Zmiana prezentacji nazw nie zmienia wyniku analizy przykładu."
+      ]
+    }
+  ],
+  "overall": {
+    "understandable": true,
+    "summary": "Cel i główny przebieg są zrozumiałe. Mocne strony to konkretne wyjaśnienia wyniku, kontrola udostępniania oraz sprawdzona obsługa podstawowych interakcji klawiaturą. Najważniejsza poprawka dotyczy nieprecyzyjnego podsumowania błędu formularza."
+  }
+}

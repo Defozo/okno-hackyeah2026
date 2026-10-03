@@ -1,0 +1,214 @@
+{
+  "tested_at": "2026-10-03T18:42:30.726Z",
+  "base_url": "https://okno-impacther-2026.defozo.chatgpt.site",
+  "flows": [
+    "Synthetic demo: conflict45, two calculated alternatives",
+    "Exact recipient preview and actual PDF download",
+    "Explicit save and acceptance with versioned decision",
+    "Baseline, confirmed trial, initially blank outcome and saved synthetic observation",
+    "Actual calendar export",
+    "Private JSON backup, deletion and import with consent reset",
+    "Real public catalog source with review date and missing data",
+    "Public enrollment fee rendered as a one-time component, separately from ongoing care costs"
+  ],
+  "axe": [
+    {
+      "screen": "start",
+      "violations": []
+    },
+    {
+      "screen": "results",
+      "violations": []
+    },
+    {
+      "screen": "results-360",
+      "violations": []
+    },
+    {
+      "screen": "results-320",
+      "violations": []
+    },
+    {
+      "screen": "agreements",
+      "violations": []
+    },
+    {
+      "screen": "trial",
+      "violations": []
+    },
+    {
+      "screen": "verified-catalog",
+      "violations": []
+    }
+  ],
+  "responsive": [
+    {
+      "width": 360,
+      "scroll": 360,
+      "passes": true
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "passes": true
+    },
+    {
+      "zoom": "CSS 200%",
+      "scroll": 1440,
+      "width": 1440,
+      "passes": true
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "expected_console_errors": [],
+  "platform_warnings": [
+    {
+      "source": "Cloudflare injected JavaScript detection, blocked by application CSP",
+      "message": "Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-EujFOR2rAVE2bv6X7G2MV5Z+ljha0uVgGxSQ79fBoQY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked."
+    }
+  ],
+  "fresh_session_test": true,
+  "dns_resolution": {
+    "method": "Browser resolver"
+  },
+  "tls_certificate_validation": true,
+  "authorized_test_data_only": true,
+  "mocks_used": false,
+  "initial_cookie_count": 0,
+  "api_calls": [
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/examples",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/catalog",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/solve",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/export",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/export",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/plans",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/plans/<id>/decisions",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/plans/<id>/trial",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/plans/<id>/outcomes",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/export",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/export",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/plans/<id>/backup",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/plans/<id>",
+      "method": "DELETE",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/import",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/plans/<id>",
+      "method": "DELETE",
+      "status": 200
+    },
+    {
+      "path": "/api/session",
+      "method": "GET",
+      "status": 200
+    }
+  ],
+  "decision_status": 200,
+  "session_cookie": {
+    "secure": true,
+    "http_only": true,
+    "same_site": "Strict"
+  },
+  "session_isolation": true,
+  "catalog_price_component": {
+    "record": "KIDS SPACE Barska",
+    "amount_grosze": 50000,
+    "component": "enrollment",
+    "period": "once",
+    "displayed_facts": "Rodzaj Opieka Godziny w źródle 07:00 do 17:00 Kwota składnika 500,00 zł Dotyczy Wpisowe / rekrutacja Okres opłaty Jednorazowo Sprawdzono 3 paź 2026 Ważność 10 paź 2026",
+    "displayed_missing_fields": "Do potwierdzenia: Koszt bieżącej opieki, Koszt wyżywienia, Przyjęcie konkretnej osoby, Wyjątki w kalendarzu."
+  },
+  "verified": true,
+  "key_flow_test": true,
+  "completed_at": "2026-10-03T18:44:31.498Z"
+}

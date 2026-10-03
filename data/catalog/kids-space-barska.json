@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "id": "kids-space-barska-enrollment",
+      "title": "KIDS SPACE Barska: opłata rekrutacyjna",
+      "kind": "care",
+      "synthetic": false,
+      "status": "published",
+      "source_url": "https://kidsspace.pl/barska-zlobek/",
+      "fetched_at": "2026-10-03T15:08:53.862822Z",
+      "checked_at": "2026-10-03T15:22:36.876735Z",
+      "valid_from": null,
+      "valid_to": "2026-10-10",
+      "content_hash": "23d9079293f61e57a65d0d8a956d217c92b1993f26f2e6fc501648d59cfb618c",
+      "license_or_terms": "Krótkie fakty z publicznej strony placówki; brak redystrybucji pełnej strony, brak potwierdzenia przyjęcia",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "07:00",
+            "end": "17:00"
+          },
+          "source_url": "https://kidsspace.pl/barska-zlobek/",
+          "excerpt": "Godziny 7:00–17:00",
+          "fetched_at": "2026-10-03T15:08:53.862822Z",
+          "checked_at": "2026-10-03T15:22:36.876735Z",
+          "valid_from": null,
+          "valid_to": "2026-10-10",
+          "status": "reviewed"
+        },
+        "cost_grosze": {
+          "value": 50000,
+          "source_url": "https://kidsspace.pl/barska-zlobek/",
+          "excerpt": "Jednorazowa opłata rekrutacyjna 500 zł płatna wyłącznie przy zapisie dziecka.",
+          "fetched_at": "2026-10-03T15:08:53.862822Z",
+          "checked_at": "2026-10-03T15:22:36.876735Z",
+          "valid_from": null,
+          "valid_to": "2026-10-10",
+          "status": "reviewed"
+        },
+        "cost_period": {
+          "value": "once",
+          "source_url": "https://kidsspace.pl/barska-zlobek/",
+          "excerpt": "Jednorazowa opłata rekrutacyjna 500 zł płatna wyłącznie przy zapisie dziecka.",
+          "fetched_at": "2026-10-03T15:08:53.862822Z",
+          "checked_at": "2026-10-03T15:22:36.876735Z",
+          "valid_from": null,
+          "valid_to": "2026-10-10",
+          "status": "reviewed"
+        },
+        "cost_component": {
+          "value": "enrollment",
+          "source_url": "https://kidsspace.pl/barska-zlobek/",
+          "excerpt": "Jednorazowa opłata rekrutacyjna 500 zł płatna wyłącznie przy zapisie dziecka.",
+          "fetched_at": "2026-10-03T15:08:53.862822Z",
+          "checked_at": "2026-10-03T15:22:36.876735Z",
+          "valid_from": null,
+          "valid_to": "2026-10-10",
+          "status": "reviewed"
+        }
+      },
+      "missing_fields": [
+        "ongoing_care_cost",
+        "food_cost",
+        "admission",
+        "date_exceptions"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": [
+        {
+          "from": "draft",
+          "to": "reviewed",
+          "reviewer": "asystent AI Codex: porównanie dokładnych fragmentów z pobraną publiczną stroną; bez niezależnego audytu człowieka",
+          "at": "2026-10-03T15:22:36.876735+00:00"
+        },
+        {
+          "from": "reviewed",
+          "to": "published",
+          "reviewer": "asystent AI Codex: porównanie dokładnych fragmentów z pobraną publiczną stroną; bez niezależnego audytu człowieka",
+          "at": "2026-10-03T15:22:36.877255+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "records": [
+    {
+      "id": "krakow-zlobek6",
+      "title": "Żłobek Samorządowy nr 6 w Krakowie",
+      "kind": "care",
+      "synthetic": false,
+      "status": "published",
+      "source_url": "https://zlobek6.pl/o-nas/",
+      "fetched_at": "2026-10-03T12:02:44.743072Z",
+      "checked_at": "2026-10-03T12:10:55.734806Z",
+      "valid_from": null,
+      "valid_to": "2026-10-10",
+      "content_hash": "9ab3b4192a5ed1b8c3c17e3346035110cd5fc136e6acac6db41b607945ad4a31",
+      "license_or_terms": "Pojedynczy rekord faktograficzny ze strony placówki. Brak licencji na masową redystrybucję treści.",
+      "fields": {
+        "hours": {
+          "value": {
+            "start": "06:00",
+            "end": "17:00"
+          },
+          "source_url": "https://zlobek6.pl/o-nas/",
+          "excerpt": "otwarta w godzinach od 6:00 do 17:00",
+          "fetched_at": "2026-10-03T12:02:44.743072Z",
+          "checked_at": "2026-10-03T12:10:55.734806Z",
+          "valid_from": null,
+          "valid_to": "2026-10-10",
+          "status": "reviewed"
+        },
+        "cost_grosze": {
+          "value": null,
+          "source_url": "https://zlobek6.pl/o-nas/",
+          "excerpt": null,
+          "fetched_at": "2026-10-03T12:02:44.743072Z",
+          "checked_at": null,
+          "valid_from": null,
+          "valid_to": null,
+          "status": "unknown"
+        }
+      },
+      "missing_fields": [
+        "cost_grosze",
+        "admission",
+        "date_exceptions"
+      ],
+      "admission_confirmed": false,
+      "editorial_history": [
+        {
+          "from": "draft",
+          "to": "reviewed",
+          "reviewer": "source-check-assisted-by-codex-2026-10-03",
+          "at": "2026-10-03T12:10:55.734806+00:00"
+        },
+        {
+          "from": "reviewed",
+          "to": "published",
+          "reviewer": "source-check-assisted-by-codex-2026-10-03",
+          "at": "2026-10-03T12:10:55.734806+00:00"
+        }
+      ]
+    }
+  ]
+}

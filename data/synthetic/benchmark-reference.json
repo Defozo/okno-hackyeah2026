@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "title": "Referencja wydajności 28 dni",
+  "version": 1,
+  "data_mode": "synthetic",
+  "start_date": "2026-10-05",
+  "end_date": "2026-11-01",
+  "home_location": "home",
+  "minimum_paid_minutes": 9600,
+  "minimum_rest_minutes": 660,
+  "budget_grosze": 1000000,
+  "preferred_extra_buffer_minutes": 15,
+  "notes": "Syntetyczna referencja: 28 dni, 3 podopiecznych, 3 opiekunów i 7 placówek. Wspólny punkt opieki, jawne zgodności 4/3/3, 5 dozwolonych startów, 20 dni pracy. Brak zewnętrznych API.",
+  "activities": [
+    {
+      "id": "work",
+      "label": "Moja oferta pracy",
+      "kind": "work",
+      "location": "work",
+      "start": "09:00",
+      "duration_minutes": 480,
+      "paid_minutes": 480,
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "negotiable": true,
+      "start_min": "08:00",
+      "start_max": "09:00",
+      "step_minutes": 15,
+      "agreement_id": "work-hours",
+      "required": true,
+      "source": {
+        "label": "syntetyczna oferta",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    }
+  ],
+  "care_needs": [
+    {
+      "id": "need-0",
+      "dependent_id": "dependent-0",
+      "label": "Osoba 1",
+      "care_type": "child",
+      "start": "00:00",
+      "end": "24:00",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allow_self_care": true,
+      "resource_ids": [
+        "resource-0",
+        "resource-1",
+        "resource-2",
+        "resource-7"
+      ],
+      "visit_order": 0
+    },
+    {
+      "id": "need-1",
+      "dependent_id": "dependent-1",
+      "label": "Osoba 2",
+      "care_type": "child",
+      "start": "00:00",
+      "end": "24:00",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allow_self_care": true,
+      "resource_ids": [
+        "resource-3",
+        "resource-4",
+        "resource-8"
+      ],
+      "visit_order": 1
+    },
+    {
+      "id": "need-2",
+      "dependent_id": "dependent-2",
+      "label": "Osoba 3",
+      "care_type": "child",
+      "start": "00:00",
+      "end": "24:00",
+      "weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allow_self_care": true,
+      "resource_ids": [
+        "resource-5",
+        "resource-6",
+        "resource-9"
+      ],
+      "visit_order": 2
+    }
+  ],
+  "care_resources": [
+    {
+      "id": "resource-0",
+      "label": "Zasób syntetyczny 1",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-0"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3000,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-1",
+      "label": "Zasób syntetyczny 2",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-0"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3100,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-2",
+      "label": "Zasób syntetyczny 3",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-0"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3200,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-3",
+      "label": "Zasób syntetyczny 4",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-1"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3300,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-4",
+      "label": "Zasób syntetyczny 5",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-1"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3400,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-5",
+      "label": "Zasób syntetyczny 6",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-2"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3500,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-6",
+      "label": "Zasób syntetyczny 7",
+      "location": "care",
+      "kind": "facility",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-2"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3600,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-7",
+      "label": "Zasób syntetyczny 8",
+      "location": "care",
+      "kind": "caregiver",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-0"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3700,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-8",
+      "label": "Zasób syntetyczny 9",
+      "location": "care",
+      "kind": "caregiver",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-1"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3800,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    },
+    {
+      "id": "resource-9",
+      "label": "Zasób syntetyczny 10",
+      "location": "care",
+      "kind": "caregiver",
+      "capacity": 1,
+      "dependent_ids": [
+        "dependent-2"
+      ],
+      "availability": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "start": "07:00",
+          "end": "17:00"
+        }
+      ],
+      "confirmed": true,
+      "confirmation_valid_to": "2026-12-31",
+      "daily_cost_grosze": 3900,
+      "hourly_cost_grosze": 0,
+      "one_time_cost_grosze": 0,
+      "source": {
+        "label": "syntetyczne potwierdzenie na potrzeby demonstracji",
+        "checked_at": "2026-10-03",
+        "valid_to": "2026-12-31"
+      }
+    }
+  ],
+  "travel_legs": [
+    {
+      "id": "home-care",
+      "origin": "home",
+      "destination": "care",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 0,
+          "cost_grosze": 0
+        }
+      ]
+    },
+    {
+      "id": "care-work",
+      "origin": "care",
+      "destination": "work",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 25,
+          "cost_grosze": 400
+        }
+      ],
+      "handoff_minutes": 5,
+      "buffer_minutes": 15
+    },
+    {
+      "id": "work-care",
+      "origin": "work",
+      "destination": "care",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 25,
+          "cost_grosze": 400
+        }
+      ],
+      "handoff_minutes": 5,
+      "buffer_minutes": 15
+    },
+    {
+      "id": "care-home",
+      "origin": "care",
+      "destination": "home",
+      "mode": "manual",
+      "bands": [
+        {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "00:00",
+          "end": "24:00",
+          "minutes": 0,
+          "cost_grosze": 0
+        }
+      ]
+    }
+  ],
+  "self_care_capacity": 3
+}

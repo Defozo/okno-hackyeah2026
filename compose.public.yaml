@@ -1,0 +1,120 @@
+name: okno-demo
+services:
+  db:
+    image: postgres:17.4-bookworm
+    environment:
+      POSTGRES_DB: okno
+      POSTGRES_USER: okno_admin
+      POSTGRES_PASSWORD: ${OKNO_DEMO_DB_ADMIN_PASSWORD:?Inject from psst}
+      OKNO_DB_APP_PASSWORD: ${OKNO_DEMO_DB_APP_PASSWORD:?Inject from psst}
+      OKNO_DB_MIGRATOR_PASSWORD: ${OKNO_DEMO_DB_MIGRATOR_PASSWORD:?Inject from psst}
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./infra/init-db.sh:/docker-entrypoint-initdb.d/01-roles.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U okno_admin -d okno']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    networks: [private]
+    restart: unless-stopped
+  migrate:
+    image: okno-app:competition-20261003
+    environment:
+      DB_ROLE: okno_migrator
+      OKNO_DB_MIGRATOR_PASSWORD: ${OKNO_DEMO_DB_MIGRATOR_PASSWORD:?Inject from psst}
+    command: [python, -m, alembic, upgrade, head]
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [private]
+  api:
+    image: okno-app:competition-20261003
+    environment:
+      DB_ROLE: okno_app
+      OKNO_DB_APP_PASSWORD: ${OKNO_DEMO_DB_APP_PASSWORD:?Inject from psst}
+      OKNO_SESSION_SECRET: ${OKNO_DEMO_SESSION_SECRET:?Inject from psst}
+      OKNO_ENCRYPTION_KEY: ${OKNO_DEMO_ENCRYPTION_KEY:?Inject from psst}
+      APP_ORIGIN: https://okno-impacther-2026.defozo.chatgpt.site
+      COOKIE_SECURE: 'true'
+      DATA_MODE: synthetic
+      ROUTING_MODE: otp
+      OTP_URL: http://otp:8080
+      OTP_MANIFEST_PATH: /app/otp-data/manifest.json
+      SOLVER_MAX_CONCURRENT: '2'
+      SOLVER_TOTAL_BUDGET_SECONDS: '20'
+      PLAN_RETENTION_DAYS: '30'
+    volumes:
+      - ./infra/otp/data:/app/otp-data:ro
+      - ./data/catalog:/app/data/catalog:ro
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, 'import urllib.request; urllib.request.urlopen("http://localhost:8000/health/ready",timeout=5)']
+      interval: 15s
+      timeout: 8s
+      retries: 4
+    mem_limit: 4g
+    pids_limit: 128
+    networks: [private, outbound, transit]
+    restart: unless-stopped
+  maintenance:
+    image: okno-app:competition-20261003
+    environment:
+      DB_ROLE: okno_app
+      OKNO_DB_APP_PASSWORD: ${OKNO_DEMO_DB_APP_PASSWORD:?Inject from psst}
+      OKNO_ENCRYPTION_KEY: ${OKNO_DEMO_ENCRYPTION_KEY:?Inject from psst}
+      PLAN_RETENTION_DAYS: '30'
+      BACKUP_RETENTION_DAYS: '7'
+    command: [python, scripts/maintenance_loop.py]
+    volumes: [backups:/app/backups]
+    networks: [private]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+  edge:
+    image: caddy@sha256:4c6e91c6ed0e2fa03efd5b44747b625fec79bc9cd06ac5235a779726618e530d
+    environment:
+      OKNO_DEMO_GATEWAY_KEY: ${OKNO_DEMO_GATEWAY_KEY:?Inject from psst}
+    volumes:
+      - ./infra/public/Caddyfile:/etc/caddy/Caddyfile:ro
+    ports: ['127.0.0.1:18431:8080']
+    networks: [outbound]
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+  tunnel:
+    image: ${OKNO_DEMO_NGROK_IMAGE:?Use pinned ngrok image}
+    environment:
+      NGROK_AUTHTOKEN: ${OKNO_DEMO_NGROK_AUTHTOKEN:?Inject from psst}
+    command: [http, 'http://edge:8080', '--config', '/etc/ngrok.yml', '--inspect=false', '--log', 'stdout', '--log-format', json]
+    volumes:
+      - ./infra/public/ngrok.yml:/etc/ngrok.yml:ro
+    networks: [outbound]
+    ports: ['127.0.0.1:18432:4040']
+    depends_on: [edge]
+    restart: unless-stopped
+  connector:
+    image: okno-app:competition-20261003
+    entrypoint: [python, /connector.py]
+    environment:
+      OKNO_DEMO_GATEWAY_KEY: ${OKNO_DEMO_GATEWAY_KEY:?Inject from psst}
+      OKNO_DEMO_ORIGIN: https://okno-impacther-2026.defozo.chatgpt.site
+    volumes:
+      - ./scripts/public-connector.py:/connector.py:ro
+    networks: [outbound]
+    depends_on: [tunnel]
+    restart: unless-stopped
+volumes:
+  database:
+  backups:
+networks:
+  private:
+    internal: true
+    ipam:
+      config: [{subnet: 10.253.186.0/28}]
+  outbound:
+    ipam:
+      config: [{subnet: 10.253.187.0/28}]
+  transit:
+    external: true
+    name: okno_demo_transit

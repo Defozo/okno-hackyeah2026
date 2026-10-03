@@ -1,0 +1,1078 @@
+{
+  "run_at": "2026-10-03T15:26:37.751106+00:00",
+  "model": "openai/gpt-oss-120b",
+  "corpus_sha256": "c55c6bab7df68f2602076575af0e7309e080a2c75b92317f623a481745456a15",
+  "public_cases": 67,
+  "passed": 64,
+  "extractor_sha256": "f44f6bcd0db37b56d4383facdce0085b465d76739cf96b5938bea2841b879ae9",
+  "measurement": "Validated Groq extraction pipeline, including exact evidence, quantity, period and cost component; provider or validation errors count as failures",
+  "composition": {
+    "positive_hours": 6,
+    "positive_prices": 9,
+    "both_missing": 52,
+    "negated_hours": 1,
+    "excluded_prices": 1
+  },
+  "limitations": "Purposive corpus, still skewed toward missing data and childcare. Not a representative quality estimate or independent human audit. Errors count as failures.",
+  "results": [
+    {
+      "id": "public-001",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.61
+    },
+    {
+      "id": "public-002",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.496
+    },
+    {
+      "id": "public-003",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.637
+    },
+    {
+      "id": "public-004",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.447
+    },
+    {
+      "id": "public-005",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.591
+    },
+    {
+      "id": "public-006",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.342
+    },
+    {
+      "id": "public-007",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.553
+    },
+    {
+      "id": "public-008",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.383
+    },
+    {
+      "id": "public-009",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.596
+    },
+    {
+      "id": "public-010",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.539
+    },
+    {
+      "id": "public-011",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.506
+    },
+    {
+      "id": "public-012",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.387
+    },
+    {
+      "id": "public-013",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.383
+    },
+    {
+      "id": "public-014",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.925
+    },
+    {
+      "id": "public-015",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.442
+    },
+    {
+      "id": "public-016",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.499
+    },
+    {
+      "id": "public-017",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.395
+    },
+    {
+      "id": "public-018",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.534
+    },
+    {
+      "id": "public-019",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.48
+    },
+    {
+      "id": "public-020",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.938
+    },
+    {
+      "id": "public-021",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.427
+    },
+    {
+      "id": "public-022",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.48
+    },
+    {
+      "id": "public-023",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.479
+    },
+    {
+      "id": "public-024",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.429
+    },
+    {
+      "id": "public-025",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.417
+    },
+    {
+      "id": "public-026",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.334
+    },
+    {
+      "id": "public-027",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.393
+    },
+    {
+      "id": "public-028",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.388
+    },
+    {
+      "id": "public-029",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.394
+    },
+    {
+      "id": "public-030",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.473
+    },
+    {
+      "id": "public-031",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.508
+    },
+    {
+      "id": "public-032",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.452
+    },
+    {
+      "id": "public-033",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.633
+    },
+    {
+      "id": "public-034",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.725
+    },
+    {
+      "id": "public-035",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.738
+    },
+    {
+      "id": "public-036",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.405
+    },
+    {
+      "id": "public-037",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.376
+    },
+    {
+      "id": "public-038",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.553
+    },
+    {
+      "id": "public-039",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.502
+    },
+    {
+      "id": "public-040",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.452
+    },
+    {
+      "id": "public-041",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "06:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": {
+          "start": "06:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 1.147
+    },
+    {
+      "id": "public-042",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.786
+    },
+    {
+      "id": "public-043",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.683
+    },
+    {
+      "id": "public-044",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.611
+    },
+    {
+      "id": "public-045",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.543
+    },
+    {
+      "id": "public-046",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.375
+    },
+    {
+      "id": "public-047",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.512
+    },
+    {
+      "id": "public-048",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.869
+    },
+    {
+      "id": "public-049",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.476
+    },
+    {
+      "id": "public-050",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.481
+    },
+    {
+      "id": "public-051",
+      "passed": false,
+      "error_type": "ImportRejected",
+      "error": "Składnik kosztu nie ma potwierdzenia w cytacie",
+      "seconds": 1.46
+    },
+    {
+      "id": "public-052",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": {
+          "start": "06:30",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.86
+    },
+    {
+      "id": "public-053",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "06:30",
+          "end": "13:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": {
+          "start": "06:30",
+          "end": "13:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.825
+    },
+    {
+      "id": "public-054",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 2100,
+          "period": "day"
+        },
+        "cost_component": "food"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 2100,
+          "period": "day"
+        },
+        "cost_component": "food"
+      },
+      "seconds": 0.877
+    },
+    {
+      "id": "public-055",
+      "passed": false,
+      "error_type": "ImportRejected",
+      "error": "Składnik kosztu nie ma potwierdzenia w cytacie",
+      "seconds": 0.889
+    },
+    {
+      "id": "public-056",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 50000,
+          "period": "once"
+        },
+        "cost_component": "enrollment"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 50000,
+          "period": "once"
+        },
+        "cost_component": "enrollment"
+      },
+      "seconds": 0.829
+    },
+    {
+      "id": "public-057",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.507
+    },
+    {
+      "id": "public-058",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "07:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": {
+          "start": "07:00",
+          "end": "17:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.777
+    },
+    {
+      "id": "public-059",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 500000,
+          "period": "once"
+        },
+        "cost_component": "course"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 500000,
+          "period": "once"
+        },
+        "cost_component": "course"
+      },
+      "seconds": 0.767
+    },
+    {
+      "id": "public-060",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 130000,
+          "period": "once"
+        },
+        "cost_component": "course"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 130000,
+          "period": "once"
+        },
+        "cost_component": "course"
+      },
+      "seconds": 0.727
+    },
+    {
+      "id": "public-061",
+      "passed": true,
+      "actual": {
+        "hours": {
+          "start": "08:30",
+          "end": "22:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": {
+          "start": "08:30",
+          "end": "22:00"
+        },
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.799
+    },
+    {
+      "id": "public-062",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.763
+    },
+    {
+      "id": "public-063",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": null,
+        "cost_component": null
+      },
+      "seconds": 0.642
+    },
+    {
+      "id": "public-064",
+      "passed": false,
+      "error_type": "ImportRejected",
+      "error": "cost_grosze: negacja lub nieaktualność wymaga ręcznego przeglądu",
+      "seconds": 1.363
+    },
+    {
+      "id": "public-065",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 17000,
+          "period": "hour"
+        },
+        "cost_component": "course"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 17000,
+          "period": "hour"
+        },
+        "cost_component": "course"
+      },
+      "seconds": 0.749
+    },
+    {
+      "id": "public-066",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 1000,
+          "period": "hour"
+        },
+        "cost_component": "course"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 1000,
+          "period": "hour"
+        },
+        "cost_component": "course"
+      },
+      "seconds": 0.882
+    },
+    {
+      "id": "public-067",
+      "passed": true,
+      "actual": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 150000,
+          "period": "month"
+        },
+        "cost_component": "care"
+      },
+      "expected": {
+        "hours": null,
+        "cost_grosze": {
+          "value": 150000,
+          "period": "month"
+        },
+        "cost_component": "care"
+      },
+      "seconds": 0.924
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+name: okno
+services:
+  db:
+    image: postgres:17.4-bookworm
+    environment:
+      POSTGRES_DB: okno
+      POSTGRES_USER: okno_admin
+      POSTGRES_PASSWORD: ${OKNO_DB_ADMIN_PASSWORD:?Inject from psst}
+      OKNO_DB_APP_PASSWORD: ${OKNO_DB_APP_PASSWORD:?Inject from psst}
+      OKNO_DB_MIGRATOR_PASSWORD: ${OKNO_DB_MIGRATOR_PASSWORD:?Inject from psst}
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./infra/init-db.sh:/docker-entrypoint-initdb.d/01-roles.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U okno_admin -d okno']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    networks: [private]
+    restart: unless-stopped
+  migrate:
+    build: .
+    image: okno-app:local
+    environment:
+      DB_ROLE: okno_migrator
+      OKNO_DB_MIGRATOR_PASSWORD: ${OKNO_DB_MIGRATOR_PASSWORD:?Inject from psst}
+    command: [python, -m, alembic, upgrade, head]
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [private]
+  api:
+    image: okno-app:local
+    environment:
+      DB_ROLE: okno_app
+      OKNO_DB_APP_PASSWORD: ${OKNO_DB_APP_PASSWORD:?Inject from psst}
+      OKNO_SESSION_SECRET: ${OKNO_SESSION_SECRET:?Inject from psst}
+      OKNO_ENCRYPTION_KEY: ${OKNO_ENCRYPTION_KEY:?Inject from psst}
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:18430}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      DATA_MODE: ${DATA_MODE:-synthetic}
+      ROUTING_MODE: ${ROUTING_MODE:-manual}
+      OTP_URL: http://otp:8080
+      OTP_MANIFEST_PATH: /app/otp-data/manifest.json
+      SOLVER_MAX_CONCURRENT: ${SOLVER_MAX_CONCURRENT:-2}
+      SOLVER_TOTAL_BUDGET_SECONDS: ${SOLVER_TOTAL_BUDGET_SECONDS:-20}
+      PLAN_RETENTION_DAYS: ${PLAN_RETENTION_DAYS:-30}
+    volumes:
+      - ./infra/otp/data:/app/otp-data:ro
+      - ./data/catalog:/app/data/catalog:ro
+    ports: ['127.0.0.1:18430:8000']
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, 'import urllib.request; urllib.request.urlopen("http://localhost:8000/health/ready",timeout=5)']
+      interval: 15s
+      timeout: 8s
+      retries: 4
+    mem_limit: 4g
+    pids_limit: 128
+    networks: [private, outbound]
+    restart: unless-stopped
+  otp:
+    image: opentripplanner/opentripplanner:2.7.0@sha256:640870b240ad206d05634e7a066588804c6e23abebf37cbc02b0c9ba66073486
+    profiles: [transit]
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx10G
+    volumes: ['./infra/otp/data:/var/opentripplanner:ro']
+    command: ['--load', '--serve']
+    mem_limit: 12g
+    networks: [private]
+    restart: unless-stopped
+  maintenance:
+    image: okno-app:local
+    environment:
+      DB_ROLE: okno_app
+      OKNO_DB_APP_PASSWORD: ${OKNO_DB_APP_PASSWORD:?Inject from psst}
+      OKNO_ENCRYPTION_KEY: ${OKNO_ENCRYPTION_KEY:?Inject from psst}
+      PLAN_RETENTION_DAYS: ${PLAN_RETENTION_DAYS:-30}
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-7}
+    command: [python, scripts/maintenance_loop.py]
+    volumes: [backups:/app/backups]
+    networks: [private]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    restart: unless-stopped
+  imports:
+    image: okno-app:local
+    profiles: [imports]
+    entrypoint: [python, -m, api.importer]
+    command: ['--help']
+    environment:
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      FIRECRAWL_API_KEY: ${FIRECRAWL_API_KEY:-}
+    volumes: ['./data/catalog:/app/data/catalog']
+    networks: [outbound]
+  proxy:
+    image: caddy:2.10.2-alpine
+    profiles: [tls]
+    ports: ['127.0.0.1:18443:443']
+    volumes:
+      - ./infra/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy:/data
+    networks: [outbound]
+    depends_on: [api]
+volumes:
+  database:
+  caddy:
+  backups:
+networks:
+  private:
+    internal: true
+  outbound:
+    ipam:
+      config:
+        - subnet: ${OKNO_OUTBOUND_SUBNET:-10.253.185.0/28}

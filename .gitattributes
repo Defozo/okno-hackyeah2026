@@ -1,0 +1,2 @@
+# Preserve the bytes listed in SOURCE_MANIFEST.json across checkouts.
+* -text

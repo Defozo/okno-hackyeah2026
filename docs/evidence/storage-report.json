@@ -1,0 +1,16 @@
+{
+  "tested_at": "2026-10-03T17:00:53.539165+02:00",
+  "database_role": {
+    "current_user": "okno_app",
+    "rolsuper": false,
+    "rolcreatedb": false,
+    "rolcreaterole": false
+  },
+  "encrypted_backup": {
+    "present": true,
+    "plaintext_json": false,
+    "decryption_verified": true,
+    "schema_version": 1
+  },
+  "private_records_or_keys_in_report": false
+}

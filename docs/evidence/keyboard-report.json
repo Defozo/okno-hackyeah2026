@@ -1,0 +1,267 @@
+{
+  "tested_at": "2026-10-03T16:43:00.384Z",
+  "base_url": "http://localhost:18430",
+  "status": "passed",
+  "input_method": "Playwright keyboard Tab, Shift+Tab, Enter, Space, Escape, Control+A and insertText on the already focused input",
+  "pointer_or_programmatic_focus_used": false,
+  "screen_reader_tested": false,
+  "limitations": [
+    "Automated keyboard and browser accessibility semantics check; not a human usability study or an NVDA/JAWS/VoiceOver test.",
+    "Single Chromium desktop viewport, fresh browser session, synthetic at-home offer."
+  ],
+  "navigation": [
+    {
+      "target": "plan title",
+      "tabs": 3,
+      "active": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "title",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "add own offer",
+      "tabs": 15,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Dodaj ofertę lub zajęcia",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "offer title",
+      "tabs": 34,
+      "active": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "offer location",
+      "tabs": 2,
+      "active": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "offer start",
+      "tabs": 1,
+      "active": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "analyse own offer",
+      "tabs": 24,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Sprawdź mój plan",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "open save dialog",
+      "tabs": 20,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Zapisz plan",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "save consent",
+      "tabs": 1,
+      "active": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "in_dialog": true
+      }
+    },
+    {
+      "target": "confirm save",
+      "tabs": 1,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Zapisz mój plan",
+        "in_dialog": true
+      }
+    },
+    {
+      "target": "open saved plans",
+      "tabs": 8,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Zapisane plany1 w tej przeglądarce",
+        "in_dialog": false
+      }
+    },
+    {
+      "target": "manage current plan",
+      "tabs": 3,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Bieżący plan",
+        "in_dialog": true
+      }
+    },
+    {
+      "target": "open delete confirmation",
+      "tabs": 3,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Usuń bieżący plan",
+        "in_dialog": true
+      }
+    },
+    {
+      "target": "confirm test plan deletion",
+      "tabs": 2,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Usuń plan i powiązane dane",
+        "in_dialog": true
+      }
+    },
+    {
+      "target": "verify saved list after deletion",
+      "tabs": 32,
+      "active": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Zapisane planyWróć do swoich ustaleń",
+        "in_dialog": false
+      }
+    }
+  ],
+  "flows": [
+    "First Tab reaches the skip link; Enter activates it",
+    "Own at-home offer entered and analysed using keyboard only",
+    "Save dialog requires explicit consent; Tab and Shift+Tab stay inside; Escape restores the opening button",
+    "Explicit consent selected with Space and synthetic plan saved",
+    "Saved plan managed, explicitly deleted, and absence verified using keyboard only"
+  ],
+  "focus_trap": [
+    {
+      "key": "Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    },
+    {
+      "key": "Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    },
+    {
+      "key": "Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    },
+    {
+      "key": "Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "INPUT",
+      "role": null,
+      "name": "",
+      "in_dialog": true
+    },
+    {
+      "key": "Shift+Tab",
+      "tag": "BUTTON",
+      "role": null,
+      "name": "Zamknij okno",
+      "in_dialog": true
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "save_dialog_accessibility_snapshot": "- dialog \"Chcesz wrócić do swojego planu?\":\n  - heading \"Chcesz wrócić do swojego planu?\" [level=2]\n  - paragraph: Zapis na serwerze jest osobną, dobrowolną decyzją.\n  - button \"Zamknij okno\":\n    - img\n  - strong: Dostęp jest przypisany do tej przeglądarki.\n  - text: Usunięcie jej cookie może oznaczać utratę dostępu. Po zapisie pobierz własną kopię JSON.\n  - paragraph: Plan zostanie zachowany na serwerze. Domyślny okres bez aktywności to 30 dni. Zmiany powiązanych warunków wymagają ponownego sprawdzenia dawnych ustaleń.\n  - checkbox \"Chcę zapisać te dane i rozumiem sposób dostępu.\"\n  - text: Chcę zapisać te dane i rozumiem sposób dostępu.\n  - button \"Zapisz mój plan\" [disabled]:\n    - img\n    - text: Zapisz mój plan",
+  "save_dialog_focus_restored": true,
+  "test_plan_deleted": true,
+  "finished_at": "2026-10-03T16:43:17.397Z"
+}

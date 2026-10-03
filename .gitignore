@@ -1,0 +1,38 @@
+# Local secrets and runtime state
+.env
+.env.*
+!.env.example
+.runtime/
+.venv/
+.openai/
+**/.openai/
+*.db
+*.sqlite*
+backups/
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+USER_REQUEST*
+HACKTRIBE_UPDATE_RESULT.json
+scripts/hacktribe_pitch_update.py
+# Generated dependencies and build output
+node_modules/
+**/node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.tsbuildinfo
+web/dist/
+public-demo/dist/
+output/
+test-results/
+playwright-report/
+# Downloaded transit inputs and graph
+infra/otp/data/*
+!infra/otp/data/.gitkeep
+infra/otp/graph/
+# Full downloaded pages are not redistributed
+data/extraction/public-pages.json
+data/extraction/runtime-pages.json
