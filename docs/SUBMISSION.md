@@ -1,37 +1,21 @@
 # Okno: wykonalny plan pracy i opieki
 
-**DEFOZO SOFTWARE HOUSE**. Autor i jedyny członek zespołu: **Michał Kiełtyka**. Kategoria: **ImpactHER: Technology for Real Change**. Etap: **New Idea**.
+DEFOZO SOFTWARE HOUSE · Michał Kiełtyka · ImpactHER: Technology for Real Change · New Idea.
 
-## Problem
+## Problem i wartość
 
-Praca kończy się o 17:00. Opieka też. Samo znalezienie oferty nie rozwiązuje problemu powrotu do pracy, jeśli po drodze trzeba jeszcze dojechać i odebrać dziecko. Kobieta potrzebuje konkretnych godzin i warunków, z którymi może wrócić do rozmowy z pracodawcą.
+Praca kończy się o 17:00. Opieka też. Sama oferta pracy nie rozwiązuje problemu powrotu do zatrudnienia, gdy trzeba jeszcze dojechać i odebrać dziecko. Okno pomaga wskazać konkretne godziny i warunki, które użytkowniczka może uzgodnić z pracodawcą lub opiekunem.
 
-## Rozwiązanie
+Użytkowniczka podaje grafik, zasoby opieki, dojazdy, daty i granice budżetu. Aplikacja pokazuje konflikt, oblicza dopuszczalne warianty i porównuje ich koszt, zapas czasu oraz zachowany wymiar pracy. Karta dla pracodawcy zawiera proponowane godziny i okres próby, bez informacji o rodzinie, placówkach i prywatnych kosztach.
 
-Okno zamienia grafik pracy, opiekę i dojazdy w plan do uzgodnienia. Wskazuje konflikt, oblicza dopuszczalne zmiany i pokazuje ich koszt, zapas czasu oraz zachowany wymiar pracy. Użytkowniczka ustala granice, których plan ma przestrzegać.
+W syntetycznym przykładzie praca 09:00–17:00 daje 45 minut kolizji z opieką. Zmiana na 08:15–16:15 usuwa konflikt, a 08:00–16:00 daje 15 minut zapasu. Oba warianty zachowują 40 godzin pracy tygodniowo i wymagają uzgodnienia. Kontrpropozycja 08:30–16:30 pozostawia 15 minut kolizji, którą aplikacja wykrywa przy ponownym przeliczeniu.
 
-W przykładzie demonstracyjnym praca 09:00–17:00 oznacza odbiór 45 minut po zamknięciu placówki. Przesunięcie pracy na 08:15–16:15 usuwa tę kolizję. Wariant 08:00–16:00 daje dodatkowe 15 minut zapasu. Oba zachowują 40 godzin płatnej pracy w tygodniu i wymagają uzgodnienia godzin z pracodawcą.
+## Od wariantu do próby
 
-Wybrany wariant trafia do karty dla pracodawcy z godzinami i okresem próby. Użytkowniczka kontroluje jej treść przed eksportem. Karta pomija dane rodziny, placówek i prywatne koszty. Odpowiedź lub kontrpropozycję można zapisać i ponownie przeliczyć plan. Po uzgodnieniu warunków aplikacja prowadzi przez próbę i porównanie rzeczywistego czasu pracy, kosztów oraz wysiłku organizacyjnego.
+Odpowiedź, odmowę lub kontrpropozycję można zapisać i ponownie sprawdzić. Po potwierdzeniu zależności aplikacja prowadzi przez okres odniesienia, próbę oraz zapis rzeczywistej pracy, kosztów i wysiłku organizacyjnego. Obliczony plan i rzeczywisty rezultat pozostają odrębnymi informacjami.
 
-## Działający produkt
+## Technologia
 
-Demo obejmuje cały przepływ: od własnych warunków, przez analizę i uzgodnienia, do próby, eksportu PDF i kalendarza oraz usunięcia zapisanego planu. Model OR-Tools CP-SAT uwzględnia daty, kilku podopiecznych, pojemność opiekunów, kierunki dojazdu, przekazania, wyjątki i budżet. Niezależny walidator sprawdza wynik. Routing OpenTripPlanner na danych OSM i GTFS dla Krakowa przelicza dojazdy po zmianie godzin; można także wpisać czasy ręcznie.
+OR-Tools CP-SAT oblicza warianty, a niezależny walidator kontroluje harmonogram. Opcjonalny OpenTripPlanner korzysta z OSM i GTFS; dostępne są także własne czasy podróży. Zapisane plany są szyfrowane, a eksport obejmuje tylko zatwierdzone pola. Publiczny katalog podaje źródła i daty. Opcjonalna ekstrakcja AI dotyczy wyłącznie publicznych materiałów.
 
-Publiczny katalog pozwala sprawdzić źródło i datę informacji o opiece. Opcjonalny import AI pomaga odczytać publiczne materiały. Prywatne grafiki nie trafiają do modelu językowego. Przykład w filmie i demo jest syntetyczny.
-
-## Następny krok
-
-Planowany pilotaż z organizacją wspierającą powrót kobiet do pracy sprawdzi, czy obliczone warianty prowadzą do uzgodnień i utrzymania zatrudnienia. Pomiar obejmie godziny płatnej pracy, koszt opieki i dojazdu oraz czas poświęcony na organizację. Protokół badań i definicje miar są przygotowane w [RESEARCH.md](RESEARCH.md).
-
-## Materiały
-
-- [Interaktywne demo](https://okno-impacther-2026.defozo.chatgpt.site/) i [strona materiałów](https://okno-impacther-2026.defozo.chatgpt.site/materialy/).
-- [Prezentacja PDF](https://okno-impacther-2026.defozo.chatgpt.site/materialy/prezentacja.pdf), [edytowalny PPTX z notatkami](https://okno-impacther-2026.defozo.chatgpt.site/materialy/prezentacja.pptx) i [film z polskim lektorem](https://okno-impacther-2026.defozo.chatgpt.site/materialy/demo.mp4).
-- [Instrukcja jurora](jury/README.md), [kryteria i źródła wymagań](jury/REQUIREMENTS.md), [wyniki kontroli technicznych](VALIDATION.md), [uruchomienie](../README.md).
-
-## Autorstwo i zasoby
-
-Michał Kiełtyka odpowiada za projekt jako jedyny członek DEFOZO SOFTWARE HOUSE. Istotnie wykorzystano Codex do koncepcji, programowania, testów, interfejsu i materiałów. Film korzysta z syntetycznego lektora ElevenLabs oraz oryginalnego podkładu instrumentalnego. Szczegóły: [AI_USAGE.md](../AI_USAGE.md), [THIRD_PARTY.md](../THIRD_PARTY.md), [PREEXISTING.md](../PREEXISTING.md).
-
-Istniejące zgłoszenie HackTribe pozostaje na etapie **New Idea**. Bieżące zlecenie obejmuje zapis materiałów i opisu przy zachowaniu widoczności wpisu. Wynik zapisu i ponownego odczytu dokumentuje `HACKTRIBE_UPDATE_RESULT.json`. Osobna finalizacja konkursowa nie jest objęta tym zleceniem.
+[Instrukcja demo](jury/README.md) · [Materiały](MATERIALS.md) · [Architektura](ARCHITECTURE.md) · [Testy](VALIDATION.md) · [Uruchomienie](../README.md).

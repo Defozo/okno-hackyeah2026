@@ -36,3 +36,8 @@ infra/otp/graph/
 # Full downloaded pages are not redistributed
 data/extraction/public-pages.json
 data/extraction/runtime-pages.json
+
+# Local reports and publication workspaces
+artifacts/
+docs/evidence/*
+!docs/evidence/.gitkeep
