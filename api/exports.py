@@ -107,7 +107,7 @@ def render_text(card):
 
 def render_html(card):
     text = html.escape(render_text(card))
-    return '<!doctype html><html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Okno: karta uzgodnienia</title><style>body{font:17px/1.65 Arial,sans-serif;color:#173f35;max-width:820px;margin:40px auto;padding:24px}h1{font-size:32px}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}@page{size:A4;margin:20mm}</style><main><h1>Okno</h1><pre>' + text + '</pre></main></html>'
+    return '<!doctype html><html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Okno: karta uzgodnienia</title><style>body{font:17px/1.65 Arial,sans-serif;color:#352c35;max-width:820px;margin:40px auto;padding:24px}h1{font-size:32px}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}@page{size:A4;margin:20mm}</style><main><h1>Okno</h1><pre>' + text + '</pre></main></html>'
 
 
 def sign_preview(owner, payload_hash, expires):
