@@ -1,8 +1,10 @@
 # Okno
 
-Okno pomaga połączyć pracę, opiekę i dojazdy. Z podanych godzin i warunków wylicza konflikt, porównuje dopuszczalne zmiany i przygotowuje konkretną propozycję do rozmowy z pracodawcą. Po uzgodnieniu warunków pozwala zapisać odpowiedź, rozpocząć próbę i porównać rzeczywiste obserwacje.
+Okno pomaga kobietom łączącym pracę lub powrót do zatrudnienia z opieką ułożyć wykonalny plan dnia. Uwzględnia godziny pracy, dowóz i odbiór, kierunkowe dojazdy oraz budżet. Z tych warunków wylicza konflikt i przygotowuje konkretne propozycje do rozmowy z pracodawcą lub opiekunem.
 
-**[Otwórz demo](https://okno-impacther-2026.defozo.chatgpt.site/)** · **[Prezentacja i filmy](https://okno-impacther-2026.defozo.chatgpt.site/materialy/)** · **[Pobierz kod i materiały](https://okno-impacther-2026.defozo.chatgpt.site/materialy/pakiet.zip)**
+Możesz porównać zachowany wymiar pracy, koszt i zapas czasu, wybrać wariant, zapisać odpowiedź lub kontrpropozycję, a po uzgodnieniu warunków rozpocząć próbę. Karta dla pracodawcy przekazuje proponowane godziny i okres próby, zachowując prywatne szczegóły opieki poza eksportem. Obserwacje z próby pokazują, jak uzgodniony plan sprawdza się w codziennym życiu.
+
+**[Obejrzyj film i prezentację](https://hackyeah-2026-projekty.defozo.chatgpt.site/#impacther-technology-for-real-change)** · **[Uruchom demo lokalnie](#uruchomienie-lokalne)** · **[Pobierz kod](https://github.com/Defozo/okno-hackyeah2026/archive/refs/heads/main.zip)**
 
 DEFOZO SOFTWARE HOUSE · Michał Kiełtyka · HackYeah 2026 · ImpactHER: Technology for Real Change · New Idea.
 
@@ -11,6 +13,8 @@ DEFOZO SOFTWARE HOUSE · Michał Kiełtyka · HackYeah 2026 · ImpactHER: Techno
 W demo wybierz **„45 minut do zmiany”**, a następnie **„Sprawdź mój plan”**. Przy pracy 09:00–17:00 odbiór z dojazdem i buforem wypada 45 minut po zamknięciu placówki. Wariant 08:15–16:15 usuwa kolizję; 08:00–16:00 daje dodatkowe 15 minut zapasu. Oba zachowują 40 godzin pracy tygodniowo w tym syntetycznym przykładzie i wymagają zgody pracodawcy.
 
 W **Uzgodnieniach** obejrzyj kartę dla pracodawcy i pobierz PDF. Możesz osobno zapisać plan, dodać odpowiedź lub kontrpropozycję, ponownie przeliczyć warunki i przejść do próby oraz kalendarza. Po demonstracji usuń swój zapis. [Instrukcja krok po kroku](docs/jury/README.md).
+
+Każdy wariant wskazuje potrzebne uzgodnienia. Zapisana akceptacja dotyczy określonych godzin, dat i warunków; ich zmiana uruchamia ponowne sprawdzenie. W czasie próby zapisujesz rzeczywistą pracę, koszty i czas organizacji, a następnie porównujesz je z okresem odniesienia. Historia zachowuje plan, uzgodnienia i własne obserwacje jako podstawę kolejnej rozmowy.
 
 ## Uruchomienie lokalne
 
@@ -71,7 +75,7 @@ Po zbudowaniu obrazu można użyć `./scripts/test-docker.ps1`. Dla działające
 
 ## Dane i architektura
 
-Interfejs React/TypeScript współpracuje z FastAPI, solverem OR-Tools CP-SAT i niezależnym walidatorem harmonogramu. PostgreSQL przechowuje zaszyfrowane plany. Eksport obejmuje PDF, HTML, tekst i ICS. [Architektura i kontrakt obliczeń](docs/ARCHITECTURE.md).
+Interfejs React/TypeScript współpracuje z FastAPI, solverem OR-Tools CP-SAT i niezależnym walidatorem harmonogramu. Solver porównuje liczbę zmienianych uzgodnień, przesunięcia godzin i koszty według zadanych priorytetów. Walidator ponownie sprawdza harmonogram, w tym pokrycie opieki, przejazdy i budżet. Wynik pokazuje również zapas czasu i wpływ dodatkowego opóźnienia. PostgreSQL przechowuje zaszyfrowane plany. Eksport obejmuje PDF, HTML, tekst i ICS. [Architektura i kontrakt obliczeń](docs/ARCHITECTURE.md).
 
 Analiza trafia do własnego API. Zapis jest osobną decyzją, dostęp do planu jest powiązany z sesją przeglądarki, a eksport nie wysyła wiadomości. Prywatny grafik nie trafia do modelu językowego. Publiczne demo służy do pracy na danych testowych i zależy od działającego serwera operatora. [Działanie demo](docs/PUBLIC_DEMO.md).
 
